@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mateuszstaszkow.github.io/ganc-new/sitemap.xml

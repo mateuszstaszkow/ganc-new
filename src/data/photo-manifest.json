@@ -1,0 +1,102 @@
+[
+  {
+    "slug": "01-komora-chlodnicza",
+    "width": 502,
+    "height": 335,
+    "widths": [
+      320,
+      502
+    ],
+    "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAACwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZQDLLBHsE+OsZpfbwADU3Hr/plGk8Ocn12dc+Wd1CV8lB0Ka/JhIXAAAAA=="
+  },
+  {
+    "slug": "02-drzwi-mroznicze-przesuwne",
+    "width": 503,
+    "height": 336,
+    "widths": [
+      320,
+      503
+    ],
+    "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADwAwCdASoUAA4APu1mq04ppaQiMAgBMB2JZQAAXvc+7s7YBMCawCMAAP7BNqVd9ZeFe1Mz/lF2oWcXqhlzT5CkJcxaaQAA"
+  },
+  {
+    "slug": "03-korytarz-komor",
+    "width": 505,
+    "height": 337,
+    "widths": [
+      320,
+      505
+    ],
+    "lqip": "data:image/webp;base64,UklGRlYAAABXRUJQVlA4IEoAAADQAwCdASoUAA0APu1iqk4ppaQiMAgBMB2JQAAIOm73l5r8pWPhseAA/oApNW3Ap9RVzPpmGJgI1FBH6Gi+TN26QvCX+nhPhhAAAA=="
+  },
+  {
+    "slug": "04-hala-produkcyjna-wnetrze",
+    "width": 505,
+    "height": 338,
+    "widths": [
+      320,
+      505
+    ],
+    "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABwAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZQDG9BMyIdT6pAAA/iacnibv9GwbMvu/Eci+YEq/EUe2utHBmlfVjB9UuHgA"
+  },
+  {
+    "slug": "05-rampy-przeladunkowe",
+    "width": 506,
+    "height": 339,
+    "widths": [
+      320,
+      506
+    ],
+    "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACwAwCdASoUAA0APu1mq04ppaQiMAgBMB2JZwAAW2GukgxiKNxfAAD+4J0sDKIwxZ/rRfmy62o9C0PjEJrARp1cqsdoYAAA"
+  },
+  {
+    "slug": "06-konstrukcja-hali",
+    "width": 503,
+    "height": 336,
+    "widths": [
+      320,
+      503
+    ],
+    "lqip": "data:image/webp;base64,UklGRloAAABXRUJQVlA4IE4AAACwAwCdASoUAA4APu1oqk6ppiQiMAgBMB2JQBOgBDzYMwtL3KkhAAD4rbPNegIMClsId09gkztSWNRokI3H2LWf1fTpyFvgjOoa4Ev0AAA="
+  },
+  {
+    "slug": "07-drzwi-nierdzewne",
+    "width": 502,
+    "height": 335,
+    "widths": [
+      320,
+      502
+    ],
+    "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAADQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JZQDCgCEegD2fljesVgAA/scRTjThQ4adGy5WH+YomTqc5LQUygw8mSeYAAAA"
+  },
+  {
+    "slug": "08-hala-elewacja",
+    "width": 502,
+    "height": 335,
+    "widths": [
+      320,
+      502
+    ],
+    "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAABwAwCdASoUAA0APu1orU6ppiSiMAgBMB2JYwCw7CHZqE95JQAA/upvHnWQcg9vqHMYcJV0SjEBgtwPoTooKfRSKAAAAA=="
+  },
+  {
+    "slug": "09-plyty-warstwowe-strop",
+    "width": 506,
+    "height": 338,
+    "widths": [
+      320,
+      506
+    ],
+    "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACwAwCdASoUAA0APu1krU2ppaSiMAgBMB2JZwAAVMBK+KKDY/aEcAD+jvhIJA1a8qzu/Rayc8YvlAQxsNwbafsg70JlrgAA"
+  },
+  {
+    "slug": "10-montaz-plyt",
+    "width": 507,
+    "height": 338,
+    "widths": [
+      320,
+      507
+    ],
+    "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JYwAAW/FdPHle3/PfQwAA/fkHPs1BH7Tw8k/f+93clkX2Lh4vJJZnj8AAAA=="
+  }
+]
