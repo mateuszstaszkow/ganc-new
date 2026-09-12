@@ -83,7 +83,14 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
 
             <a
               href={`tel:${company.phoneHref}`}
-              className="hidden items-center gap-2 rounded-full border border-ice-500/40 bg-ice-500/10 px-4 py-2.5 text-sm font-bold whitespace-nowrap text-ice-200 transition-colors hover:bg-ice-500/20 hover:text-white 2xl:inline-flex"
+              aria-label={company.phone}
+              className="inline-flex size-10 items-center justify-center rounded-full border border-ice-500/40 bg-ice-500/10 text-ice-200 transition-colors hover:bg-ice-500/20 hover:text-white md:hidden"
+            >
+              <Icon name="phone" className="size-4" />
+            </a>
+            <a
+              href={`tel:${company.phoneHref}`}
+              className="hidden items-center gap-2 rounded-full border border-ice-500/40 bg-ice-500/10 px-3.5 py-2.5 text-sm font-bold whitespace-nowrap text-ice-200 transition-colors hover:bg-ice-500/20 hover:text-white md:inline-flex"
             >
               <Icon name="phone" className="size-4" />
               {company.phone}
