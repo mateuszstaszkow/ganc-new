@@ -7,7 +7,8 @@ import {
   useTransform,
 } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { company, hero } from '../data/content'
+import { company } from '../data/content'
+import { useI18n } from '../i18n'
 import { useLiteMotion } from '../hooks/useLiteMotion'
 import { ButtonLink } from './ui/Button'
 import { FrostField } from './ui/FrostField'
@@ -16,6 +17,7 @@ import { Photo } from './ui/Photo'
 
 /** Counts from ambient down to freezer temperature once, on mount. */
 function TemperatureReadout() {
+  const { t } = useI18n()
   const reduce = useReducedMotion()
   const value = useMotionValue(reduce ? -25 : 20)
   const [display, setDisplay] = useState(reduce ? '−25' : '20')
@@ -54,7 +56,7 @@ function TemperatureReadout() {
           <span className="text-xl text-ice-400 sm:text-2xl">°C</span>
         </p>
         <p className="mt-1 text-xs font-semibold tracking-[0.18em] text-steel-400 uppercase">
-          Zakres mroźniczy
+          {t.hero.freezerRange}
         </p>
       </div>
     </div>
@@ -64,15 +66,16 @@ function TemperatureReadout() {
 /** Exploded view of a sandwich panel — the core material GANC builds with. */
 function PanelStack() {
   const lite = useLiteMotion()
+  const { t } = useI18n()
   const layers = [
-    { label: 'Blacha powlekana', className: 'bg-steel-200/90', height: 'h-2.5' },
-    { label: 'Rdzeń izolacyjny', className: 'bg-gradient-to-r from-ice-200/80 to-white/70', height: 'h-14' },
-    { label: 'Blacha powlekana', className: 'bg-steel-200/90', height: 'h-2.5' },
+    { label: t.hero.panelLayers[0], className: 'bg-steel-200/90', height: 'h-2.5' },
+    { label: t.hero.panelLayers[1], className: 'bg-gradient-to-r from-ice-200/80 to-white/70', height: 'h-14' },
+    { label: t.hero.panelLayers[2], className: 'bg-steel-200/90', height: 'h-2.5' },
   ]
 
   return (
     <div className="space-y-2.5">
-      <p className="text-xs font-bold tracking-[0.22em] text-ice-400 uppercase">Płyta warstwowa</p>
+      <p className="text-xs font-bold tracking-[0.22em] text-ice-400 uppercase">{t.hero.panelTitle}</p>
       <div className="space-y-1.5">
         {layers.map((layer, index) => (
           <motion.div
@@ -95,6 +98,8 @@ function PanelStack() {
 }
 
 export function Hero() {
+  const { t } = useI18n()
+  const hero = t.hero
   const reduce = useReducedMotion()
   const lite = useLiteMotion()
   const { scrollYProgress } = useScroll()
@@ -110,7 +115,7 @@ export function Hero() {
   return (
     <section
       id="start"
-      aria-label="Wprowadzenie"
+      aria-label={hero.introAria}
       className="relative flex min-h-[100svh] items-center overflow-hidden pt-28 pb-16 sm:pt-32 lg:pt-36"
     >
       {/* ---- background stack ---- */}
@@ -201,19 +206,19 @@ export function Hero() {
               transition={{ delay: 0.55, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
             >
-              <ButtonLink href={hero.primaryCta.href} className="w-full sm:w-auto">
-                {hero.primaryCta.label}
+              <ButtonLink href="#kontakt" className="w-full sm:w-auto">
+                {hero.primaryCta}
                 <Icon
                   name="arrowRight"
                   className="size-4 transition-transform duration-300 group-hover/btn:translate-x-1"
                 />
               </ButtonLink>
               <ButtonLink
-                href={hero.secondaryCta.href}
+                href="#oferta"
                 variant="secondary"
                 className="w-full sm:w-auto"
               >
-                {hero.secondaryCta.label}
+                {hero.secondaryCta}
               </ButtonLink>
             </motion.div>
 
@@ -253,7 +258,7 @@ export function Hero() {
               <div className="relative flex items-start justify-between gap-4">
                 <TemperatureReadout />
                 <span className="rounded-full bg-ember-500/15 px-3 py-1.5 text-[0.62rem] font-bold tracking-[0.16em] text-ember-400 uppercase ring-1 ring-ember-500/30">
-                  Mroźnia
+                  {hero.freezerBadge}
                 </span>
               </div>
 
@@ -264,7 +269,7 @@ export function Hero() {
               <div className="relative mt-7 overflow-hidden rounded-2xl ring-1 ring-white/10">
                 <Photo
                   slug="01-komora-chlodnicza"
-                  alt="Wnętrze komory chłodniczej z drzwiami mroźniczymi i stanowiskiem higieny"
+                  alt={hero.photoAlt}
                   className="aspect-[3/2] w-full"
                   sizes="(max-width: 1024px) 90vw, 34vw"
                   priority
@@ -274,7 +279,7 @@ export function Hero() {
                   className="pointer-events-none absolute inset-0 bg-gradient-to-t from-steel-950/70 via-transparent to-transparent"
                 />
                 <p className="absolute bottom-3 left-4 text-xs font-semibold text-white/90">
-                  Komora chłodnicza — realizacja GANC
+                  {hero.photoCaption}
                 </p>
               </div>
             </div>
@@ -285,13 +290,13 @@ export function Hero() {
       {/* ---- scroll cue ---- */}
       <motion.a
         href="#o-nas"
-        aria-label="Przewiń do sekcji O nas"
+        aria-label={hero.scrollAria}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4, duration: 0.8 }}
         className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-steel-400 transition-colors hover:text-white sm:flex"
       >
-        <span className="text-[0.62rem] font-bold tracking-[0.3em] uppercase">Przewiń</span>
+        <span className="text-[0.62rem] font-bold tracking-[0.3em] uppercase">{hero.scroll}</span>
         <motion.span
           animate={reduce ? undefined : { y: [0, 7, 0] }}
           transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}

@@ -1,25 +1,32 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { gallery } from '../data/content'
+import { useI18n } from '../i18n'
 import { useLockBodyScroll } from '../hooks/useLockBodyScroll'
 import { Icon } from './ui/Icon'
 import { Photo, photoSrc } from './ui/Photo'
 import { Reveal } from './ui/Reveal'
 import { Section, SectionHeading } from './ui/Section'
 
-const ALL = 'Wszystkie'
+const ALL = '__all__'
 
 export function Gallery() {
+  const { t } = useI18n()
+  const gallery = t.gallery.items
   const categories = useMemo(
     () => [ALL, ...Array.from(new Set(gallery.map((item) => item.category)))],
-    [],
+    [gallery],
   )
   const [filter, setFilter] = useState<string>(ALL)
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
+  useEffect(() => {
+    setFilter(ALL)
+    setOpenIndex(null)
+  }, [t.gallery.all])
+
   const visible = useMemo(
     () => (filter === ALL ? [...gallery] : gallery.filter((item) => item.category === filter)),
-    [filter],
+    [filter, gallery],
   )
 
   useLockBodyScroll(openIndex !== null)
@@ -49,15 +56,15 @@ export function Gallery() {
   return (
     <Section id="realizacje" decorated className="bg-steel-950">
       <SectionHeading
-        eyebrow="Realizacje"
-        title="Wybrane prace"
-        lead="Komory chłodnicze i mroźnicze, obudowy panelowe hal, stolarka i rampy — z realizacji prowadzonych na terenie całej Polski."
+        eyebrow={t.gallery.eyebrow}
+        title={t.gallery.title}
+        lead={t.gallery.lead}
       />
 
       <Reveal direction="up" className="mt-10">
         <div
           role="tablist"
-          aria-label="Filtruj realizacje"
+          aria-label={t.gallery.filterAria}
           className="no-scrollbar -mx-4 flex gap-2 overflow-x-auto px-4 pb-1 sm:mx-0 sm:flex-wrap sm:px-0"
         >
           {categories.map((category) => {
@@ -82,7 +89,7 @@ export function Gallery() {
                     transition={{ type: 'spring', stiffness: 360, damping: 30 }}
                   />
                 )}
-                {category}
+                {category === ALL ? t.gallery.all : category}
               </button>
             )
           })}
@@ -151,7 +158,7 @@ export function Gallery() {
           >
             <button
               type="button"
-              aria-label="Zamknij podgląd"
+              aria-label={t.gallery.closePreview}
               onClick={close}
               className="absolute inset-0 h-full w-full cursor-default bg-steel-950/90 backdrop-blur-md"
             />
@@ -196,7 +203,7 @@ export function Gallery() {
                 <button
                   type="button"
                   onClick={() => step(-1)}
-                  aria-label="Poprzednie zdjęcie"
+                  aria-label={t.gallery.prevPhoto}
                   className="glass flex size-12 items-center justify-center rounded-full text-white transition-colors hover:bg-white/15"
                 >
                   <Icon name="arrowRight" className="size-5 rotate-180" />
@@ -204,7 +211,7 @@ export function Gallery() {
                 <button
                   type="button"
                   onClick={() => step(1)}
-                  aria-label="Następne zdjęcie"
+                  aria-label={t.gallery.nextPhoto}
                   className="glass flex size-12 items-center justify-center rounded-full text-white transition-colors hover:bg-white/15"
                 >
                   <Icon name="arrowRight" className="size-5" />
@@ -215,7 +222,7 @@ export function Gallery() {
             <button
               type="button"
               onClick={close}
-              aria-label="Zamknij podgląd"
+              aria-label={t.gallery.closePreview}
               className="glass absolute top-4 right-4 z-20 flex size-12 items-center justify-center rounded-full text-white transition-colors hover:bg-white/15 sm:top-6 sm:right-6"
             >
               <Icon name="close" className="size-5" />

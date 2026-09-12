@@ -1,23 +1,31 @@
 import { motion } from 'framer-motion'
-import { partners } from '../data/content'
+import { useI18n } from '../i18n'
 import { Icon } from './ui/Icon'
 import { Photo } from './ui/Photo'
 import { Reveal, Stagger, StaggerItem } from './ui/Reveal'
 import { Section, SectionHeading } from './ui/Section'
 
 export function Partners() {
+  const { t } = useI18n()
+  const partners = t.partners
+  const brands = [
+    { name: 'COOLIT', role: partners.role },
+    { name: 'EMS', role: partners.role },
+    { name: 'PFEUFER', role: partners.role },
+  ]
+
   return (
     <Section id="partnerzy" className="bg-steel-900">
       <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-16">
         <div>
           <SectionHeading
-            eyebrow="Autoryzowany dystrybutor"
+            eyebrow={partners.eyebrow}
             title={partners.heading}
             lead={partners.lead}
           />
 
           <Stagger className="mt-10 space-y-3">
-            {partners.brands.map((brand) => (
+            {brands.map((brand) => (
               <StaggerItem key={brand.name}>
                 <div className="glass group flex items-center gap-4 rounded-2xl p-5 transition-colors duration-300 hover:border-ice-500/40">
                   <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-ice-500/25 to-transparent text-ice-300 ring-1 ring-inset ring-white/10">
@@ -57,19 +65,19 @@ export function Partners() {
             <div className="relative grid grid-cols-2 gap-4">
               <Photo
                 slug="07-drzwi-nierdzewne"
-                alt="Drzwi przesuwne ze stali nierdzewnej w mroźni"
+                alt={partners.photoAlts.stainless}
                 className="col-span-2 aspect-[16/10] w-full rounded-2xl ring-1 ring-white/10"
                 sizes="(max-width: 1024px) 92vw, 44vw"
               />
               <Photo
                 slug="02-drzwi-mroznicze-przesuwne"
-                alt="Duże drzwi przesuwne mroźnicze w korytarzu technologicznym"
+                alt={partners.photoAlts.sliding}
                 className="aspect-square w-full rounded-2xl ring-1 ring-white/10"
                 sizes="(max-width: 1024px) 44vw, 22vw"
               />
               <Photo
                 slug="05-rampy-przeladunkowe"
-                alt="Rampy przeładowcze z bramami segmentowymi"
+                alt={partners.photoAlts.docks}
                 className="aspect-square w-full rounded-2xl ring-1 ring-white/10"
                 sizes="(max-width: 1024px) 44vw, 22vw"
               />

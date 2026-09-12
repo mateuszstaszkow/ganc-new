@@ -1,10 +1,14 @@
-import { careers, company } from '../data/content'
+import { company } from '../data/content'
+import { useI18n } from '../i18n'
 import { ButtonLink } from './ui/Button'
 import { Icon } from './ui/Icon'
 import { Reveal } from './ui/Reveal'
 import { Section } from './ui/Section'
 
 export function Careers() {
+  const { t } = useI18n()
+  const careers = t.careers
+
   return (
     <Section id="kariera" className="bg-steel-950">
       <Reveal direction="up">
@@ -59,7 +63,7 @@ export function Careers() {
 
               <ButtonLink
                 href={`mailto:${company.emailHr}?subject=${encodeURIComponent(
-                  'Aplikacja — praca w GANC IZOLACJE',
+                  careers.applySubject,
                 )}`}
                 className="mt-4 w-full"
               >

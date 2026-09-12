@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react'
 import { Header } from '../components/Header'
 import { Hero } from '../components/Hero'
-import { marqueeItems } from '../data/content'
+import { useI18n } from '../i18n'
 
 const Marquee = lazy(() => import('../components/ui/Marquee').then((m) => ({ default: m.Marquee })))
 const About = lazy(() => import('../components/About').then((m) => ({ default: m.About })))
@@ -17,13 +17,15 @@ const Contact = lazy(() => import('../components/Contact').then((m) => ({ defaul
 const Footer = lazy(() => import('../components/Footer').then((m) => ({ default: m.Footer })))
 
 export default function Home() {
+  const { t } = useI18n()
+
   return (
     <>
       <Header />
       <main id="tresc">
         <Hero />
         <Suspense fallback={<div className="min-h-[40vh] bg-steel-950" aria-hidden="true" />}>
-          <Marquee items={marqueeItems} />
+          <Marquee items={t.marqueeItems} />
           <About />
           <Specialties />
           <Offer />

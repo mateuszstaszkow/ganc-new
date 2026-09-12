@@ -1,16 +1,19 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { company, nav } from '../data/content'
+import { company } from '../data/content'
+import { useI18n } from '../i18n'
 import { useLiteMotion } from '../hooks/useLiteMotion'
 import { useLockBodyScroll } from '../hooks/useLockBodyScroll'
 import { useScrollSpy } from '../hooks/useScrollSpy'
+import { LanguageSwitcher } from './LanguageSwitcher'
 import { Icon } from './ui/Icon'
 import { Logo } from './ui/Logo'
 
-const SECTION_IDS = nav.map((item) => item.id)
+const SECTION_IDS = ['o-nas', 'specjalizacje', 'oferta', 'realizacje', 'proces', 'kariera', 'kontakt']
 
 export function Header({ onHome = true }: { onHome?: boolean }) {
+  const { t, homePath, sectionHref } = useI18n()
   const [open, setOpen] = useState(false)
   const [condensed, setCondensed] = useState(false)
   const lite = useLiteMotion()
@@ -20,7 +23,7 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
   useMotionValueEvent(scrollY, 'change', (y) => setCondensed(y > 24))
   useLockBodyScroll(open)
 
-  const href = (id: string) => (onHome ? `#${id}` : `/#${id}`)
+  const href = (id: string) => sectionHref(id, onHome)
 
   return (
     <>
@@ -28,7 +31,7 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
         href="#tresc"
         className="sr-only rounded-full bg-white px-4 py-2 font-semibold text-steel-950 focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[80]"
       >
-        Przejdź do treści
+        {t.ui.skipToContent}
       </a>
 
       <header
@@ -38,14 +41,18 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
             : 'border-b border-transparent py-4 sm:py-5'
         }`}
       >
-        <div className="shell flex items-center justify-between gap-4">
-          <Link to="/" aria-label={`${company.legalName} — strona główna`} className="shrink-0">
+        <div className="shell flex items-center justify-between gap-3">
+          <Link
+            to={homePath}
+            aria-label={`${company.legalName} — ${t.ui.homeAria}`}
+            className="shrink-0"
+          >
             <Logo animate={!lite} />
           </Link>
 
-          <nav aria-label="Menu główne" className="hidden lg:block">
+          <nav aria-label={t.ui.mainMenu} className="hidden lg:block">
             <ul className="flex items-center gap-1">
-              {nav.map((item) => {
+              {t.nav.map((item) => {
                 const isActive = onHome && active === item.id
                 return (
                   <li key={item.id}>
@@ -71,7 +78,9 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
             </ul>
           </nav>
 
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-1.5 sm:gap-3">
+            <LanguageSwitcher compact />
+
             <a
               href={`tel:${company.phoneHref}`}
               className="hidden items-center gap-2 rounded-full border border-ice-500/40 bg-ice-500/10 px-4 py-2.5 text-sm font-bold text-ice-200 transition-colors hover:bg-ice-500/20 hover:text-white md:inline-flex"
@@ -83,7 +92,7 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
             <button
               type="button"
               onClick={() => setOpen(true)}
-              aria-label="Otwórz menu"
+              aria-label={t.ui.openMenu}
               aria-expanded={open}
               className="glass flex size-11 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10 lg:hidden"
             >
@@ -104,13 +113,13 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
           >
             <button
               type="button"
-              aria-label="Zamknij menu"
+              aria-label={t.ui.closeMenu}
               onClick={() => setOpen(false)}
               className="absolute inset-0 h-full w-full cursor-default bg-steel-950/70 backdrop-blur-sm"
             />
 
             <motion.nav
-              aria-label="Menu mobilne"
+              aria-label={t.ui.mobileMenu}
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
@@ -122,7 +131,7 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
-                  aria-label="Zamknij menu"
+                  aria-label={t.ui.closeMenu}
                   className="flex size-11 items-center justify-center rounded-full text-steel-300 transition-colors hover:bg-white/10 hover:text-white"
                 >
                   <Icon name="close" className="size-5" />
@@ -130,7 +139,7 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
               </div>
 
               <ul className="flex-1 overflow-y-auto px-4 py-5">
-                {nav.map((item, index) => (
+                {t.nav.map((item, index) => (
                   <motion.li
                     key={item.id}
                     initial={{ opacity: 0, x: 26 }}
@@ -149,7 +158,8 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
                 ))}
               </ul>
 
-              <div className="space-y-2 border-t border-white/10 px-6 py-5">
+              <div className="space-y-4 border-t border-white/10 px-6 py-5">
+                <LanguageSwitcher />
                 <a
                   href={`tel:${company.phoneHref}`}
                   className="flex items-center gap-3 rounded-2xl bg-ice-500 px-4 py-3.5 font-bold text-white"

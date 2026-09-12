@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { specialties } from '../data/content'
+import { useI18n } from '../i18n'
 import { Icon } from './ui/Icon'
 import { Photo } from './ui/Photo'
 import { Reveal } from './ui/Reveal'
@@ -7,6 +7,9 @@ import { Section, SectionHeading } from './ui/Section'
 import { Tilt } from './ui/Magnetic'
 
 export function Specialties() {
+  const { t } = useI18n()
+  const specialties = t.specialties
+
   return (
     <Section id="specjalizacje" className="bg-steel-900">
       <div
@@ -15,21 +18,19 @@ export function Specialties() {
       />
 
       <SectionHeading
-        eyebrow="Główne produkty"
+        eyebrow={specialties.eyebrow}
         title={
-          // Non-breaking space keeps the dash tied to "mroźnie" so it can never
-          // wrap onto the next line on its own.
           <>
-            {'Chłodnie i mroźnie\u00A0— '}
-            <span className="text-gradient-ice">nasza specjalność</span>
+            {specialties.titleBefore}
+            <span className="text-gradient-ice">{specialties.titleAccent}</span>
           </>
         }
-        lead="Budujemy komory w systemie płyt warstwowych oraz tradycyjnym, wraz z doborem i montażem stolarki chłodniczej i mroźniczej."
+        lead={specialties.lead}
         align="center"
       />
 
       <div className="mt-14 grid gap-6 lg:mt-20 lg:grid-cols-2 lg:gap-8">
-        {specialties.map((item, index) => (
+        {specialties.items.map((item, index) => (
           <Reveal key={item.id} direction={index === 0 ? 'right' : 'left'} delay={index * 0.1}>
             <Tilt className="h-full">
               <article className="glass group relative flex h-full flex-col overflow-hidden rounded-3xl">

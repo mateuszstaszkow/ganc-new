@@ -1,11 +1,13 @@
 import { motion, useReducedMotion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
-import { about, trustPoints } from '../data/content'
+import { useI18n } from '../i18n'
 import { Reveal, Stagger, StaggerItem } from './ui/Reveal'
 import { Photo } from './ui/Photo'
 import { Section, SectionHeading } from './ui/Section'
 
 export function About() {
+  const { t } = useI18n()
+  const { about, trustPoints } = t
   const wrapRef = useRef<HTMLDivElement>(null)
   const reduce = useReducedMotion()
   const { scrollYProgress } = useScroll({
@@ -42,13 +44,13 @@ export function About() {
           <motion.div style={{ y: yA }} className="space-y-4">
             <Photo
               slug="03-korytarz-komor"
-              alt="Korytarz technologiczny z drzwiami komór chłodniczych"
+              alt={about.photoAlts.corridor}
               className="aspect-[3/4] w-full rounded-2xl ring-1 ring-white/10"
               sizes="(max-width: 1024px) 44vw, 20vw"
             />
             <Photo
               slug="09-plyty-warstwowe-strop"
-              alt="Strop i ściany wykonane z płyt warstwowych"
+              alt={about.photoAlts.panels}
               className="aspect-square w-full rounded-2xl ring-1 ring-white/10"
               sizes="(max-width: 1024px) 44vw, 20vw"
             />
@@ -57,13 +59,13 @@ export function About() {
           <motion.div style={{ y: yB }} className="space-y-4 pt-8">
             <Photo
               slug="08-hala-elewacja"
-              alt="Elewacja hali z obudową panelową"
+              alt={about.photoAlts.facade}
               className="aspect-square w-full rounded-2xl ring-1 ring-white/10"
               sizes="(max-width: 1024px) 44vw, 20vw"
             />
             <Photo
               slug="06-konstrukcja-hali"
-              alt="Konstrukcja stalowa hali magazynowej w trakcie budowy"
+              alt={about.photoAlts.steel}
               className="aspect-[3/4] w-full rounded-2xl ring-1 ring-white/10"
               sizes="(max-width: 1024px) 44vw, 20vw"
             />

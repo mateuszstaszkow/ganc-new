@@ -23,11 +23,18 @@ function githubPagesSpa(): Plugin {
       copyFileSync(path.join(out, 'index.html'), path.join(out, '404.html'))
 
       const today = new Date().toISOString().slice(0, 10)
-      const urls = ['', 'rodo']
-        .map(
-          (route) =>
-            `  <url><loc>${siteUrl}${route}</loc><lastmod>${today}</lastmod>` +
-            `<changefreq>monthly</changefreq><priority>${route ? '0.4' : '1.0'}</priority></url>`,
+      const prefixes = ['', 'en/', 'de/', 'uk/']
+      const pages = ['', 'rodo']
+      const urls = prefixes
+        .flatMap((prefix) =>
+          pages.map((page) => {
+            const route = `${prefix}${page}`
+            const priority = page ? '0.4' : prefix ? '0.8' : '1.0'
+            return (
+              `  <url><loc>${siteUrl}${route}</loc><lastmod>${today}</lastmod>` +
+              `<changefreq>monthly</changefreq><priority>${priority}</priority></url>`
+            )
+          }),
         )
         .join('\n')
 

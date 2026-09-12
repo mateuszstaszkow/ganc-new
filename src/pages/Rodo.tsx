@@ -3,9 +3,12 @@ import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { Icon } from '../components/ui/Icon'
 import { Reveal } from '../components/ui/Reveal'
-import { rodo } from '../data/content'
+import { useI18n } from '../i18n'
 
 export default function Rodo() {
+  const { t, homePath } = useI18n()
+  const rodo = t.rodo
+
   return (
     <>
       <Header onHome={false} />
@@ -19,17 +22,21 @@ export default function Rodo() {
         <div className="shell max-w-3xl">
           <Reveal direction="up">
             <Link
-              to="/"
+              to={homePath}
               className="inline-flex items-center gap-2 text-sm font-semibold text-ice-300 transition-colors hover:text-white"
             >
               <Icon name="arrowRight" className="size-4 rotate-180" />
-              Strona główna
+              {t.ui.home}
             </Link>
           </Reveal>
 
           <Reveal direction="up" delay={0.06}>
             <h1 className="mt-7 text-fluid-3xl font-extrabold text-white">{rodo.heading}</h1>
           </Reveal>
+
+          {t.ui.legalNote ? (
+            <p className="mt-4 text-sm text-ice-300/90">{t.ui.legalNote}</p>
+          ) : null}
 
           <Reveal direction="up" delay={0.12}>
             <p className="mt-7 font-semibold text-ice-200">{rodo.intro}</p>

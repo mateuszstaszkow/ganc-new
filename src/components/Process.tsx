@@ -1,10 +1,12 @@
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion'
 import { useRef } from 'react'
-import { process } from '../data/content'
+import { useI18n } from '../i18n'
 import { Reveal } from './ui/Reveal'
 import { Section, SectionHeading } from './ui/Section'
 
 export function Process() {
+  const { t } = useI18n()
+  const process = t.process
   const listRef = useRef<HTMLOListElement>(null)
   const { scrollYProgress } = useScroll({
     target: listRef,
@@ -16,9 +18,9 @@ export function Process() {
   return (
     <Section id="proces" className="bg-steel-900">
       <SectionHeading
-        eyebrow="Jak pracujemy"
-        title="Od analizy inwestycji do odbioru obiektu"
-        lead="Każdy etap prowadzimy w uzgodnieniu z inwestorem — z naciskiem na optymalizację kosztową i sprawdzone materiały."
+        eyebrow={process.eyebrow}
+        title={process.title}
+        lead={process.lead}
       />
 
       <ol ref={listRef} className="relative mt-14 lg:mt-20">
@@ -33,7 +35,7 @@ export function Process() {
           className="absolute top-2 bottom-2 left-[1.4rem] w-px bg-gradient-to-b from-ice-400 via-ice-500 to-ember-500 sm:left-[1.75rem]"
         />
 
-        {process.map((step, index) => (
+        {process.steps.map((step, index) => (
           <li key={step.step} className="relative pb-10 pl-16 last:pb-0 sm:pl-20">
             {/* Kept outside <Reveal>: that wrapper animates filter/transform and
                 would otherwise become this badge's containing block, pulling it

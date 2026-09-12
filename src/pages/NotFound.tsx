@@ -2,8 +2,11 @@ import { Link } from 'react-router-dom'
 import { Footer } from '../components/Footer'
 import { Header } from '../components/Header'
 import { Icon } from '../components/ui/Icon'
+import { useI18n } from '../i18n'
 
 export default function NotFound() {
+  const { t, homePath } = useI18n()
+
   return (
     <>
       <Header onHome={false} />
@@ -18,19 +21,17 @@ export default function NotFound() {
         </div>
 
         <div className="shell text-center">
-          <p className="text-xs font-bold tracking-[0.3em] text-ember-400 uppercase">Błąd 404</p>
-          <h1 className="mt-5 text-fluid-3xl font-extrabold text-white">
-            Nie znaleziono strony
-          </h1>
-          <p className="mx-auto mt-4 max-w-md text-steel-300">
-            Ten adres nie istnieje lub został przeniesiony.
+          <p className="text-xs font-bold tracking-[0.3em] text-ember-400 uppercase">
+            {t.ui.notFoundKicker}
           </p>
+          <h1 className="mt-5 text-fluid-3xl font-extrabold text-white">{t.ui.notFoundTitle}</h1>
+          <p className="mx-auto mt-4 max-w-md text-steel-300">{t.ui.notFoundLead}</p>
 
           <Link
-            to="/"
+            to={homePath}
             className="mt-9 inline-flex min-h-12 items-center gap-2.5 rounded-full bg-ice-500 px-7 font-bold text-white shadow-glow-ice transition-colors hover:bg-ice-400"
           >
-            Wróć na stronę główną
+            {t.ui.backHome}
             <Icon name="arrowRight" className="size-4" />
           </Link>
         </div>
