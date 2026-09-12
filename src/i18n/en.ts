@@ -30,7 +30,7 @@ export const en: Dictionary = {
   },
   nav: [
     { id: 'o-nas', label: 'About us' },
-    { id: 'specjalizacje', label: 'Cold rooms & freezers' },
+    { id: 'specjalizacje', label: 'Cold rooms' },
     { id: 'oferta', label: 'Offer' },
     { id: 'realizacje', label: 'Projects' },
     { id: 'proces', label: 'How we work' },
@@ -43,7 +43,7 @@ export const en: Dictionary = {
   },
   hero: {
     kicker: 'Specialist insulation for retail and industry',
-    titleLines: ['We build', 'cold rooms and freezer rooms'],
+    titleLines: ['We build cold rooms', 'and freezer rooms'],
     titleAccent: 'across Poland',
     lead:
       'Our core service is the construction of cold rooms and freezer rooms in retail and production buildings — in sandwich-panel and traditional systems.',

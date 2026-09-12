@@ -41,7 +41,7 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
             : 'border-b border-transparent py-4 sm:py-5'
         }`}
       >
-        <div className="shell flex items-center justify-between gap-3">
+        <div className="shell flex flex-nowrap items-center justify-between gap-3">
           <Link
             to={homePath}
             aria-label={`${company.legalName} — ${t.ui.homeAria}`}
@@ -50,16 +50,16 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
             <Logo animate={!lite} />
           </Link>
 
-          <nav aria-label={t.ui.mainMenu} className="hidden lg:block">
-            <ul className="flex items-center gap-1">
+          <nav aria-label={t.ui.mainMenu} className="hidden min-w-0 xl:block">
+            <ul className="flex items-center justify-center">
               {t.nav.map((item) => {
                 const isActive = onHome && active === item.id
                 return (
-                  <li key={item.id}>
+                  <li key={item.id} className="shrink-0">
                     <a
                       href={href(item.id)}
                       aria-current={isActive ? 'true' : undefined}
-                      className={`relative rounded-full px-3.5 py-2 text-sm font-semibold transition-colors xl:px-4 ${
+                      className={`relative block whitespace-nowrap rounded-full px-2.5 py-2 text-[0.8125rem] font-semibold transition-colors 2xl:px-3.5 ${
                         isActive ? 'text-white' : 'text-steel-300 hover:text-white'
                       }`}
                     >
@@ -78,12 +78,12 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
             </ul>
           </nav>
 
-          <div className="flex items-center gap-1.5 sm:gap-3">
+          <div className="flex shrink-0 items-center gap-2">
             <LanguageSwitcher compact />
 
             <a
               href={`tel:${company.phoneHref}`}
-              className="hidden items-center gap-2 rounded-full border border-ice-500/40 bg-ice-500/10 px-4 py-2.5 text-sm font-bold text-ice-200 transition-colors hover:bg-ice-500/20 hover:text-white md:inline-flex"
+              className="hidden items-center gap-2 rounded-full border border-ice-500/40 bg-ice-500/10 px-4 py-2.5 text-sm font-bold whitespace-nowrap text-ice-200 transition-colors hover:bg-ice-500/20 hover:text-white 2xl:inline-flex"
             >
               <Icon name="phone" className="size-4" />
               {company.phone}
@@ -94,7 +94,7 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
               onClick={() => setOpen(true)}
               aria-label={t.ui.openMenu}
               aria-expanded={open}
-              className="glass flex size-11 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10 lg:hidden"
+              className="glass flex size-11 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10 xl:hidden"
             >
               <Icon name="menu" className="size-5" />
             </button>
@@ -105,7 +105,7 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
       <AnimatePresence>
         {open && (
           <motion.div
-            className="fixed inset-0 z-[70] lg:hidden"
+            className="fixed inset-0 z-[70] xl:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

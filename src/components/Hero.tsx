@@ -87,7 +87,7 @@ function PanelStack() {
             className="flex items-center gap-3"
           >
             <span className={`${layer.height} flex-1 rounded-sm ${layer.className}`} />
-            <span className="w-28 shrink-0 text-[0.6rem] leading-tight font-medium text-steel-400 sm:text-[0.65rem]">
+            <span className="w-[7.5rem] shrink-0 text-[0.6rem] leading-snug font-medium text-steel-400 sm:w-32 sm:text-[0.65rem]">
               {layer.label}
             </span>
           </motion.div>
@@ -109,7 +109,6 @@ export function Hero() {
   const y = useTransform(scrollYProgress, [0, 0.16], [0, lite ? 0 : -90])
   const opacity = useTransform(scrollYProgress, [0, 0.13], [1, lite ? 1 : 0.1])
 
-  const words = hero.titleLines.join(' ').split(' ')
   const enter = !lite && !reduce
 
   return (
@@ -147,7 +146,7 @@ export function Hero() {
               initial={enter ? { opacity: 0, y: 16 } : false}
               animate={enter ? { opacity: 1, y: 0 } : undefined}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="glass inline-flex items-center gap-2.5 rounded-full py-2 pr-4 pl-2.5 text-xs font-semibold text-ice-100 sm:text-sm"
+              className="glass inline-flex max-w-full items-center gap-2.5 rounded-full py-2 pr-4 pl-2.5 text-left text-xs leading-snug font-semibold text-ice-100 sm:text-sm"
             >
               <span className="relative flex size-2">
                 <span className="absolute inset-0 animate-pulse-ring rounded-full bg-ice-400" />
@@ -161,30 +160,30 @@ export function Hero() {
                 {hero.titleLines.join(' ')} {hero.titleAccent}
               </span>
               <span aria-hidden="true" className="block">
-                {words.map((word, index) => (
+                {hero.titleLines.map((line, index) => (
                   <motion.span
-                    key={`${word}-${index}`}
-                    initial={enter ? { opacity: 0, y: 24 } : false}
+                    key={line}
+                    initial={enter ? { opacity: 0, y: 20 } : false}
                     animate={enter ? { opacity: 1, y: 0 } : undefined}
                     transition={{
-                      delay: 0.12 + index * 0.07,
+                      delay: 0.1 + index * 0.08,
                       duration: 0.6,
                       ease: [0.16, 1, 0.3, 1],
                     }}
-                    className="mr-[0.24em] inline-block"
+                    className="block"
                   >
-                    {word}
+                    {line}
                   </motion.span>
                 ))}
                 <motion.span
-                  initial={enter ? { opacity: 0, y: 24 } : false}
+                  initial={enter ? { opacity: 0, y: 20 } : false}
                   animate={enter ? { opacity: 1, y: 0 } : undefined}
                   transition={{
-                    delay: 0.12 + words.length * 0.07,
+                    delay: 0.1 + hero.titleLines.length * 0.08,
                     duration: 0.6,
                     ease: [0.16, 1, 0.3, 1],
                   }}
-                  className="text-gradient-ice inline-block"
+                  className="text-gradient-ice block whitespace-nowrap"
                 >
                   {hero.titleAccent}
                 </motion.span>

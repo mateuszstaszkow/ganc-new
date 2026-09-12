@@ -30,10 +30,10 @@ export const de: Dictionary = {
   },
   nav: [
     { id: 'o-nas', label: 'Über uns' },
-    { id: 'specjalizacje', label: 'Kühl- und Tiefkühlräume' },
+    { id: 'specjalizacje', label: 'Kühlräume' },
     { id: 'oferta', label: 'Angebot' },
     { id: 'realizacje', label: 'Referenzen' },
-    { id: 'proces', label: 'So arbeiten wir' },
+    { id: 'proces', label: 'Ablauf' },
     { id: 'kariera', label: 'Karriere' },
     { id: 'kontakt', label: 'Kontakt' },
   ],
@@ -42,8 +42,8 @@ export const de: Dictionary = {
     country: 'Polen',
   },
   hero: {
-    kicker: 'Spezialdämmung für Handel und Industrie',
-    titleLines: ['Wir bauen', 'Kühl- und Tiefkühlräume'],
+    kicker: 'Dämmung für Handel und Industrie',
+    titleLines: ['Wir bauen Kühlräume', 'und Tiefkühlräume'],
     titleAccent: 'in ganz Polen',
     lead:
       'Unser Kerngeschäft ist der Bau von Kühl- und Tiefkühlräumen in Handels- und Produktionsobjekten — im Sandwichpaneel- und im traditionellen System.',
@@ -113,7 +113,7 @@ export const de: Dictionary = {
   },
   specialties: {
     eyebrow: 'Hauptprodukte',
-    titleBefore: 'Kühl- und Tiefkühlräume\u00A0— ',
+    titleBefore: 'Kühl-\u00A0und Tiefkühlräume\u00A0— ',
     titleAccent: 'unsere Spezialität',
     lead: 'Wir bauen Kammern im Sandwichpaneel- und traditionellen System, einschließlich Auswahl und Montage der Kühl- und Tiefkühlzargen.',
     items: [
