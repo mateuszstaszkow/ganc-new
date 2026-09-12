@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#05121f" />
     <meta name="theme-color" content="#05121f" media="(prefers-color-scheme: dark)" />
     <meta name="theme-color" content="#00A0E3" media="(prefers-color-scheme: light)" />
 
@@ -32,9 +33,6 @@
     <meta name="apple-mobile-web-app-title" content="GANC IZOLACJE" />
     <meta name="format-detection" content="telephone=yes" />
 
-    <link rel="preconnect" href="https://rsms.me/" />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -63,9 +61,131 @@
         ]
       }
     </script>
+
+    <!--
+      First paint must not wait for the JS bundle. This shell lives inside #root
+      so React replaces it on mount; until then the phone already shows the
+      real headline, lead and contact actions.
+    -->
+    <style>
+      html,
+      body {
+        margin: 0;
+        background: #05121f;
+        color: #eceff5;
+      }
+      #boot {
+        box-sizing: border-box;
+        min-height: 100svh;
+        padding: max(1.15rem, env(safe-area-inset-top)) 1.25rem 2rem;
+        font-family: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      }
+      #boot .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        min-height: 2.75rem;
+      }
+      #boot .brand svg {
+        display: block;
+        height: 1.25rem;
+        width: auto;
+      }
+      #boot .brand strong {
+        display: block;
+        font-size: 0.9rem;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        color: #fff;
+        line-height: 1;
+      }
+      #boot .brand span {
+        display: block;
+        margin-top: 0.2rem;
+        font-size: 0.6rem;
+        font-weight: 600;
+        letter-spacing: 0.3em;
+        color: #4bb9f6;
+        line-height: 1;
+      }
+      #boot .kicker {
+        margin: 5.5rem 0 0;
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: #e2f2fe;
+      }
+      #boot h1 {
+        margin: 1rem 0 0;
+        max-width: 16ch;
+        font-size: clamp(2.5rem, 11vw, 4.25rem);
+        font-weight: 800;
+        line-height: 1.08;
+        letter-spacing: -0.012em;
+        color: #fff;
+      }
+      #boot h1 em {
+        font-style: normal;
+        color: #00a0e3;
+      }
+      #boot .lead {
+        margin: 1.5rem 0 0;
+        max-width: 36rem;
+        font-size: 1.05rem;
+        line-height: 1.65;
+        color: #b3bfd1;
+      }
+      #boot .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 2rem;
+        max-width: 22rem;
+      }
+      #boot a {
+        display: block;
+        padding: 0.9rem 1.25rem;
+        border-radius: 999px;
+        font-weight: 700;
+        text-align: center;
+        text-decoration: none;
+      }
+      #boot .primary {
+        background: #00a0e3;
+        color: #fff;
+      }
+      #boot .secondary {
+        border: 1px solid rgb(255 255 255 / 0.18);
+        color: #eceff5;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div id="boot">
+        <div class="brand">
+          <svg viewBox="0 0 480 147" aria-hidden="true" focusable="false">
+            <path fill="#E31E24" d="M346 12h120v46h-11V23h-98v35h-11z" />
+            <path fill="#00A0E3" d="M346 89h11v34h98V89h11v45H346z" />
+            <rect fill="#00A0E3" x="14" y="68" width="379" height="12" />
+            <rect fill="#00A0E3" x="420" y="68" width="46" height="12" />
+          </svg>
+          <p>
+            <strong>GANC</strong>
+            <span>IZOLACJE</span>
+          </p>
+        </div>
+        <p class="kicker">Specjalistyczne izolacje dla handlu i przemysłu</p>
+        <h1>Budujemy chłodnie i mroźnie <em>w całej Polsce</em></h1>
+        <p class="lead">
+          Podstawową gałęzią naszych usług jest budowa chłodni i mroźni w obiektach handlowych i
+          produkcyjnych — w systemie płyt warstwowych oraz tradycyjnym.
+        </p>
+        <div class="actions">
+          <a class="primary" href="#kontakt">Zapytaj o wycenę</a>
+          <a class="secondary" href="tel:+48943171490">+48 94 317 14 90</a>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

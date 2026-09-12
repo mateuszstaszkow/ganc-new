@@ -47,6 +47,7 @@ export default defineConfig({
     githubPagesSpa(),
     VitePWA({
       registerType: 'autoUpdate',
+      injectRegister: false,
       includeAssets: ['favicon.svg', 'apple-touch-icon.png', 'robots.txt'],
       manifest: {
         name: 'GANC IZOLACJE Sp. z o.o. — chłodnie i mroźnie',

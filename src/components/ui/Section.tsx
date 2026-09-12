@@ -20,7 +20,7 @@ export function Section({ id, children, className, decorated = false }: SectionP
           <div aria-hidden="true" className="grid-lines pointer-events-none absolute inset-0 opacity-60" />
           <div
             aria-hidden="true"
-            className="pointer-events-none absolute -top-32 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-ice-500/12 blur-[120px]"
+            className="hero-orb pointer-events-none absolute -top-32 left-1/2 h-72 w-[42rem] -translate-x-1/2 rounded-full bg-ice-500/12 blur-[120px]"
           />
         </>
       )}

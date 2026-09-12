@@ -1,5 +1,6 @@
 import { motion, useReducedMotion, type Variants } from 'framer-motion'
 import type { ElementType, ReactNode } from 'react'
+import { useLiteMotion } from '../../hooks/useLiteMotion'
 
 type Direction = 'up' | 'down' | 'left' | 'right' | 'none'
 
@@ -32,16 +33,17 @@ export function Reveal({
   direction = 'up',
   delay = 0,
   duration = 0.7,
-  blur = true,
+  blur = false,
   className,
   as = 'div',
   once = true,
 }: RevealProps) {
   const reduce = useReducedMotion()
+  const lite = useLiteMotion()
   const MotionTag = motion[as as keyof typeof motion] as typeof motion.div
   const { x, y } = DISTANCE[direction]
 
-  if (reduce) {
+  if (reduce || lite) {
     const Tag = as as ElementType
     return <Tag className={className}>{children}</Tag>
   }
@@ -49,8 +51,8 @@ export function Reveal({
   return (
     <MotionTag
       className={className}
-      initial={{ opacity: 0, x, y, filter: blur ? 'blur(10px)' : 'blur(0px)' }}
-      whileInView={{ opacity: 1, x: 0, y: 0, filter: 'blur(0px)' }}
+      initial={{ opacity: 0, x, y, ...(blur ? { filter: 'blur(10px)' } : {}) }}
+      whileInView={{ opacity: 1, x: 0, y: 0, ...(blur ? { filter: 'blur(0px)' } : {}) }}
       viewport={{ once, margin: '-64px 0px -64px 0px' }}
       transition={{ duration, delay, ease: [0.16, 1, 0.3, 1] }}
     >
@@ -66,11 +68,10 @@ export const staggerParent: Variants = {
 }
 
 export const staggerChild: Variants = {
-  hidden: { opacity: 0, y: 28, filter: 'blur(8px)' },
+  hidden: { opacity: 0, y: 28 },
   shown: {
     opacity: 1,
     y: 0,
-    filter: 'blur(0px)',
     transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] },
   },
 }
@@ -83,9 +84,10 @@ type StaggerProps = {
 
 export function Stagger({ children, className, as = 'div' }: StaggerProps) {
   const reduce = useReducedMotion()
+  const lite = useLiteMotion()
   const MotionTag = motion[as as keyof typeof motion] as typeof motion.div
 
-  if (reduce) {
+  if (reduce || lite) {
     const Tag = as as ElementType
     return <Tag className={className}>{children}</Tag>
   }
@@ -109,9 +111,10 @@ export function StaggerItem({
   as = 'div',
 }: StaggerProps) {
   const reduce = useReducedMotion()
+  const lite = useLiteMotion()
   const MotionTag = motion[as as keyof typeof motion] as typeof motion.div
 
-  if (reduce) {
+  if (reduce || lite) {
     const Tag = as as ElementType
     return <Tag className={className}>{children}</Tag>
   }

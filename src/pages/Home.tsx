@@ -1,16 +1,20 @@
-import { About } from '../components/About'
-import { Careers } from '../components/Careers'
-import { Contact } from '../components/Contact'
-import { Footer } from '../components/Footer'
-import { Gallery } from '../components/Gallery'
+import { lazy, Suspense } from 'react'
 import { Header } from '../components/Header'
 import { Hero } from '../components/Hero'
-import { Offer } from '../components/Offer'
-import { Partners } from '../components/Partners'
-import { Process } from '../components/Process'
-import { Specialties } from '../components/Specialties'
-import { Marquee } from '../components/ui/Marquee'
 import { marqueeItems } from '../data/content'
+
+const Marquee = lazy(() => import('../components/ui/Marquee').then((m) => ({ default: m.Marquee })))
+const About = lazy(() => import('../components/About').then((m) => ({ default: m.About })))
+const Specialties = lazy(() =>
+  import('../components/Specialties').then((m) => ({ default: m.Specialties })),
+)
+const Offer = lazy(() => import('../components/Offer').then((m) => ({ default: m.Offer })))
+const Gallery = lazy(() => import('../components/Gallery').then((m) => ({ default: m.Gallery })))
+const Process = lazy(() => import('../components/Process').then((m) => ({ default: m.Process })))
+const Partners = lazy(() => import('../components/Partners').then((m) => ({ default: m.Partners })))
+const Careers = lazy(() => import('../components/Careers').then((m) => ({ default: m.Careers })))
+const Contact = lazy(() => import('../components/Contact').then((m) => ({ default: m.Contact })))
+const Footer = lazy(() => import('../components/Footer').then((m) => ({ default: m.Footer })))
 
 export default function Home() {
   return (
@@ -18,17 +22,21 @@ export default function Home() {
       <Header />
       <main id="tresc">
         <Hero />
-        <Marquee items={marqueeItems} />
-        <About />
-        <Specialties />
-        <Offer />
-        <Gallery />
-        <Process />
-        <Partners />
-        <Careers />
-        <Contact />
+        <Suspense fallback={<div className="min-h-[40vh] bg-steel-950" aria-hidden="true" />}>
+          <Marquee items={marqueeItems} />
+          <About />
+          <Specialties />
+          <Offer />
+          <Gallery />
+          <Process />
+          <Partners />
+          <Careers />
+          <Contact />
+        </Suspense>
       </main>
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </>
   )
 }

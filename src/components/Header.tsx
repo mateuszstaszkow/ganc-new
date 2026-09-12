@@ -2,6 +2,7 @@ import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { company, nav } from '../data/content'
+import { useLiteMotion } from '../hooks/useLiteMotion'
 import { useLockBodyScroll } from '../hooks/useLockBodyScroll'
 import { useScrollSpy } from '../hooks/useScrollSpy'
 import { Icon } from './ui/Icon'
@@ -12,6 +13,7 @@ const SECTION_IDS = nav.map((item) => item.id)
 export function Header({ onHome = true }: { onHome?: boolean }) {
   const [open, setOpen] = useState(false)
   const [condensed, setCondensed] = useState(false)
+  const lite = useLiteMotion()
   const { scrollY } = useScroll()
   const active = useScrollSpy(SECTION_IDS)
 
@@ -38,7 +40,7 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
       >
         <div className="shell flex items-center justify-between gap-4">
           <Link to="/" aria-label={`${company.legalName} — strona główna`} className="shrink-0">
-            <Logo animate />
+            <Logo animate={!lite} />
           </Link>
 
           <nav aria-label="Menu główne" className="hidden lg:block">

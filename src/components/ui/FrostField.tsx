@@ -24,6 +24,9 @@ export function FrostField({ className }: { className?: string }) {
 
   useEffect(() => {
     if (reduce) return
+    // iPhone-class devices: skip the rAF loop entirely. A 3x canvas behind
+    // the hero is the main reason the first screen felt empty / stuck.
+    if (window.matchMedia('(max-width: 1023px), (pointer: coarse)').matches) return
     const canvas = canvasRef.current
     if (!canvas) return
     const ctx = canvas.getContext('2d')

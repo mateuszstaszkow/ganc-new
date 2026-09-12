@@ -8,6 +8,7 @@ import {
 } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { company, hero } from '../data/content'
+import { useLiteMotion } from '../hooks/useLiteMotion'
 import { ButtonLink } from './ui/Button'
 import { FrostField } from './ui/FrostField'
 import { Icon } from './ui/Icon'
@@ -62,6 +63,7 @@ function TemperatureReadout() {
 
 /** Exploded view of a sandwich panel — the core material GANC builds with. */
 function PanelStack() {
+  const lite = useLiteMotion()
   const layers = [
     { label: 'Blacha powlekana', className: 'bg-steel-200/90', height: 'h-2.5' },
     { label: 'Rdzeń izolacyjny', className: 'bg-gradient-to-r from-ice-200/80 to-white/70', height: 'h-14' },
@@ -75,8 +77,8 @@ function PanelStack() {
         {layers.map((layer, index) => (
           <motion.div
             key={layer.label}
-            initial={{ opacity: 0, x: -18, scaleX: 0.9 }}
-            animate={{ opacity: 1, x: 0, scaleX: 1 }}
+            initial={lite ? false : { opacity: 0, x: -18, scaleX: 0.9 }}
+            animate={lite ? undefined : { opacity: 1, x: 0, scaleX: 1 }}
             transition={{ delay: 1.1 + index * 0.16, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             style={{ originX: 0 }}
             className="flex items-center gap-3"
@@ -94,13 +96,16 @@ function PanelStack() {
 
 export function Hero() {
   const reduce = useReducedMotion()
+  const lite = useLiteMotion()
   const { scrollYProgress } = useScroll()
 
   // Gentle parallax: the hero drifts up and dims as the next section arrives.
-  const y = useTransform(scrollYProgress, [0, 0.16], [0, reduce ? 0 : -90])
-  const opacity = useTransform(scrollYProgress, [0, 0.13], [1, reduce ? 1 : 0.1])
+  // Phones skip this — a transform on the whole hero is a jank source on iOS.
+  const y = useTransform(scrollYProgress, [0, 0.16], [0, lite ? 0 : -90])
+  const opacity = useTransform(scrollYProgress, [0, 0.13], [1, lite ? 1 : 0.1])
 
   const words = hero.titleLines.join(' ').split(' ')
+  const enter = !lite && !reduce
 
   return (
     <section
@@ -113,17 +118,17 @@ export function Hero() {
         <div className="absolute inset-0 bg-steel-950" />
         <div className="grid-lines absolute inset-0 opacity-70" />
 
-        <div className="absolute -top-40 -left-32 size-[38rem] animate-drift rounded-full bg-ice-600/25 blur-[130px]" />
+        <div className="hero-orb absolute -top-40 -left-32 size-[38rem] animate-drift rounded-full bg-ice-600/25 blur-[130px]" />
         <div
-          className="absolute -right-28 top-1/4 size-[32rem] animate-drift rounded-full bg-ice-400/18 blur-[120px]"
+          className="hero-orb absolute -right-28 top-1/4 size-[32rem] animate-drift rounded-full bg-ice-400/18 blur-[120px]"
           style={{ animationDelay: '-7s' }}
         />
         <div
-          className="absolute -bottom-20 left-1/3 size-[26rem] animate-drift rounded-full bg-ember-600/14 blur-[120px]"
+          className="hero-orb absolute -bottom-20 left-1/3 size-[26rem] animate-drift rounded-full bg-ember-600/14 blur-[120px]"
           style={{ animationDelay: '-14s' }}
         />
 
-        <FrostField className="absolute inset-0 h-full w-full" />
+        {!lite && <FrostField className="absolute inset-0 h-full w-full" />}
 
         <div className="noise absolute inset-0 opacity-[0.16] mix-blend-overlay" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-steel-950 to-transparent" />
@@ -134,8 +139,8 @@ export function Hero() {
           {/* ---- copy ---- */}
           <div>
             <motion.p
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={enter ? { opacity: 0, y: 16 } : false}
+              animate={enter ? { opacity: 1, y: 0 } : undefined}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="glass inline-flex items-center gap-2.5 rounded-full py-2 pr-4 pl-2.5 text-xs font-semibold text-ice-100 sm:text-sm"
             >
@@ -154,11 +159,11 @@ export function Hero() {
                 {words.map((word, index) => (
                   <motion.span
                     key={`${word}-${index}`}
-                    initial={reduce ? false : { opacity: 0, y: 32, filter: 'blur(12px)' }}
-                    animate={reduce ? undefined : { opacity: 1, y: 0, filter: 'blur(0px)' }}
+                    initial={enter ? { opacity: 0, y: 24 } : false}
+                    animate={enter ? { opacity: 1, y: 0 } : undefined}
                     transition={{
-                      delay: 0.15 + index * 0.09,
-                      duration: 0.85,
+                      delay: 0.12 + index * 0.07,
+                      duration: 0.6,
                       ease: [0.16, 1, 0.3, 1],
                     }}
                     className="mr-[0.24em] inline-block"
@@ -167,11 +172,11 @@ export function Hero() {
                   </motion.span>
                 ))}
                 <motion.span
-                  initial={reduce ? false : { opacity: 0, y: 32, filter: 'blur(12px)' }}
-                  animate={reduce ? undefined : { opacity: 1, y: 0, filter: 'blur(0px)' }}
+                  initial={enter ? { opacity: 0, y: 24 } : false}
+                  animate={enter ? { opacity: 1, y: 0 } : undefined}
                   transition={{
-                    delay: 0.15 + words.length * 0.09,
-                    duration: 0.85,
+                    delay: 0.12 + words.length * 0.07,
+                    duration: 0.6,
                     ease: [0.16, 1, 0.3, 1],
                   }}
                   className="text-gradient-ice inline-block"
@@ -182,18 +187,18 @@ export function Hero() {
             </h1>
 
             <motion.p
-              initial={reduce ? false : { opacity: 0, y: 22 }}
-              animate={reduce ? undefined : { opacity: 1, y: 0 }}
-              transition={{ delay: 0.62, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+              initial={enter ? { opacity: 0, y: 18 } : false}
+              animate={enter ? { opacity: 1, y: 0 } : undefined}
+              transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="mt-7 max-w-xl text-fluid-lg text-steel-300"
             >
               {hero.lead}
             </motion.p>
 
             <motion.div
-              initial={reduce ? false : { opacity: 0, y: 22 }}
-              animate={reduce ? undefined : { opacity: 1, y: 0 }}
-              transition={{ delay: 0.76, duration: 0.75, ease: [0.16, 1, 0.3, 1] }}
+              initial={enter ? { opacity: 0, y: 18 } : false}
+              animate={enter ? { opacity: 1, y: 0 } : undefined}
+              transition={{ delay: 0.55, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
               className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center"
             >
               <ButtonLink href={hero.primaryCta.href} className="w-full sm:w-auto">
@@ -213,9 +218,9 @@ export function Hero() {
             </motion.div>
 
             <motion.p
-              initial={reduce ? false : { opacity: 0 }}
-              animate={reduce ? undefined : { opacity: 1 }}
-              transition={{ delay: 1, duration: 0.7 }}
+              initial={enter ? { opacity: 0 } : false}
+              animate={enter ? { opacity: 1 } : undefined}
+              transition={{ delay: 0.7, duration: 0.5 }}
               className="mt-8 flex flex-wrap items-center gap-x-2 gap-y-1 text-sm text-steel-400"
             >
               <Icon name="pin" className="size-4 text-ember-500" />
@@ -234,9 +239,9 @@ export function Hero() {
 
           {/* ---- visual ---- */}
           <motion.div
-            initial={reduce ? false : { opacity: 0, y: 40, scale: 0.96 }}
-            animate={reduce ? undefined : { opacity: 1, y: 0, scale: 1 }}
-            transition={{ delay: 0.5, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            initial={enter ? { opacity: 0, y: 28 } : false}
+            animate={enter ? { opacity: 1, y: 0 } : undefined}
+            transition={{ delay: 0.35, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="relative mx-auto w-full max-w-md lg:max-w-none"
           >
             <div className="glass relative overflow-hidden rounded-3xl p-5 sm:p-7">

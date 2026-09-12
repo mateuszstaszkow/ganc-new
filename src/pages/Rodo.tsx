@@ -13,7 +13,7 @@ export default function Rodo() {
       <main id="tresc" className="relative overflow-hidden pt-32 pb-24 sm:pt-40">
         <div aria-hidden="true" className="absolute inset-0 -z-10">
           <div className="grid-lines absolute inset-0 opacity-50" />
-          <div className="absolute -top-40 left-1/2 size-[34rem] -translate-x-1/2 rounded-full bg-ice-600/18 blur-[130px]" />
+          <div className="hero-orb absolute -top-40 left-1/2 size-[34rem] -translate-x-1/2 rounded-full bg-ice-600/18 blur-[130px]" />
         </div>
 
         <div className="shell max-w-3xl">

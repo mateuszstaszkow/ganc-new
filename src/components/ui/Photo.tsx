@@ -75,7 +75,7 @@ export function Photo({
           width={entry.width}
           height={entry.height}
           loading={priority ? 'eager' : 'lazy'}
-          decoding={priority ? 'sync' : 'async'}
+          decoding="async"
           fetchPriority={priority ? 'high' : 'auto'}
           onLoad={() => setLoaded(true)}
           className={`h-full w-full object-cover transition-[opacity,transform] duration-700 ${
