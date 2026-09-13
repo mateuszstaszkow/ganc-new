@@ -4,7 +4,7 @@ export const en: Dictionary = {
   meta: {
     title: 'GANC IZOLACJE Sp. z o.o. — cold rooms and freezer rooms | Sianów',
     description:
-      'GANC IZOLACJE Sp. z o.o. — construction of cold rooms and freezer rooms in sandwich-panel and traditional systems, thermal insulation, COOLIT, EMS and PFEUFER cold-store doors, industrial flooring and halls. Based in Sianów, projects across Poland.',
+      'GANC IZOLACJE Sp. z o.o. — construction of cold rooms and freezer rooms in sandwich-panel and traditional systems, thermal insulation, COOLIT, EMS and PFEUFER cold-store doors, industrial flooring and halls. Based in Sianów, projects in Poland and Germany.',
   },
   ui: {
     skipToContent: 'Skip to content',
@@ -44,7 +44,7 @@ export const en: Dictionary = {
   hero: {
     kicker: 'Specialist insulation for retail and industry',
     titleLines: ['We build cold rooms', 'and freezer rooms'],
-    titleAccent: 'across Poland',
+    titleAccent: 'in Poland and Germany',
     lead:
       'Our core service is the construction of cold rooms and freezer rooms in retail and production buildings — in sandwich-panel and traditional systems.',
     primaryCta: 'Ask for a quote',
@@ -61,10 +61,10 @@ export const en: Dictionary = {
   },
   trustPoints: [
     {
-      value: 'All of Poland',
+      value: 'Poland & Germany',
       label: 'Project coverage',
       detail:
-        'Complete construction of cold and freezer chambers in retail and industrial buildings throughout Poland.',
+        'Complete construction of cold and freezer chambers in retail and industrial buildings in Poland and Germany.',
     },
     {
       value: 'Many years',
@@ -100,7 +100,7 @@ export const en: Dictionary = {
     lead: 'A company with an established position in specialist insulation for retail and industry.',
     paragraphs: [
       'GANC IZOLACJE Sp. z o.o. is a company with an established position in specialist insulation services for retail and industry. Our core offering is the construction of cold rooms and freezer rooms in retail and production buildings, in sandwich-panel and traditional systems. We also specialise in the supply and installation of doors for cold rooms and freezer rooms (internal and external). We carry out specialist flooring and tiling works in industrial buildings. We design and build warehouse and production halls.',
-      'The engineering staff and employees of GANC Izolacje Sp. z o.o. have many years of industry experience, which is why our work is characterised by the highest quality and precision. The company has delivered many complete cold and freezer chamber projects in retail and industrial buildings across Poland. We have also completed panel cladding of steel structures for warehouse and production halls.',
+      'The engineering staff and employees of GANC Izolacje Sp. z o.o. have many years of industry experience, which is why our work is characterised by the highest quality and precision. The company has delivered many complete cold and freezer chamber projects in retail and industrial buildings in Poland and Germany. We have also completed panel cladding of steel structures for warehouse and production halls.',
       'Every investment is analysed in detail with the investor with a view to cost optimisation. As a rule we recommend proven materials whose quality guarantees durability and reliability. We are an authorised sales partner and distributor in Poland for doors from the German manufacturers COOLIT, EMS and PFEUFER, made from high-grade materials with low thermal transmittance.',
       'We always do our utmost so that every client is fully satisfied with the level of service we provide.',
     ],
@@ -237,7 +237,7 @@ export const en: Dictionary = {
   gallery: {
     eyebrow: 'Projects',
     title: 'Selected work',
-    lead: 'Cold and freezer chambers, panel hall cladding, door sets and docks — from projects delivered across Poland.',
+    lead: 'Cold and freezer chambers, panel hall cladding, door sets and docks — from projects delivered in Poland and Germany.',
     all: 'All',
     filterAria: 'Filter projects',
     closePreview: 'Close preview',
@@ -299,8 +299,7 @@ export const en: Dictionary = {
   contact: {
     heading: 'Contact',
     lead: 'Write or call — we will answer questions about the scope of work and pricing.',
-    formNote:
-      'The form opens your mail app with a prepared message. You can also write directly to the office address.',
+    formNote: 'Your message will be sent directly to biuro@ganc.com.pl.',
     address: 'Address',
     phone: 'Phone',
     email: 'E-mail',
@@ -308,17 +307,25 @@ export const en: Dictionary = {
     hr: 'HR',
     name: 'Full name *',
     namePlaceholder: 'John Smith',
+    emailField: 'E-mail *',
+    emailPlaceholder: 'john@company.com',
     companyField: 'Company',
     companyPlaceholder: 'Company name',
     phoneField: 'Phone',
     message: 'Project description *',
     messagePlaceholder: 'Type of building, scope of work, planned date, location…',
     submit: 'Send enquiry',
+    sending: 'Sending…',
+    success: 'Thank you. Your message has been sent to the office.',
+    error: 'The message could not be sent. Please email biuro@ganc.com.pl or call us.',
+    sendAnother: 'Send another enquiry',
     mailSubject: 'Enquiry from the GANC website',
     mailName: 'Full name',
+    mailEmail: 'E-mail',
     mailCompany: 'Company',
     mailPhone: 'Phone',
     mapTitle: 'Map',
+    openMap: 'Open in Google Maps',
   },
   footer: {
     blurb:

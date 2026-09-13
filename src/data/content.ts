@@ -15,7 +15,11 @@ export const company = {
   phoneSecondaryHref: '+48943186689',
   email: 'biuro@ganc.com.pl',
   emailHr: 'sekretariat@ganc.com.pl',
-  geo: { lat: 54.2436, lng: 16.2903 },
+  nip: '6692518755',
+  krs: '0000452240',
+  regon: '321340115',
+  mapsUrl: 'https://share.google/D0jEWyM3Qf6vJuNAP',
+  geo: { lat: 54.23097, lng: 16.29725 },
 } as const
 
 export const SECTION_IDS = [

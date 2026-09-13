@@ -9,35 +9,79 @@ import { Section, SectionHeading } from './ui/Section'
 const FIELD =
   'w-full rounded-xl border border-white/12 bg-white/5 px-4 py-3 text-white placeholder:text-steel-500 transition-colors focus:border-ice-400/60 focus:bg-white/8 focus:outline-none'
 
+const EMPTY_FORM = {
+  name: '',
+  email: '',
+  company: '',
+  phone: '',
+  message: '',
+  website: '',
+}
+
+type FormState = typeof EMPTY_FORM
+type Status = 'idle' | 'sending' | 'success' | 'error'
+
 function ContactForm() {
   const { t } = useI18n()
   const c = t.contact
-  const [form, setForm] = useState({ name: '', company: '', phone: '', message: '' })
+  const [form, setForm] = useState<FormState>(EMPTY_FORM)
+  const [status, setStatus] = useState<Status>('idle')
 
-  const update = (key: keyof typeof form) => (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+  const update = (key: keyof FormState) => (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
     setForm((prev) => ({ ...prev, [key]: event.target.value }))
 
-  const submit = (event: React.FormEvent) => {
+  const submit = async (event: React.FormEvent) => {
     event.preventDefault()
-    const body = [
-      `${c.mailName}: ${form.name}`,
-      form.company && `${c.mailCompany}: ${form.company}`,
-      form.phone && `${c.mailPhone}: ${form.phone}`,
-      '',
-      form.message,
-    ]
-      .filter(Boolean)
-      .join('\n')
+    if (form.website) return
 
-    window.location.href = `mailto:${company.email}?subject=${encodeURIComponent(
-      c.mailSubject,
-    )}&body=${encodeURIComponent(body)}`
+    setStatus('sending')
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${company.email}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          [c.mailCompany]: form.company || '—',
+          [c.mailPhone]: form.phone || '—',
+          message: form.message,
+          _subject: c.mailSubject,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      })
+
+      const data = (await response.json()) as { success?: boolean | string }
+      if (!response.ok || data.success === false || data.success === 'false') {
+        throw new Error('submit failed')
+      }
+
+      setForm(EMPTY_FORM)
+      setStatus('success')
+    } catch {
+      setStatus('error')
+    }
+  }
+
+  if (status === 'success') {
+    return (
+      <div className="glass rounded-3xl p-6 sm:p-8" role="status">
+        <p className="flex items-start gap-3 text-ice-100">
+          <Icon name="check" className="mt-0.5 size-5 shrink-0 text-ice-300" />
+          <span>{c.success}</span>
+        </p>
+        <Button type="button" variant="secondary" className="mt-6 w-full" onClick={() => setStatus('idle')}>
+          {c.sendAnother}
+        </Button>
+      </div>
+    )
   }
 
   return (
-    <form onSubmit={submit} className="glass rounded-3xl p-6 sm:p-8">
+    <form onSubmit={submit} className="relative glass rounded-3xl p-6 sm:p-8">
       <div className="grid gap-4 sm:grid-cols-2">
-        <label className="block sm:col-span-2">
+        <label className="block">
           <span className="mb-1.5 block text-xs font-bold tracking-[0.16em] text-steel-400 uppercase">
             {c.name}
           </span>
@@ -49,6 +93,22 @@ function ContactForm() {
             value={form.name}
             onChange={update('name')}
             placeholder={c.namePlaceholder}
+            className={FIELD}
+          />
+        </label>
+
+        <label className="block">
+          <span className="mb-1.5 block text-xs font-bold tracking-[0.16em] text-steel-400 uppercase">
+            {c.emailField}
+          </span>
+          <input
+            required
+            type="email"
+            name="email"
+            autoComplete="email"
+            value={form.email}
+            onChange={update('email')}
+            placeholder={c.emailPlaceholder}
             className={FIELD}
           />
         </label>
@@ -100,13 +160,32 @@ function ContactForm() {
         </label>
       </div>
 
-      <Button type="submit" className="mt-6 w-full">
-        {c.submit}
-        <Icon
-          name="arrowRight"
-          className="size-4 transition-transform duration-300 group-hover/btn:translate-x-1"
-        />
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        value={form.website}
+        onChange={update('website')}
+        className="hidden"
+        aria-hidden="true"
+      />
+
+      <Button type="submit" className="mt-6 w-full" disabled={status === 'sending'}>
+        {status === 'sending' ? c.sending : c.submit}
+        {status !== 'sending' && (
+          <Icon
+            name="arrowRight"
+            className="size-4 transition-transform duration-300 group-hover/btn:translate-x-1"
+          />
+        )}
       </Button>
+
+      {status === 'error' && (
+        <p className="mt-4 text-sm leading-relaxed text-ember-400" role="alert">
+          {c.error}
+        </p>
+      )}
 
       <p className="mt-4 text-xs leading-relaxed text-steel-500">{c.formNote}</p>
     </form>
@@ -114,7 +193,7 @@ function ContactForm() {
 }
 
 export function Contact() {
-  const { t } = useI18n()
+  const { t, locale } = useI18n()
   const c = t.contact
 
   const details: {
@@ -128,10 +207,8 @@ export function Contact() {
       icon: 'pin',
       label: c.address,
       value: `${company.street}, ${company.postalCode} ${company.city}`,
-      href: `https://www.openstreetmap.org/search?query=${encodeURIComponent(
-        `${company.street} ${company.postalCode} ${company.city}`,
-      )}`,
-      note: t.company.region,
+      href: company.mapsUrl,
+      note: `NIP ${company.nip} · KRS ${company.krs} · REGON ${company.regon}`,
     },
     {
       icon: 'phone',
@@ -149,11 +226,8 @@ export function Contact() {
     },
   ]
 
-  const mapSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${
-    company.geo.lng - 0.022
-  }%2C${company.geo.lat - 0.011}%2C${company.geo.lng + 0.022}%2C${
-    company.geo.lat + 0.011
-  }&layer=mapnik&marker=${company.geo.lat}%2C${company.geo.lng}`
+  const mapQuery = encodeURIComponent(`${company.street}, ${company.postalCode} ${company.city}, Polska`)
+  const mapSrc = `https://maps.google.com/maps?q=${mapQuery}&z=17&hl=${locale}&output=embed`
 
   return (
     <Section id="kontakt" decorated className="bg-steel-950">
@@ -206,8 +280,16 @@ export function Contact() {
                 src={mapSrc}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="h-64 w-full border-0 grayscale-[0.35] contrast-[1.05]"
+                className="h-64 w-full border-0"
               />
+              <a
+                href={company.mapsUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="block bg-steel-900/90 px-4 py-2.5 text-center text-xs font-semibold tracking-wide text-ice-300 transition-colors hover:bg-steel-800 hover:text-white"
+              >
+                {c.openMap}
+              </a>
             </div>
           </Reveal>
         </div>

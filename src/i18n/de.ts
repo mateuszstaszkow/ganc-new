@@ -4,7 +4,7 @@ export const de: Dictionary = {
   meta: {
     title: 'GANC IZOLACJE Sp. z o.o. — Kühl- und Tiefkühlräume | Sianów',
     description:
-      'GANC IZOLACJE Sp. z o.o. — Bau von Kühl- und Tiefkühlräumen im Sandwichpaneel- und traditionellen System, Wärmedämmung, Kühltüren von COOLIT, EMS und PFEUFER, Industrieböden und Hallen. Sitz in Sianów, Projekte in ganz Polen.',
+      'GANC IZOLACJE Sp. z o.o. — Bau von Kühl- und Tiefkühlräumen im Sandwichpaneel- und traditionellen System, Wärmedämmung, Kühltüren von COOLIT, EMS und PFEUFER, Industrieböden und Hallen. Sitz in Sianów, Projekte in Polen und Deutschland.',
   },
   ui: {
     skipToContent: 'Zum Inhalt springen',
@@ -44,7 +44,7 @@ export const de: Dictionary = {
   hero: {
     kicker: 'Dämmung für Handel und Industrie',
     titleLines: ['Wir bauen Kühlräume', 'und Tiefkühlräume'],
-    titleAccent: 'in ganz Polen',
+    titleAccent: 'in Polen und Deutschland',
     lead:
       'Unser Kerngeschäft ist der Bau von Kühl- und Tiefkühlräumen in Handels- und Produktionsobjekten — im Sandwichpaneel- und im traditionellen System.',
     primaryCta: 'Angebot anfragen',
@@ -61,10 +61,10 @@ export const de: Dictionary = {
   },
   trustPoints: [
     {
-      value: 'Ganz Polen',
+      value: 'Polen und Deutschland',
       label: 'Einsatzgebiet',
       detail:
-        'Kompletter Bau von Kühl- und Tiefkühlkammern in Handels- und Industrieobjekten in ganz Polen.',
+        'Kompletter Bau von Kühl- und Tiefkühlkammern in Handels- und Industrieobjekten in Polen und Deutschland.',
     },
     {
       value: 'Langjährig',
@@ -100,7 +100,7 @@ export const de: Dictionary = {
     lead: 'Ein Unternehmen mit gefestigter Position bei Spezialdämmungen für Handel und Industrie.',
     paragraphs: [
       'GANC IZOLACJE Sp. z o.o. ist ein Unternehmen mit gefestigter Position auf dem Markt für Spezialdämmungen für Handel und Industrie. Das Kerngeschäft von GANC Izolacje Sp. z o.o. ist der Bau von Kühl- und Tiefkühlräumen in Handels- und Produktionsobjekten im Sandwichpaneel- und im traditionellen System. Darüber hinaus sind wir auf Lieferung und Montage von Türen für Kühl- und Tiefkühlräume (innen und außen) spezialisiert. Wir führen Spezialarbeiten für Industrieböden und Fliesen in Industrieobjekten aus. Wir planen und errichten Lager- und Produktionshallen.',
-      'Die Ingenieure und Mitarbeiter von GANC Izolacje Sp. z o.o. verfügen über langjährige Branchenerfahrung, daher zeichnet sich unsere Ausführung durch höchste Qualität und Präzision aus. Das Unternehmen hat zahlreiche komplette Kühl- und Tiefkühlkammern in Handels- und Industrieobjekten in ganz Polen realisiert. Zum Portfolio gehören auch Paneelbekleidungen von Stahlkonstruktionen für Lager- und Produktionshallen.',
+      'Die Ingenieure und Mitarbeiter von GANC Izolacje Sp. z o.o. verfügen über langjährige Branchenerfahrung, daher zeichnet sich unsere Ausführung durch höchste Qualität und Präzision aus. Das Unternehmen hat zahlreiche komplette Kühl- und Tiefkühlkammern in Handels- und Industrieobjekten in Polen und Deutschland realisiert. Zum Portfolio gehören auch Paneelbekleidungen von Stahlkonstruktionen für Lager- und Produktionshallen.',
       'Jede Investition wird gemeinsam mit dem Investor genau auf Kostenoptimierung geprüft. Grundsätzlich empfehlen wir bewährte Materialien, deren Qualität Dauerhaftigkeit und Zuverlässigkeit garantiert. Wir sind autorisierter Handelspartner und Vertrieb in Polen für Türen der deutschen Hersteller COOLIT, EMS und PFEUFER aus hochwertigen Materialien mit geringen Wärmedurchgangskoeffizienten.',
       'Wir setzen uns jedes Mal dafür ein, dass jeder Kunde mit dem Niveau unserer Leistungen höchstzufrieden ist.',
     ],
@@ -237,7 +237,7 @@ export const de: Dictionary = {
   gallery: {
     eyebrow: 'Referenzen',
     title: 'Ausgewählte Arbeiten',
-    lead: 'Kühl- und Tiefkühlkammern, Paneelbekleidung von Hallen, Türen und Rampen — aus Projekten in ganz Polen.',
+    lead: 'Kühl- und Tiefkühlkammern, Paneelbekleidung von Hallen, Türen und Rampen — aus Projekten in Polen und Deutschland.',
     all: 'Alle',
     filterAria: 'Referenzen filtern',
     closePreview: 'Vorschau schließen',
@@ -299,8 +299,7 @@ export const de: Dictionary = {
   contact: {
     heading: 'Kontakt',
     lead: 'Schreiben oder anrufen — wir beantworten Fragen zu Leistungsumfang und Angebot.',
-    formNote:
-      'Das Formular öffnet Ihr E-Mail-Programm mit einem vorbereiteten Text. Sie können auch direkt an das Büro schreiben.',
+    formNote: 'Die Nachricht geht direkt an biuro@ganc.com.pl.',
     address: 'Adresse',
     phone: 'Telefon',
     email: 'E-Mail',
@@ -308,17 +307,26 @@ export const de: Dictionary = {
     hr: 'Personal',
     name: 'Vor- und Nachname *',
     namePlaceholder: 'Max Mustermann',
+    emailField: 'E-Mail *',
+    emailPlaceholder: 'max@firma.de',
     companyField: 'Firma',
     companyPlaceholder: 'Firmenname',
     phoneField: 'Telefon',
     message: 'Beschreibung der Investition *',
     messagePlaceholder: 'Objektart, Leistungsumfang, geplanter Termin, Standort…',
     submit: 'Anfrage senden',
+    sending: 'Wird gesendet…',
+    success: 'Vielen Dank. Die Nachricht wurde an das Büro gesendet.',
+    error:
+      'Die Nachricht konnte nicht gesendet werden. Schreiben Sie direkt an biuro@ganc.com.pl oder rufen Sie uns an.',
+    sendAnother: 'Weitere Anfrage senden',
     mailSubject: 'Anfrage über die GANC-Website',
     mailName: 'Vor- und Nachname',
+    mailEmail: 'E-Mail',
     mailCompany: 'Firma',
     mailPhone: 'Telefon',
     mapTitle: 'Karte',
+    openMap: 'In Google Maps öffnen',
   },
   footer: {
     blurb:

@@ -28,6 +28,14 @@ export function Footer({ onHome = true }: { onHome?: boolean }) {
                   {company.street}
                   <br />
                   {company.postalCode} {company.city}
+                  <br />
+                  <span className="mt-1.5 block text-xs text-steel-500">
+                    NIP {company.nip}
+                    <span aria-hidden="true"> · </span>
+                    KRS {company.krs}
+                    <span aria-hidden="true"> · </span>
+                    REGON {company.regon}
+                  </span>
                 </span>
               </p>
               <p>

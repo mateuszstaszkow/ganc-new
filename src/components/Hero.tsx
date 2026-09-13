@@ -183,7 +183,7 @@ export function Hero() {
                     duration: 0.6,
                     ease: [0.16, 1, 0.3, 1],
                   }}
-                  className="text-gradient-ice block whitespace-nowrap"
+                  className="text-gradient-ice block"
                 >
                   {hero.titleAccent}
                 </motion.span>

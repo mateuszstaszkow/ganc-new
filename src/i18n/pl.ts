@@ -2,7 +2,7 @@ export const pl = {
   meta: {
     title: 'GANC IZOLACJE Sp. z o.o. — budowa chłodni i mroźni | Sianów',
     description:
-      'GANC IZOLACJE Sp. z o.o. — budowa chłodni i mroźni w systemie płyt warstwowych i tradycyjnym, izolacje termiczne, drzwi chłodnicze COOLIT, EMS, PFEUFER, posadzki przemysłowe i hale. Sianów, realizacje w całej Polsce.',
+      'GANC IZOLACJE Sp. z o.o. — budowa chłodni i mroźni w systemie płyt warstwowych i tradycyjnym, izolacje termiczne, drzwi chłodnicze COOLIT, EMS, PFEUFER, posadzki przemysłowe i hale. Sianów, realizacje w Polsce i Niemczech.',
   },
   ui: {
     skipToContent: 'Przejdź do treści',
@@ -41,7 +41,7 @@ export const pl = {
   hero: {
     kicker: 'Specjalistyczne izolacje dla handlu i przemysłu',
     titleLines: ['Budujemy', 'chłodnie i mroźnie'],
-    titleAccent: 'w całej Polsce',
+    titleAccent: 'w Polsce i Niemczech',
     lead:
       'Podstawową gałęzią naszych usług jest budowa chłodni i mroźni w obiektach handlowych i produkcyjnych — w systemie płyt warstwowych oraz tradycyjnym.',
     primaryCta: 'Zapytaj o wycenę',
@@ -58,10 +58,10 @@ export const pl = {
   },
   trustPoints: [
     {
-      value: 'Cała Polska',
+      value: 'Polska i Niemcy',
       label: 'Zasięg realizacji',
       detail:
-        'Kompleksowa budowa komór chłodniczych i mroźniczych w obiektach handlowych i przemysłowych na terenie całej Polski.',
+        'Kompleksowa budowa komór chłodniczych i mroźniczych w obiektach handlowych i przemysłowych w Polsce i Niemczech.',
     },
     {
       value: 'Wieloletnie',
@@ -97,7 +97,7 @@ export const pl = {
     lead: 'Firma o ugruntowanej pozycji na rynku specjalistycznych usług izolacyjnych dla handlu i przemysłu.',
     paragraphs: [
       'GANC IZOLACJE Sp. z o.o. to firma o ugruntowanej pozycji na rynku specjalistycznych usług izolacyjnych dla handlu i przemysłu. Podstawową gałęzią usług oferowanych przez GANC Izolacje Sp. z o.o. jest budowa chłodni i mroźni w obiektach handlowych i produkcyjnych w systemie płyt warstwowych oraz tradycyjnym. Ponadto specjalizujemy się w dostawach i montażu drzwi dla chłodni i mroźni (wewnętrznych i zewnętrznych). Wykonujemy specjalistyczne roboty posadzkarskie i płytkarskie obiektów przemysłowych. Projektujemy i wykonujemy hale magazynowe oraz produkcyjne.',
-      'Kadra inżynieryjna oraz pracownicy firmy GANC Izolacje Sp. z o.o. posiadają wieloletnie doświadczenie w branży, dzięki czemu nasze wykonawstwo charakteryzuje się najwyższą jakością i precyzją. Firma jest realizatorem wielu prac w zakresie kompleksowej budowy komór chłodniczych i mroźniczych w obiektach handlowych i przemysłowych na terenie całej Polski. W swoim dorobku posiadamy także realizacje obudowy panelowej konstrukcji stalowych hali magazynowych i produkcyjnych.',
+      'Kadra inżynieryjna oraz pracownicy firmy GANC Izolacje Sp. z o.o. posiadają wieloletnie doświadczenie w branży, dzięki czemu nasze wykonawstwo charakteryzuje się najwyższą jakością i precyzją. Firma jest realizatorem wielu prac w zakresie kompleksowej budowy komór chłodniczych i mroźniczych w obiektach handlowych i przemysłowych w Polsce i Niemczech. W swoim dorobku posiadamy także realizacje obudowy panelowej konstrukcji stalowych hali magazynowych i produkcyjnych.',
       'Każda inwestycja jest dokładnie analizowana z inwestorem pod kątem optymalizacji kosztowej. Z zasady zalecamy naszym klientom sprawdzone materiały o jakości gwarantującej trwałość i niezawodność. Nasza firma jest autoryzowanym partnerem handlowym i dystrybutorem na Polskę drzwi niemieckich producentów COOLIT, EMS oraz PFEUFER, wykonywanych z wysokiej klasy materiałów, posiadających niskie współczynniki przenikalności cieplnej.',
       'Każdorazowo dokładamy wszelkich starań, aby każdy klient był maksymalnie zadowolony z poziomu świadczonych przez nas usług.',
     ],
@@ -234,7 +234,7 @@ export const pl = {
   gallery: {
     eyebrow: 'Realizacje',
     title: 'Wybrane prace',
-    lead: 'Komory chłodnicze i mroźnicze, obudowy panelowe hal, stolarka i rampy — z realizacji prowadzonych na terenie całej Polski.',
+    lead: 'Komory chłodnicze i mroźnicze, obudowy panelowe hal, stolarka i rampy — z realizacji prowadzonych w Polsce i Niemczech.',
     all: 'Wszystkie',
     filterAria: 'Filtruj realizacje',
     closePreview: 'Zamknij podgląd',
@@ -296,8 +296,7 @@ export const pl = {
   contact: {
     heading: 'Kontakt',
     lead: 'Napisz lub zadzwoń — odpowiemy na pytania dotyczące zakresu prac i wyceny.',
-    formNote:
-      'Formularz otworzy Twój program pocztowy z gotową treścią wiadomości. Możesz też napisać bezpośrednio na adres biura.',
+    formNote: 'Wiadomość trafi bezpośrednio na biuro@ganc.com.pl.',
     address: 'Adres',
     phone: 'Telefon',
     email: 'E-mail',
@@ -305,17 +304,26 @@ export const pl = {
     hr: 'Kadry',
     name: 'Imię i nazwisko *',
     namePlaceholder: 'Jan Kowalski',
+    emailField: 'E-mail *',
+    emailPlaceholder: 'jan@firma.pl',
     companyField: 'Firma',
     companyPlaceholder: 'Nazwa firmy',
     phoneField: 'Telefon',
     message: 'Opis inwestycji *',
     messagePlaceholder: 'Rodzaj obiektu, zakres prac, planowany termin, lokalizacja…',
     submit: 'Wyślij zapytanie',
+    sending: 'Wysyłanie…',
+    success: 'Dziękujemy. Wiadomość została wysłana do biura.',
+    error:
+      'Nie udało się wysłać wiadomości. Napisz bezpośrednio na biuro@ganc.com.pl albo zadzwoń.',
+    sendAnother: 'Wyślij kolejne zapytanie',
     mailSubject: 'Zapytanie ze strony ganc.com.pl',
     mailName: 'Imię i nazwisko',
+    mailEmail: 'E-mail',
     mailCompany: 'Firma',
     mailPhone: 'Telefon',
     mapTitle: 'Mapa',
+    openMap: 'Otwórz w Mapach Google',
   },
   footer: {
     blurb:
