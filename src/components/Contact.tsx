@@ -226,8 +226,10 @@ export function Contact() {
     },
   ]
 
-  const mapQuery = encodeURIComponent(`${company.street}, ${company.postalCode} ${company.city}, Polska`)
-  const mapSrc = `https://maps.google.com/maps?q=${mapQuery}&z=17&hl=${locale}&output=embed`
+  const mapQuery = encodeURIComponent(
+    'GANC IZOLACJE Sp. z o.o., ul. Dworcowa 16, 76-004 Sianów',
+  )
+  const mapSrc = `https://maps.google.com/maps?q=${mapQuery}&z=18&hl=${locale}&output=embed`
 
   return (
     <Section id="kontakt" decorated className="bg-steel-950">
@@ -276,7 +278,7 @@ export function Contact() {
           <Reveal direction="up" delay={0.24}>
             <div className="overflow-hidden rounded-2xl ring-1 ring-white/10">
               <iframe
-                title={`${c.mapTitle} — ${company.city}, ${company.street}`}
+                title={`${c.mapTitle} — GANC IZOLACJE, ${company.street}, ${company.city}`}
                 src={mapSrc}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

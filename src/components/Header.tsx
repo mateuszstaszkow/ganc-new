@@ -3,20 +3,16 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { company } from '../data/content'
 import { useI18n } from '../i18n'
-import { useLiteMotion } from '../hooks/useLiteMotion'
 import { useLockBodyScroll } from '../hooks/useLockBodyScroll'
 import { useScrollSpy } from '../hooks/useScrollSpy'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { Icon } from './ui/Icon'
-import { Logo } from './ui/Logo'
-
-const SECTION_IDS = ['o-nas', 'specjalizacje', 'oferta', 'realizacje', 'proces', 'kariera', 'kontakt']
+const SECTION_IDS = ['proces', 'specjalizacje', 'oferta', 'realizacje', 'kariera', 'kontakt', 'o-nas']
 
 export function Header({ onHome = true }: { onHome?: boolean }) {
   const { t, homePath, sectionHref } = useI18n()
   const [open, setOpen] = useState(false)
   const [condensed, setCondensed] = useState(false)
-  const lite = useLiteMotion()
   const { scrollY } = useScroll()
   const active = useScrollSpy(SECTION_IDS)
 
@@ -45,9 +41,15 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
           <Link
             to={homePath}
             aria-label={`${company.legalName} — ${t.ui.homeAria}`}
-            className="shrink-0"
+            className="inline-flex shrink-0"
           >
-            <Logo animate={!lite} />
+            <img
+              src={`${import.meta.env.BASE_URL}logo-lockup-light.png`}
+              alt=""
+              width={988}
+              height={269}
+              className="h-7 w-auto sm:h-8"
+            />
           </Link>
 
           <nav aria-label={t.ui.mainMenu} className="hidden min-w-0 xl:block">
@@ -134,7 +136,20 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
               className="absolute inset-y-0 right-0 flex w-full max-w-sm flex-col border-l border-white/10 bg-steel-900 shadow-2xl"
             >
               <div className="flex items-center justify-between border-b border-white/10 px-6 py-4">
-                <Logo />
+                <Link
+                  to={homePath}
+                  onClick={() => setOpen(false)}
+                  aria-label={`${company.legalName} — ${t.ui.homeAria}`}
+                  className="inline-flex"
+                >
+                  <img
+                    src={`${import.meta.env.BASE_URL}logo-lockup-light.png`}
+                    alt=""
+                    width={988}
+                    height={269}
+                    className="h-7 w-auto"
+                  />
+                </Link>
                 <button
                   type="button"
                   onClick={() => setOpen(false)}

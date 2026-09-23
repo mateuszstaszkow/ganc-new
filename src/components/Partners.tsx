@@ -9,9 +9,9 @@ export function Partners() {
   const { t } = useI18n()
   const partners = t.partners
   const brands = [
-    { name: 'COOLIT', role: partners.role },
-    { name: 'EMS', role: partners.role },
-    { name: 'PFEUFER', role: partners.role },
+    { name: 'cool it', role: partners.role },
+    { name: 'PFEUFFER', role: partners.role },
+    { name: 'Celltherm', role: partners.role },
   ]
 
   return (
@@ -47,13 +47,6 @@ export function Partners() {
               </StaggerItem>
             ))}
           </Stagger>
-
-          <Reveal direction="up" delay={0.1}>
-            <p className="mt-7 flex gap-3 rounded-2xl border border-ice-500/25 bg-ice-500/8 p-5 text-sm leading-relaxed text-ice-100">
-              <Icon name="snowflake" className="mt-0.5 size-5 shrink-0 text-ice-300" />
-              {partners.note}
-            </p>
-          </Reveal>
         </div>
 
         <Reveal direction="left" delay={0.15}>
@@ -64,19 +57,19 @@ export function Partners() {
             />
             <div className="relative grid grid-cols-2 gap-4">
               <Photo
-                slug="07-drzwi-nierdzewne"
+                slug="22-odboje"
                 alt={partners.photoAlts.stainless}
                 className="col-span-2 aspect-[16/10] w-full rounded-2xl ring-1 ring-white/10"
                 sizes="(max-width: 1024px) 92vw, 44vw"
               />
               <Photo
-                slug="02-drzwi-mroznicze-przesuwne"
+                slug="36-drzwi-zamkniete"
                 alt={partners.photoAlts.sliding}
                 className="aspect-square w-full rounded-2xl ring-1 ring-white/10"
                 sizes="(max-width: 1024px) 44vw, 22vw"
               />
               <Photo
-                slug="05-rampy-przeladunkowe"
+                slug="26-brama-segmentowa"
                 alt={partners.photoAlts.docks}
                 className="aspect-square w-full rounded-2xl ring-1 ring-white/10"
                 sizes="(max-width: 1024px) 44vw, 22vw"

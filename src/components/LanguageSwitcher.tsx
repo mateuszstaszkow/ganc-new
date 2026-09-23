@@ -5,7 +5,7 @@ import { Icon } from './ui/Icon'
 
 export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
   const { locale, t } = useI18n()
-  const { pathname, hash } = useLocation()
+  const { pathname } = useLocation()
   const rest = stripLocale(pathname)
   const current = localeMeta[locale]
   const [open, setOpen] = useState(false)
@@ -41,7 +41,7 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
             return (
               <li key={code}>
                 <Link
-                  to={`${withLocale(code, rest)}${hash}`}
+                  to={withLocale(code, rest)}
                   hrefLang={meta.html}
                   aria-current={active ? 'true' : undefined}
                   className={`rounded-full px-3 py-2 text-sm font-bold transition-colors ${
@@ -86,7 +86,7 @@ export function LanguageSwitcher({ compact = false }: { compact?: boolean }) {
             return (
               <li key={code} role="option" aria-selected={active}>
                 <Link
-                  to={`${withLocale(code, rest)}${hash}`}
+                  to={withLocale(code, rest)}
                   hrefLang={meta.html}
                   onClick={() => setOpen(false)}
                   className={`flex items-center justify-between gap-3 px-3.5 py-2.5 text-sm font-semibold ${

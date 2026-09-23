@@ -4,7 +4,7 @@ export const de: Dictionary = {
   meta: {
     title: 'GANC IZOLACJE Sp. z o.o. — Kühl- und Tiefkühlräume | Sianów',
     description:
-      'GANC IZOLACJE Sp. z o.o. — Bau von Kühl- und Tiefkühlräumen im Sandwichpaneel- und traditionellen System, Wärmedämmung, Kühltüren von COOLIT, EMS und PFEUFER, Industrieböden und Hallen. Sitz in Sianów, Projekte in Polen und Deutschland.',
+      'GANC IZOLACJE Sp. z o.o. — Bau von Kühl- und Tiefkühlräumen im Sandwichpaneel- und Modulsystem, Türen von cool it, PFEUFFER und Celltherm, Industrieböden. Sitz in Sianów.',
   },
   ui: {
     skipToContent: 'Zum Inhalt springen',
@@ -29,13 +29,13 @@ export const de: Dictionary = {
       'Dies ist eine Übersetzung der Informationspflicht. Rechtlich verbindlich ist der polnische Text.',
   },
   nav: [
-    { id: 'o-nas', label: 'Über uns' },
+    { id: 'proces', label: 'Ablauf' },
     { id: 'specjalizacje', label: 'Kühlräume' },
     { id: 'oferta', label: 'Angebot' },
     { id: 'realizacje', label: 'Referenzen' },
-    { id: 'proces', label: 'Ablauf' },
     { id: 'kariera', label: 'Karriere' },
     { id: 'kontakt', label: 'Kontakt' },
+    { id: 'o-nas', label: 'Über uns' },
   ],
   company: {
     region: 'Woiwodschaft Westpommern',
@@ -44,9 +44,9 @@ export const de: Dictionary = {
   hero: {
     kicker: 'Dämmung für Handel und Industrie',
     titleLines: ['Wir bauen Kühlräume', 'und Tiefkühlräume'],
-    titleAccent: 'in Polen und Deutschland',
+    titleAccent: '',
     lead:
-      'Unser Kerngeschäft ist der Bau von Kühl- und Tiefkühlräumen in Handels- und Produktionsobjekten — im Sandwichpaneel- und im traditionellen System.',
+      'Unser Kerngeschäft ist der Bau von Kühl- und Tiefkühlräumen in Handels- und Produktionsobjekten.',
     primaryCta: 'Angebot anfragen',
     secondaryCta: 'Angebot ansehen',
     introAria: 'Einführung',
@@ -54,17 +54,17 @@ export const de: Dictionary = {
     freezerBadge: 'Tiefkühlraum',
     panelTitle: 'Sandwichpaneel',
     panelLayers: ['Beschichtetes Blech', 'Dämmkern', 'Beschichtetes Blech'],
-    photoAlt: 'Innenraum einer Kühlkammer mit Tiefkühltüren und Hygienestation',
+    photoAlt: 'Leerer Kühlraum mit angelehnter Tür und Licht im Spalt',
     photoCaption: 'Kühlkammer — Ausführung GANC',
     scroll: 'Scrollen',
-    scrollAria: 'Zum Abschnitt Über uns scrollen',
+    scrollAria: 'Zum Abschnitt Ablauf scrollen',
   },
   trustPoints: [
     {
-      value: 'Polen und Deutschland',
-      label: 'Einsatzgebiet',
+      value: '2024 und 2026',
+      label: 'Forbes-Diamanten',
       detail:
-        'Kompletter Bau von Kühl- und Tiefkühlkammern in Handels- und Industrieobjekten in Polen und Deutschland.',
+        'GANC IZOLACJE Sp. z o.o. ist Preisträger der Rankings Forbes-Diamanten 2024 und Forbes-Diamanten 2026.',
     },
     {
       value: 'Langjährig',
@@ -76,7 +76,7 @@ export const de: Dictionary = {
       value: 'Autorisiert',
       label: 'Partner und Vertrieb',
       detail:
-        'Autorisierter Handelspartner und Vertrieb in Polen für Kühltüren der deutschen Hersteller COOLIT, EMS und PFEUFER.',
+        'Autorisierter Handelspartner und Vertrieb in Polen für Türen der Hersteller cool it, PFEUFFER und Celltherm.',
     },
     {
       value: 'Optimierung',
@@ -90,32 +90,49 @@ export const de: Dictionary = {
     'Tiefkühlräume',
     'Sandwichpaneele',
     'Kühltüren',
-    'Verladerampen',
+    'Umschlagrampen',
     'Industrieböden',
-    'Lagerhallen',
     'Modernisierungen',
   ],
   about: {
     heading: 'Über uns',
     lead: 'Ein Unternehmen mit gefestigter Position bei Spezialdämmungen für Handel und Industrie.',
     paragraphs: [
-      'GANC IZOLACJE Sp. z o.o. ist ein Unternehmen mit gefestigter Position auf dem Markt für Spezialdämmungen für Handel und Industrie. Das Kerngeschäft von GANC Izolacje Sp. z o.o. ist der Bau von Kühl- und Tiefkühlräumen in Handels- und Produktionsobjekten im Sandwichpaneel- und im traditionellen System. Darüber hinaus sind wir auf Lieferung und Montage von Türen für Kühl- und Tiefkühlräume (innen und außen) spezialisiert. Wir führen Spezialarbeiten für Industrieböden und Fliesen in Industrieobjekten aus. Wir planen und errichten Lager- und Produktionshallen.',
-      'Die Ingenieure und Mitarbeiter von GANC Izolacje Sp. z o.o. verfügen über langjährige Branchenerfahrung, daher zeichnet sich unsere Ausführung durch höchste Qualität und Präzision aus. Das Unternehmen hat zahlreiche komplette Kühl- und Tiefkühlkammern in Handels- und Industrieobjekten in Polen und Deutschland realisiert. Zum Portfolio gehören auch Paneelbekleidungen von Stahlkonstruktionen für Lager- und Produktionshallen.',
-      'Jede Investition wird gemeinsam mit dem Investor genau auf Kostenoptimierung geprüft. Grundsätzlich empfehlen wir bewährte Materialien, deren Qualität Dauerhaftigkeit und Zuverlässigkeit garantiert. Wir sind autorisierter Handelspartner und Vertrieb in Polen für Türen der deutschen Hersteller COOLIT, EMS und PFEUFER aus hochwertigen Materialien mit geringen Wärmedurchgangskoeffizienten.',
+      'Das Kerngeschäft von GANC IZOLACJE Sp. z o.o. ist der Bau von Kühl- und Tiefkühlräumen in Handels- und Produktionsobjekten. Wir sind auf Lieferung und Montage von Kühl- und Tiefkühltüren spezialisiert, innen und außen. Wir führen Spezialarbeiten für Industrieböden und Fliesen in Industrieobjekten aus.',
+      'Ingenieure und Mitarbeiter verfügen über langjährige Branchenerfahrung, daher zeichnet sich unsere Ausführung durch höchste Qualität und Präzision aus. Wir realisieren den kompletten Bau von Kühl- und Tiefkühlkammern in Handels- und Industrieobjekten.',
+      'Jede Investition wird gemeinsam mit dem Investor genau auf Kostenoptimierung geprüft. Grundsätzlich empfehlen wir bewährte Materialien, deren Qualität Dauerhaftigkeit und Zuverlässigkeit garantiert. Wir sind autorisierter Handelspartner und Vertrieb in Polen für Türen der Hersteller cool it, PFEUFFER und Celltherm.',
       'Wir setzen uns jedes Mal dafür ein, dass jeder Kunde mit dem Niveau unserer Leistungen höchstzufrieden ist.',
     ],
     photoAlts: {
-      corridor: 'Technischer Flur mit Türen der Kühlkammern',
-      panels: 'Decke und Wände aus Sandwichpaneelen',
-      facade: 'Hallenfassade mit Paneelbekleidung',
-      steel: 'Stahlkonstruktion einer Lagerhalle im Bau',
+      corridor: 'Flur mit Hygienestation',
+      doors: 'cool it-Tiefkühltür in einer Kammer',
+      freezerDoor: 'cool it-Tür mit Rammschutz',
+      steel: 'Montage einer Kühltürzarge',
+    },
+    forbes: {
+      logoAlt: 'Forbes',
+      kicker: 'Diamanten des Magazins Forbes',
+      title: 'Preisträger des Rankings 2024 und 2026',
+      editions: [
+        {
+          year: '2024',
+          name: 'Robert Olesiński',
+          role: 'Regionaldirektor für Firmenkunden, ING Bank Śląski',
+        },
+        {
+          year: '2026',
+          name: 'Marcin Hajduga',
+          role: 'Regionaldirektor für Firmenkunden, ING Bank Śląski',
+        },
+      ],
+      partner: 'Strategischer Partner: ING',
     },
   },
   specialties: {
     eyebrow: 'Hauptprodukte',
     titleBefore: 'Kühl-\u00A0und Tiefkühlräume\u00A0— ',
     titleAccent: 'unsere Spezialität',
-    lead: 'Wir bauen Kammern im Sandwichpaneel- und traditionellen System, einschließlich Auswahl und Montage der Kühl- und Tiefkühlzargen.',
+    lead: 'Wir bauen Kammern im Sandwichpaneel- und Modulsystem, einschließlich Auswahl und Montage der Kühl- und Tiefkühlzargen.',
     items: [
       {
         id: 'chlodnie',
@@ -123,27 +140,27 @@ export const de: Dictionary = {
         range: 'ca. 0 – +8 °C',
         tempLabel: '+2',
         summary:
-          'Kühlkammern in Handels- und Produktionsobjekten, ausgeführt im Sandwichpaneel- und traditionellen System.',
+          'Kühlkammern in Handels- und Produktionsobjekten.',
         points: [
           'Wärmedämmung von Kammern, Räumen und Decken mit Sandwichpaneelen',
           'Lieferung und Montage innen- und außenliegender Kühltüren',
           'Kompletter Kammerbau in Handels- und Industrieobjekten',
         ],
-        photo: '01-komora-chlodnicza',
+        photo: '18-wozki-chlodnicze',
       },
       {
         id: 'mroznie',
         name: 'Tiefkühlräume',
-        range: 'bis ca. −25 °C',
-        tempLabel: '−25',
+        range: 'bis −32 °C',
+        tempLabel: '−32',
         summary:
           'Tiefkühlräume für Handel und Lebensmittelindustrie — mit Tiefkühltüren mit geringen Wärmedurchgangskoeffizienten.',
         points: [
-          'Bau von Tiefkühlräumen im Sandwichpaneel- und traditionellen System',
-          'Tiefkühltüren der Hersteller COOLIT, EMS und PFEUFER',
-          'Verladerampen und Tore mit Automatik',
+          'Bau von Tiefkühlräumen in Handels- und Produktionsobjekten',
+          'Tiefkühltüren der Hersteller cool it, PFEUFFER und Celltherm',
+          'Umschlagrampen und Tore mit Automatik',
         ],
-        photo: '02-drzwi-mroznicze-przesuwne',
+        photo: '22-odboje',
       },
     ],
   },
@@ -159,37 +176,31 @@ export const de: Dictionary = {
       },
       {
         icon: 'door',
-        text: 'Auswahl von Kühl-, Tiefkühl- und Industrietüren, Verladerampen und Toren mit Automatik',
+        text: 'Auswahl von Kühl-, Tiefkühl- und Industrietüren, Umschlagrampen und Toren mit Automatik',
       },
       {
         icon: 'floor',
-        text: 'Boden- und Fliesenarbeiten mit Spezialisierung auf Lebensmittelbetriebe (Brauereien, Molkereien, Fleischereien, Eiscremefabriken) sowie chemikalienbeständige Spezialböden',
+        text: 'Boden- und Fliesenarbeiten mit Spezialisierung auf Lebensmittelbetriebe (Brauereien, Molkereien, Fleischereien, Eiscremefabriken, Lebensmittelverarbeitung, Fischverarbeitung) sowie chemikalienbeständige Spezialböden',
       },
       { icon: 'blueprint', text: 'Planung von Industrieobjekten' },
       {
-        icon: 'stairs',
-        text: 'Planung und Ausführung von Hilfselementen für Industrieobjekte (Treppen, Podeste usw.)',
-      },
-      { icon: 'hall', text: 'Planung von Produktionshallen im Sandwichpaneelsystem' },
-      {
         icon: 'factory',
-        text: 'Ausführung von Industrieobjekten (Verarbeitungsbetriebe, Lebensmittelwerke usw.)',
+        text: 'Ausführung von Industrieobjekten (Verarbeitungsbetriebe, Lebensmittelwerke, Restaurants, Hotels)',
       },
-      { icon: 'refresh', text: 'Modernisierung bestehender Industrieobjekte' },
+      { icon: 'refresh', text: 'Modernisierung von Industrieobjekten' },
       { icon: 'tools', text: 'Instandsetzungsarbeiten in den genannten Objekten' },
-      { icon: 'move', text: 'Demontage und Versetzen von Objekten' },
     ],
   },
   partners: {
     eyebrow: 'Autorisierter Vertrieb',
     heading: 'Kühl- und Tiefkühltüren',
-    lead: 'Wir sind autorisierter Handelspartner und Vertrieb in Polen für Türen der deutschen Hersteller:',
+    lead: 'Wir sind autorisierter Handelspartner und Vertrieb in Polen für Türen der Hersteller:',
     note: 'Türen aus hochwertigen Materialien mit geringen Wärmedurchgangskoeffizienten.',
     role: 'Kühl- und Tiefkühltüren',
     photoAlts: {
-      stainless: 'Schiebetüren aus Edelstahl in einem Tiefkühlraum',
-      sliding: 'Große Tiefkühl-Schiebetüren im technischen Flur',
-      docks: 'Verladerampen mit Sektionaltoren',
+      stainless: 'cool it-Tiefkühltür in einem Raum mit Regalen',
+      sliding: 'Durchgang in eine Kammer mit Transportwagen',
+      docks: 'Sektionaltor neben einer Paneelkammer',
     },
   },
   process: {
@@ -205,7 +216,7 @@ export const de: Dictionary = {
       {
         step: '02',
         title: 'Planung',
-        text: 'Planung von Industrieobjekten und Produktionshallen im Sandwichpaneelsystem.',
+        text: 'Planung von Industrieobjekten.',
       },
       {
         step: '03',
@@ -220,16 +231,16 @@ export const de: Dictionary = {
       {
         step: '05',
         title: 'Ausbau und Abnahme',
-        text: 'Spezial-Boden- und Fliesenarbeiten, Hilfselemente, Übergabe des Objekts.',
+        text: 'Spezial-Boden- und Fliesenarbeiten sowie Übergabe des Objekts.',
       },
     ],
   },
   careers: {
     heading: 'Karriere',
     headline: 'WIR STELLEN EIN',
-    lead: 'fachlich qualifizierte und ungelernte Mitarbeiter für die Stellen:',
-    roles: ['Dämmmonteur', 'Bauarbeiter'],
-    offerNote: 'Nach der Probezeit bieten wir eine attraktive Vergütung.',
+    lead: 'fachlich qualifizierte Mitarbeiter für die Stellen:',
+    roles: ['Isoliermonteur', 'Monteur für Kühlzargen'],
+    area: 'Arbeitsgebiet: ganz Polen',
     applyNote: 'Interessierte senden ihre Bewerbung bitte an:',
     disclaimer: 'Wir kontaktieren ausschließlich ausgewählte Bewerber.',
     applySubject: 'Bewerbung — Stelle bei GANC IZOLACJE',
@@ -237,7 +248,7 @@ export const de: Dictionary = {
   gallery: {
     eyebrow: 'Referenzen',
     title: 'Ausgewählte Arbeiten',
-    lead: 'Kühl- und Tiefkühlkammern, Paneelbekleidung von Hallen, Türen und Rampen — aus Projekten in Polen und Deutschland.',
+    lead: 'Kühl- und Tiefkühlkammern, Türen und Ausbau.',
     all: 'Alle',
     filterAria: 'Referenzen filtern',
     closePreview: 'Vorschau schließen',
@@ -245,54 +256,119 @@ export const de: Dictionary = {
     nextPhoto: 'Nächstes Foto',
     items: [
       {
-        slug: '01-komora-chlodnicza',
-        title: 'Kühlkammer mit Türen und Hygienestation',
+        slug: '17-agregat-podwojny',
+        title: 'Kühlraum mit Regalen und einer cool it-Tür',
         category: 'Kühlräume',
       },
       {
-        slug: '02-drzwi-mroznicze-przesuwne',
-        title: 'Tiefkühl-Schiebetüren in einer Produktionshalle',
+        slug: '22-odboje',
+        title: 'cool it-Tiefkühltür in einer Kammer',
         category: 'Türen',
       },
       {
-        slug: '03-korytarz-komor',
-        title: 'Technischer Flur mit Kühlkammern',
+        slug: '18-wozki-chlodnicze',
+        title: 'Kühlaggregat in einer Kühlkammer',
         category: 'Kühlräume',
       },
       {
-        slug: '04-hala-produkcyjna-wnetrze',
-        title: 'Produktionsraum mit Kühltüren',
+        slug: '20-przejscie-wozkow',
+        title: 'Transportwagen in einer Kühlkammer',
+        category: 'Kühlräume',
+      },
+      {
+        slug: '16-komora-regaly',
+        title: 'Flur mit Hygienestation',
+        category: 'Kühlräume',
+      },
+      {
+        slug: '34-komora-otwarta',
+        title: 'cool it-Tür mit Rammschutz',
+        category: 'Türen',
+      },
+      {
+        slug: '35-parownik',
+        title: 'Durchgang zum Einkaufswagenbereich',
+        category: 'Türen',
+      },
+      {
+        slug: '36-drzwi-zamkniete',
+        title: 'Durchgang in einen Raum mit Wagen',
+        category: 'Türen',
+      },
+      {
+        slug: '19-drzwi-przesuwne',
+        title: 'Eckrammschutz in einer Kammer',
+        category: 'Kühlräume',
+      },
+      {
+        slug: '12-komora-posadzka',
+        title: 'Kammer mit rutschfestem Boden',
+        category: 'Kühlräume',
+      },
+      {
+        slug: '21-okna-podawcze',
+        title: 'Innenraum einer Kühlkammer',
+        category: 'Kühlräume',
+      },
+      {
+        slug: '15-korytarz-higiena',
+        title: 'Kammer während der Fertigstellung',
+        category: 'Kühlräume',
+      },
+      {
+        slug: '11-komora-drzwi-swiatlo',
+        title: 'Kammerboden am Türdurchgang',
+        category: 'Kühlräume',
+      },
+      {
+        slug: '27-ciag-komor',
+        title: 'Reihe von Kühlkammern',
+        category: 'Kühlräume',
+      },
+      {
+        slug: '23-komory-murowe',
+        title: 'Gemauerte Kammern in einer Halle',
+        category: 'Kühlräume',
+      },
+      {
+        slug: '26-brama-segmentowa',
+        title: 'Sektionaltor neben einer Kammer',
         category: 'Industrieobjekte',
       },
       {
-        slug: '05-rampy-przeladunkowe',
-        title: 'Verladerampen mit Toren',
-        category: 'Rampen und Tore',
+        slug: '24-montaz-pianka',
+        title: 'Verlegen des Kammerbodens',
+        category: 'Montage',
       },
       {
-        slug: '06-konstrukcja-hali',
-        title: 'Stahlkonstruktion einer Lagerhalle',
-        category: 'Hallen',
+        slug: '25-posadzka-montaz',
+        title: 'Deckenecke aus Sandwichpaneelen',
+        category: 'Sandwichpaneele',
       },
       {
-        slug: '07-drzwi-nierdzewne',
-        title: 'Schiebetüren aus Edelstahl',
+        slug: '28-montaz-oscieznicy',
+        title: 'Montage einer Kühltür',
         category: 'Türen',
       },
       {
-        slug: '08-hala-elewacja',
-        title: 'Paneelbekleidung einer Halle — Fassade',
-        category: 'Hallen',
+        slug: '31-skrzydlo-drzwi',
+        title: 'Türblatt einer Kühltür',
+        category: 'Türen',
       },
       {
-        slug: '09-plyty-warstwowe-strop',
-        title: 'Decke und Wände aus Sandwichpaneelen',
-        category: 'Sandwichpaneele',
+        slug: '29-montaz-stropu',
+        title: 'Kühltür in einer Kammer',
+        category: 'Türen',
       },
       {
-        slug: '10-montaz-plyt',
-        title: 'Montage von Sandwichpaneelen',
-        category: 'Sandwichpaneele',
+        slug: '33-posadzka-otwor',
+        title: 'Kühltür nach geschlossener Decke',
+        category: 'Türen',
+      },
+      {
+        slug: '32-montaz-nad-drzwiami',
+        title: 'Kammer während der Paneelmontage',
+        category: 'Montage',
       },
     ],
   },
@@ -330,7 +406,7 @@ export const de: Dictionary = {
   },
   footer: {
     blurb:
-      'Spezialdämmungen für Handel und Industrie — Bau von Kühl- und Tiefkühlräumen im Sandwichpaneel- und traditionellen System.',
+      'Spezialdämmungen für Handel und Industrie — Bau von Kühl- und Tiefkühlräumen.',
     copyrightNotice:
       'Alle Grafiken, Fotos, Programme, Texte, das Firmenzeichen und diese Website unterliegen dem urheberrechtlichen Schutz. Jede Nutzung ohne vorherige schriftliche Genehmigung von GANC IZOLACJE Sp. z o.o. ist untersagt und kann zivil- und strafrechtliche Haftung im gesetzlich zulässigen Höchstmaß nach sich ziehen.',
   },
@@ -343,7 +419,7 @@ export const de: Dictionary = {
       {
         title: 'Verantwortlicher',
         paragraphs: [
-          'Verantwortlicher für Ihre personenbezogenen Daten ist GANC IZOLACJE Sp. z o.o. mit Sitz in Sianów (im Folgenden: der Verantwortliche), ul. Dworcowa 16, 76-004 Sianów, Tel. 94 318 66 89, E-Mail: sekretariat@ganc.com.pl',
+          'Verantwortlicher für Ihre personenbezogenen Daten ist GANC IZOLACJE Sp. z o.o. mit Sitz in Sianów (im Folgenden: der Verantwortliche), ul. Dworcowa 16, 76-004 Sianów, Tel. 601 725 142, E-Mail: sekretariat@ganc.com.pl',
         ],
       },
       {

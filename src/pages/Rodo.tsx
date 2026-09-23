@@ -91,7 +91,7 @@ export default function Rodo() {
         </div>
       </main>
 
-      <Footer onHome={false} />
+      <Footer />
     </>
   )
 }

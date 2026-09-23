@@ -37,7 +37,7 @@ export default function NotFound() {
         </div>
       </main>
 
-      <Footer onHome={false} />
+      <Footer />
     </>
   )
 }

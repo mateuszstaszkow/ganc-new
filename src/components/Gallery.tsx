@@ -177,17 +177,16 @@ export function Gallery() {
               }}
               className="relative z-10 w-full max-w-3xl"
             >
-              {/* Native resolution is ~503px, so the frame is capped to stay sharp. */}
               <picture>
                 <source type="image/webp" srcSet={photoSrc(current.slug, 'webp')} />
                 <img
                   src={photoSrc(current.slug, 'jpg')}
                   alt={current.title}
-                  className="mx-auto w-full max-w-[36rem] rounded-2xl bg-steel-900 shadow-2xl ring-1 ring-white/15"
+                  className="mx-auto max-h-[78vh] w-auto max-w-full rounded-2xl bg-steel-900 shadow-2xl ring-1 ring-white/15"
                 />
               </picture>
 
-              <figcaption className="mx-auto mt-4 flex max-w-[36rem] items-center justify-between gap-4">
+              <figcaption className="mt-4 flex items-center justify-between gap-4">
                 <span>
                   <span className="block text-[0.62rem] font-bold tracking-[0.2em] text-ice-400 uppercase">
                     {current.category}
@@ -199,7 +198,7 @@ export function Gallery() {
                 </span>
               </figcaption>
 
-              <div className="mx-auto mt-5 flex max-w-[36rem] items-center justify-center gap-3">
+              <div className="mt-5 flex items-center justify-center gap-3">
                 <button
                   type="button"
                   onClick={() => step(-1)}

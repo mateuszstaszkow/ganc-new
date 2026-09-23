@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, type ReactNode } from 'react'
+import { createContext, useContext, useEffect, useMemo, useRef, type ReactNode } from 'react'
 import { useLocation } from 'react-router-dom'
 import { de } from './de'
 import { en } from './en'
@@ -29,6 +29,13 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   const { pathname } = useLocation()
   const locale = localeFromPath(pathname)
   const t = dictionaries[locale]
+  const localeRef = useRef(locale)
+
+  useEffect(() => {
+    if (localeRef.current === locale) return
+    localeRef.current = locale
+    window.scrollTo(0, 0)
+  }, [locale])
 
   useEffect(() => {
     document.documentElement.lang = localeMeta[locale].html

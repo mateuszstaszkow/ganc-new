@@ -113,8 +113,12 @@
 
   html {
     scroll-behavior: smooth;
-    /* Sticky header height + breathing room for anchor jumps. */
-    scroll-padding-top: 5.5rem;
+    /*
+      Fixed header (condensed ≈ 4rem) + ~1rem gap so in-page nav lands
+      with the section heading just under the bar — not tucked beneath it.
+    */
+    --scroll-offset: 5rem;
+    scroll-padding-top: var(--scroll-offset);
     -webkit-text-size-adjust: 100%;
   }
 

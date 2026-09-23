@@ -2,7 +2,7 @@ export const pl = {
   meta: {
     title: 'GANC IZOLACJE Sp. z o.o. — budowa chłodni i mroźni | Sianów',
     description:
-      'GANC IZOLACJE Sp. z o.o. — budowa chłodni i mroźni w systemie płyt warstwowych i tradycyjnym, izolacje termiczne, drzwi chłodnicze COOLIT, EMS, PFEUFER, posadzki przemysłowe i hale. Sianów, realizacje w Polsce i Niemczech.',
+      'GANC IZOLACJE Sp. z o.o. — budowa chłodni i mroźni w systemie płyt warstwowych i modułowym, drzwi chłodnicze i mroźnicze cool it, PFEUFFER i Celltherm, posadzki przemysłowe. Sianów.',
   },
   ui: {
     skipToContent: 'Przejdź do treści',
@@ -26,13 +26,13 @@ export const pl = {
     legalNote: '',
   },
   nav: [
-    { id: 'o-nas', label: 'O nas' },
+    { id: 'proces', label: 'Jak pracujemy' },
     { id: 'specjalizacje', label: 'Chłodnie i mroźnie' },
     { id: 'oferta', label: 'Oferta' },
     { id: 'realizacje', label: 'Realizacje' },
-    { id: 'proces', label: 'Jak pracujemy' },
     { id: 'kariera', label: 'Kariera' },
     { id: 'kontakt', label: 'Kontakt' },
+    { id: 'o-nas', label: 'O nas' },
   ],
   company: {
     region: 'woj. zachodniopomorskie',
@@ -41,9 +41,9 @@ export const pl = {
   hero: {
     kicker: 'Specjalistyczne izolacje dla handlu i przemysłu',
     titleLines: ['Budujemy', 'chłodnie i mroźnie'],
-    titleAccent: 'w Polsce i Niemczech',
+    titleAccent: '',
     lead:
-      'Podstawową gałęzią naszych usług jest budowa chłodni i mroźni w obiektach handlowych i produkcyjnych — w systemie płyt warstwowych oraz tradycyjnym.',
+      'Podstawową gałęzią naszych usług jest budowa chłodni i mroźni w obiektach handlowych i produkcyjnych.',
     primaryCta: 'Zapytaj o wycenę',
     secondaryCta: 'Zobacz ofertę',
     introAria: 'Wprowadzenie',
@@ -51,17 +51,17 @@ export const pl = {
     freezerBadge: 'Mroźnia',
     panelTitle: 'Płyta warstwowa',
     panelLayers: ['Blacha powlekana', 'Rdzeń izolacyjny', 'Blacha powlekana'],
-    photoAlt: 'Wnętrze komory chłodniczej z drzwiami mroźniczymi i stanowiskiem higieny',
+    photoAlt: 'Pusta komora chłodnicza z uchylonymi drzwiami i światłem w szczelinie',
     photoCaption: 'Komora chłodnicza — realizacja GANC',
     scroll: 'Przewiń',
-    scrollAria: 'Przewiń do sekcji O nas',
+    scrollAria: 'Przewiń do sekcji Jak pracujemy',
   },
   trustPoints: [
     {
-      value: 'Polska i Niemcy',
-      label: 'Zasięg realizacji',
+      value: '2024 i 2026',
+      label: 'Diamenty Forbesa',
       detail:
-        'Kompleksowa budowa komór chłodniczych i mroźniczych w obiektach handlowych i przemysłowych w Polsce i Niemczech.',
+        'GANC IZOLACJE Sp. z o.o. jest laureatem rankingu Diamenty Forbesa 2024 i Diamenty Forbesa 2026.',
     },
     {
       value: 'Wieloletnie',
@@ -73,7 +73,7 @@ export const pl = {
       value: 'Autoryzacja',
       label: 'Partner i dystrybutor',
       detail:
-        'Autoryzowany partner handlowy i dystrybutor na Polskę drzwi niemieckich producentów COOLIT, EMS oraz PFEUFER.',
+        'Autoryzowany partner handlowy i dystrybutor na Polskę drzwi producentów cool it, PFEUFFER oraz Celltherm.',
     },
     {
       value: 'Optymalizacja',
@@ -87,32 +87,49 @@ export const pl = {
     'Mroźnie',
     'Płyty warstwowe',
     'Drzwi chłodnicze',
-    'Rampy przeładowcze',
+    'Rampy przeładunkowe',
     'Posadzki przemysłowe',
-    'Hale magazynowe',
     'Modernizacje',
   ],
   about: {
     heading: 'O nas',
     lead: 'Firma o ugruntowanej pozycji na rynku specjalistycznych usług izolacyjnych dla handlu i przemysłu.',
     paragraphs: [
-      'GANC IZOLACJE Sp. z o.o. to firma o ugruntowanej pozycji na rynku specjalistycznych usług izolacyjnych dla handlu i przemysłu. Podstawową gałęzią usług oferowanych przez GANC Izolacje Sp. z o.o. jest budowa chłodni i mroźni w obiektach handlowych i produkcyjnych w systemie płyt warstwowych oraz tradycyjnym. Ponadto specjalizujemy się w dostawach i montażu drzwi dla chłodni i mroźni (wewnętrznych i zewnętrznych). Wykonujemy specjalistyczne roboty posadzkarskie i płytkarskie obiektów przemysłowych. Projektujemy i wykonujemy hale magazynowe oraz produkcyjne.',
-      'Kadra inżynieryjna oraz pracownicy firmy GANC Izolacje Sp. z o.o. posiadają wieloletnie doświadczenie w branży, dzięki czemu nasze wykonawstwo charakteryzuje się najwyższą jakością i precyzją. Firma jest realizatorem wielu prac w zakresie kompleksowej budowy komór chłodniczych i mroźniczych w obiektach handlowych i przemysłowych w Polsce i Niemczech. W swoim dorobku posiadamy także realizacje obudowy panelowej konstrukcji stalowych hali magazynowych i produkcyjnych.',
-      'Każda inwestycja jest dokładnie analizowana z inwestorem pod kątem optymalizacji kosztowej. Z zasady zalecamy naszym klientom sprawdzone materiały o jakości gwarantującej trwałość i niezawodność. Nasza firma jest autoryzowanym partnerem handlowym i dystrybutorem na Polskę drzwi niemieckich producentów COOLIT, EMS oraz PFEUFER, wykonywanych z wysokiej klasy materiałów, posiadających niskie współczynniki przenikalności cieplnej.',
+      'Podstawową gałęzią usług GANC IZOLACJE Sp. z o.o. jest budowa chłodni i mroźni w obiektach handlowych i produkcyjnych. Specjalizujemy się w dostawach i montażu drzwi chłodniczych i mroźniczych, wewnętrznych i zewnętrznych. Wykonujemy specjalistyczne roboty posadzkarskie i płytkarskie obiektów przemysłowych.',
+      'Kadra inżynieryjna oraz pracownicy firmy posiadają wieloletnie doświadczenie w branży, dzięki czemu nasze wykonawstwo charakteryzuje się najwyższą jakością i precyzją. Realizujemy kompleksową budowę komór chłodniczych i mroźniczych w obiektach handlowych i przemysłowych.',
+      'Każda inwestycja jest dokładnie analizowana z inwestorem pod kątem optymalizacji kosztowej. Z zasady zalecamy naszym klientom sprawdzone materiały o jakości gwarantującej trwałość i niezawodność. Nasza firma jest autoryzowanym partnerem handlowym i dystrybutorem na Polskę drzwi producentów cool it, PFEUFFER oraz Celltherm.',
       'Każdorazowo dokładamy wszelkich starań, aby każdy klient był maksymalnie zadowolony z poziomu świadczonych przez nas usług.',
     ],
     photoAlts: {
-      corridor: 'Korytarz technologiczny z drzwiami komór chłodniczych',
-      panels: 'Strop i ściany wykonane z płyt warstwowych',
-      facade: 'Elewacja hali z obudową panelową',
-      steel: 'Konstrukcja stalowa hali magazynowej w trakcie budowy',
+      corridor: 'Korytarz komór ze stanowiskiem higieny',
+      doors: 'Drzwi mroźnicze cool it w komorze',
+      freezerDoor: 'Drzwi cool it z odbojami',
+      steel: 'Montaż ościeżnicy drzwi chłodniczych',
+    },
+    forbes: {
+      logoAlt: 'Forbes',
+      kicker: 'Diamenty Miesięcznika Forbes',
+      title: 'Laureat rankingu 2024 i 2026',
+      editions: [
+        {
+          year: '2024',
+          name: 'Robert Olesiński',
+          role: 'Dyrektor Regionalny ds. Korporacyjnych ING Bank Śląski',
+        },
+        {
+          year: '2026',
+          name: 'Marcin Hajduga',
+          role: 'Dyrektor Regionalny ds. Korporacyjnych ING Bank Śląski',
+        },
+      ],
+      partner: 'Partner strategiczny: ING',
     },
   },
   specialties: {
     eyebrow: 'Główne produkty',
     titleBefore: 'Chłodnie i mroźnie\u00A0— ',
     titleAccent: 'nasza specjalność',
-    lead: 'Budujemy komory w systemie płyt warstwowych oraz tradycyjnym, wraz z doborem i montażem stolarki chłodniczej i mroźniczej.',
+    lead: 'Budujemy komory w systemie płyt warstwowych i modułowym, wraz z doborem i montażem stolarki chłodniczej i mroźniczej.',
     items: [
       {
         id: 'chlodnie',
@@ -120,27 +137,27 @@ export const pl = {
         range: 'ok. 0 – +8 °C',
         tempLabel: '+2',
         summary:
-          'Komory chłodnicze w obiektach handlowych i produkcyjnych, wykonywane w systemie płyt warstwowych oraz tradycyjnym.',
+          'Komory chłodnicze w obiektach handlowych i produkcyjnych.',
         points: [
           'Izolacja termiczna płytami warstwowymi komór, pomieszczeń i stropów',
           'Dostawa i montaż drzwi chłodniczych wewnętrznych i zewnętrznych',
           'Kompleksowa budowa komór w obiektach handlowych i przemysłowych',
         ],
-        photo: '01-komora-chlodnicza',
+        photo: '18-wozki-chlodnicze',
       },
       {
         id: 'mroznie',
         name: 'Mroźnie',
-        range: 'do ok. −25 °C',
-        tempLabel: '−25',
+        range: 'do −32 °C',
+        tempLabel: '−32',
         summary:
           'Mroźnie dla handlu i przemysłu spożywczego — z doborem stolarki mroźniczej o niskich współczynnikach przenikalności cieplnej.',
         points: [
-          'Budowa mroźni w systemie płyt warstwowych oraz tradycyjnym',
-          'Drzwi mroźnicze producentów COOLIT, EMS i PFEUFER',
-          'Rampy przeładowcze oraz bramy z automatyką',
+          'Budowa mroźni w obiektach handlowych i produkcyjnych',
+          'Drzwi mroźnicze producentów cool it, PFEUFFER i Celltherm',
+          'Rampy przeładunkowe oraz bramy z automatyką',
         ],
-        photo: '02-drzwi-mroznicze-przesuwne',
+        photo: '22-odboje',
       },
     ],
   },
@@ -156,37 +173,31 @@ export const pl = {
       },
       {
         icon: 'door',
-        text: 'dobór stolarki drzwiowej chłodniczej, mroźniczej i przemysłowej, ramp przeładowczych oraz bram z automatyką',
+        text: 'dobór stolarki drzwiowej chłodniczej, mroźniczej i przemysłowej, ramp przeładunkowych oraz bram z automatyką',
       },
       {
         icon: 'floor',
-        text: 'usługi posadzkarskie i glazurnicze ze specjalizacją w obiektach przemysłu spożywczego (browary, mleczarnie, masarnie, wytwórnie lodów) oraz usługi posadzkarskie specjalistyczne chemoodporne',
+        text: 'usługi posadzkarskie i glazurnicze ze specjalizacją w obiektach przemysłu spożywczego (browary, mleczarnie, masarnie, wytwórnie lodów, przetwórstwo spożywcze, przetwórstwo rybne) oraz usługi posadzkarskie specjalistyczne chemoodporne',
       },
       { icon: 'blueprint', text: 'projektowanie obiektów przemysłowych' },
       {
-        icon: 'stairs',
-        text: 'projektowanie i wykonawstwo pomocniczych elementów dla obiektów przemysłowych (schody, podesty, itp.)',
-      },
-      { icon: 'hall', text: 'projektowanie hal produkcyjnych w systemie płyt warstwowych' },
-      {
         icon: 'factory',
-        text: 'wykonawstwo obiektów przemysłowych (przetwórnie, zakłady spożywcze, itp.)',
+        text: 'wykonawstwo obiektów przemysłowych (przetwórnie, zakłady spożywcze, restauracje, hotele)',
       },
-      { icon: 'refresh', text: 'modernizacja starych obiektów przemysłowych' },
+      { icon: 'refresh', text: 'modernizacja obiektów przemysłowych' },
       { icon: 'tools', text: 'prace remontowe w wyżej wymienionych obiektach' },
-      { icon: 'move', text: 'demontaż i przenoszenie obiektów' },
     ],
   },
   partners: {
     eyebrow: 'Autoryzowany dystrybutor',
     heading: 'Drzwi chłodnicze i mroźnicze',
-    lead: 'Jesteśmy autoryzowanym partnerem handlowym i dystrybutorem na Polskę drzwi niemieckich producentów:',
+    lead: 'Jesteśmy autoryzowanym partnerem handlowym i dystrybutorem na Polskę drzwi producentów:',
     note: 'Drzwi wykonywane z wysokiej klasy materiałów, posiadające niskie współczynniki przenikalności cieplnej.',
     role: 'Drzwi chłodnicze i mroźnicze',
     photoAlts: {
-      stainless: 'Drzwi przesuwne ze stali nierdzewnej w mroźni',
-      sliding: 'Duże drzwi przesuwne mroźnicze w korytarzu technologicznym',
-      docks: 'Rampy przeładowcze z bramami segmentowymi',
+      stainless: 'Drzwi mroźnicze cool it w komorze z regałami',
+      sliding: 'Przejście do komory z wózkami transportowymi',
+      docks: 'Brama segmentowa obok komory z płyt',
     },
   },
   process: {
@@ -202,7 +213,7 @@ export const pl = {
       {
         step: '02',
         title: 'Projekt',
-        text: 'Projektowanie obiektów przemysłowych oraz hal produkcyjnych w systemie płyt warstwowych.',
+        text: 'Projektowanie obiektów przemysłowych.',
       },
       {
         step: '03',
@@ -217,16 +228,16 @@ export const pl = {
       {
         step: '05',
         title: 'Wykończenie i odbiór',
-        text: 'Specjalistyczne roboty posadzkarskie i płytkarskie, elementy pomocnicze, przekazanie obiektu.',
+        text: 'Specjalistyczne roboty posadzkarskie i płytkarskie oraz przekazanie obiektu.',
       },
     ],
   },
   careers: {
     heading: 'Kariera',
     headline: 'ZATRUDNIMY',
-    lead: 'pracowników wykwalifikowanych i niewykwalifikowanych na stanowiska:',
-    roles: ['monter izolacji', 'pracownik budowlany'],
-    offerNote: 'Oferujemy atrakcyjne wynagrodzenie po okresie próbnym.',
+    lead: 'pracowników wykwalifikowanych na stanowiska:',
+    roles: ['monter izolacji', 'monter stolarki'],
+    area: 'Obszar pracy: Cała Polska',
     applyNote: 'Osoby zainteresowane prosimy o przesyłanie aplikacji na adres:',
     disclaimer: 'Informujemy, że skontaktujemy się wyłącznie z wybranymi kandydatami.',
     applySubject: 'Aplikacja — praca w GANC IZOLACJE',
@@ -234,7 +245,7 @@ export const pl = {
   gallery: {
     eyebrow: 'Realizacje',
     title: 'Wybrane prace',
-    lead: 'Komory chłodnicze i mroźnicze, obudowy panelowe hal, stolarka i rampy — z realizacji prowadzonych w Polsce i Niemczech.',
+    lead: 'Komory chłodnicze i mroźnicze, stolarka oraz wykończenie obiektów.',
     all: 'Wszystkie',
     filterAria: 'Filtruj realizacje',
     closePreview: 'Zamknij podgląd',
@@ -242,54 +253,119 @@ export const pl = {
     nextPhoto: 'Następne zdjęcie',
     items: [
       {
-        slug: '01-komora-chlodnicza',
-        title: 'Komora chłodnicza z drzwiami i stanowiskiem higieny',
+        slug: '17-agregat-podwojny',
+        title: 'Komora z regałami i drzwiami cool it',
         category: 'Chłodnie',
       },
       {
-        slug: '02-drzwi-mroznicze-przesuwne',
-        title: 'Drzwi przesuwne mroźnicze w hali produkcyjnej',
+        slug: '22-odboje',
+        title: 'Drzwi mroźnicze cool it w komorze',
         category: 'Drzwi',
       },
       {
-        slug: '03-korytarz-komor',
-        title: 'Korytarz technologiczny z komorami chłodniczymi',
+        slug: '18-wozki-chlodnicze',
+        title: 'Agregat chłodniczy w komorze',
         category: 'Chłodnie',
       },
       {
-        slug: '04-hala-produkcyjna-wnetrze',
-        title: 'Pomieszczenie produkcyjne z drzwiami chłodniczymi',
+        slug: '20-przejscie-wozkow',
+        title: 'Wózki transportowe w komorze',
+        category: 'Chłodnie',
+      },
+      {
+        slug: '16-komora-regaly',
+        title: 'Korytarz ze stanowiskiem higieny',
+        category: 'Chłodnie',
+      },
+      {
+        slug: '34-komora-otwarta',
+        title: 'Drzwi cool it z odbojami',
+        category: 'Drzwi',
+      },
+      {
+        slug: '35-parownik',
+        title: 'Przejście do strefy wózków sklepowych',
+        category: 'Drzwi',
+      },
+      {
+        slug: '36-drzwi-zamkniete',
+        title: 'Przejście do komory z wózkami',
+        category: 'Drzwi',
+      },
+      {
+        slug: '19-drzwi-przesuwne',
+        title: 'Odboje narożne w komorze',
+        category: 'Chłodnie',
+      },
+      {
+        slug: '12-komora-posadzka',
+        title: 'Komora z posadzką antypoślizgową',
+        category: 'Chłodnie',
+      },
+      {
+        slug: '21-okna-podawcze',
+        title: 'Wnętrze komory chłodniczej',
+        category: 'Chłodnie',
+      },
+      {
+        slug: '15-korytarz-higiena',
+        title: 'Komora w trakcie wykończenia',
+        category: 'Chłodnie',
+      },
+      {
+        slug: '11-komora-drzwi-swiatlo',
+        title: 'Posadzka komory przy otworze drzwiowym',
+        category: 'Chłodnie',
+      },
+      {
+        slug: '27-ciag-komor',
+        title: 'Ciąg komór chłodniczych',
+        category: 'Chłodnie',
+      },
+      {
+        slug: '23-komory-murowe',
+        title: 'Komory murowane w hali',
+        category: 'Chłodnie',
+      },
+      {
+        slug: '26-brama-segmentowa',
+        title: 'Brama segmentowa przy komorze',
         category: 'Obiekty przemysłowe',
       },
       {
-        slug: '05-rampy-przeladunkowe',
-        title: 'Rampy przeładowcze z bramami',
-        category: 'Rampy i bramy',
+        slug: '24-montaz-pianka',
+        title: 'Układanie posadzki w komorze',
+        category: 'Montaż',
       },
       {
-        slug: '06-konstrukcja-hali',
-        title: 'Konstrukcja stalowa hali magazynowej',
-        category: 'Hale',
+        slug: '25-posadzka-montaz',
+        title: 'Narożnik stropu z płyt warstwowych',
+        category: 'Płyty warstwowe',
       },
       {
-        slug: '07-drzwi-nierdzewne',
-        title: 'Drzwi przesuwne ze stali nierdzewnej',
+        slug: '28-montaz-oscieznicy',
+        title: 'Montaż drzwi chłodniczych',
         category: 'Drzwi',
       },
       {
-        slug: '08-hala-elewacja',
-        title: 'Obudowa panelowa hali — elewacja',
-        category: 'Hale',
+        slug: '31-skrzydlo-drzwi',
+        title: 'Skrzydło drzwi chłodniczych',
+        category: 'Drzwi',
       },
       {
-        slug: '09-plyty-warstwowe-strop',
-        title: 'Strop i ściany z płyt warstwowych',
-        category: 'Płyty warstwowe',
+        slug: '29-montaz-stropu',
+        title: 'Drzwi chłodnicze w komorze',
+        category: 'Drzwi',
       },
       {
-        slug: '10-montaz-plyt',
-        title: 'Montaż płyt warstwowych',
-        category: 'Płyty warstwowe',
+        slug: '33-posadzka-otwor',
+        title: 'Drzwi chłodnicze po zamknięciu stropu',
+        category: 'Drzwi',
+      },
+      {
+        slug: '32-montaz-nad-drzwiami',
+        title: 'Komora w trakcie montażu płyt',
+        category: 'Montaż',
       },
     ],
   },
@@ -327,7 +403,7 @@ export const pl = {
   },
   footer: {
     blurb:
-      'Specjalistyczne usługi izolacyjne dla handlu i przemysłu — budowa chłodni i mroźni w systemie płyt warstwowych oraz tradycyjnym.',
+      'Specjalistyczne usługi izolacyjne dla handlu i przemysłu — budowa chłodni i mroźni.',
     copyrightNotice:
       'Wszystkie grafiki, zdjęcia, programy, teksty, znak firmowy oraz strona WWW podlegają ochronie prawnej na mocy ustawy o prawie autorskim. Używanie ich w jakikolwiek sposób bez uprzedniego, pisemnego zezwolenia wydanego przez GANC IZOLACJE sp. z o.o. jest zabronione i może spowodować pociągnięcie do odpowiedzialności cywilnej i karnej w maksymalnym zakresie dopuszczalnym przez prawo.',
   },
@@ -340,7 +416,7 @@ export const pl = {
       {
         title: 'Administrator danych',
         paragraphs: [
-          'Administratorem Państwa danych osobowych jest GANC IZOLACJE Sp. z o. o., z siedzibą w Sianowie (zwana dalej Administratorem) przy ul. Dworcowej 16; 76-004 Sianów, 94 318 66 89, adres e-mail: sekretariat@ganc.com.pl',
+          'Administratorem Państwa danych osobowych jest GANC IZOLACJE Sp. z o. o., z siedzibą w Sianowie (zwana dalej Administratorem) przy ul. Dworcowej 16; 76-004 Sianów, 601 725 142, adres e-mail: sekretariat@ganc.com.pl',
         ],
       },
       {

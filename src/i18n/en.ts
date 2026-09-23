@@ -4,7 +4,7 @@ export const en: Dictionary = {
   meta: {
     title: 'GANC IZOLACJE Sp. z o.o. — cold rooms and freezer rooms | Sianów',
     description:
-      'GANC IZOLACJE Sp. z o.o. — construction of cold rooms and freezer rooms in sandwich-panel and traditional systems, thermal insulation, COOLIT, EMS and PFEUFER cold-store doors, industrial flooring and halls. Based in Sianów, projects in Poland and Germany.',
+      'GANC IZOLACJE Sp. z o.o. — construction of cold rooms and freezer rooms in sandwich-panel and modular systems, cool it, PFEUFFER and Celltherm doors, industrial flooring. Based in Sianów.',
   },
   ui: {
     skipToContent: 'Skip to content',
@@ -29,13 +29,13 @@ export const en: Dictionary = {
       'This is a translation of the company’s information notice. The Polish text is legally binding.',
   },
   nav: [
-    { id: 'o-nas', label: 'About us' },
+    { id: 'proces', label: 'How we work' },
     { id: 'specjalizacje', label: 'Cold rooms' },
     { id: 'oferta', label: 'Offer' },
     { id: 'realizacje', label: 'Projects' },
-    { id: 'proces', label: 'How we work' },
     { id: 'kariera', label: 'Careers' },
     { id: 'kontakt', label: 'Contact' },
+    { id: 'o-nas', label: 'About us' },
   ],
   company: {
     region: 'West Pomeranian Voivodeship',
@@ -44,9 +44,9 @@ export const en: Dictionary = {
   hero: {
     kicker: 'Specialist insulation for retail and industry',
     titleLines: ['We build cold rooms', 'and freezer rooms'],
-    titleAccent: 'in Poland and Germany',
+    titleAccent: '',
     lead:
-      'Our core service is the construction of cold rooms and freezer rooms in retail and production buildings — in sandwich-panel and traditional systems.',
+      'Our core service is the construction of cold rooms and freezer rooms in retail and production buildings.',
     primaryCta: 'Ask for a quote',
     secondaryCta: 'See the offer',
     introAria: 'Introduction',
@@ -54,17 +54,17 @@ export const en: Dictionary = {
     freezerBadge: 'Freezer',
     panelTitle: 'Sandwich panel',
     panelLayers: ['Coated sheet', 'Insulation core', 'Coated sheet'],
-    photoAlt: 'Interior of a cold room with freezer doors and a hygiene station',
+    photoAlt: 'Empty cold chamber with a door ajar and light in the gap',
     photoCaption: 'Cold room — a GANC project',
     scroll: 'Scroll',
-    scrollAria: 'Scroll to About us',
+    scrollAria: 'Scroll to How we work',
   },
   trustPoints: [
     {
-      value: 'Poland & Germany',
-      label: 'Project coverage',
+      value: '2024 and 2026',
+      label: 'Forbes Diamonds',
       detail:
-        'Complete construction of cold and freezer chambers in retail and industrial buildings in Poland and Germany.',
+        'GANC IZOLACJE Sp. z o.o. is a laureate of the Forbes Diamonds 2024 and Forbes Diamonds 2026 rankings.',
     },
     {
       value: 'Many years',
@@ -76,7 +76,7 @@ export const en: Dictionary = {
       value: 'Authorised',
       label: 'Partner and distributor',
       detail:
-        'Authorised sales partner and distributor in Poland for cold-store and freezer doors from COOLIT, EMS and PFEUFER.',
+        'Authorised sales partner and distributor in Poland for doors from cool it, PFEUFFER and Celltherm.',
     },
     {
       value: 'Optimisation',
@@ -92,30 +92,47 @@ export const en: Dictionary = {
     'Cold-store doors',
     'Loading docks',
     'Industrial flooring',
-    'Warehouse halls',
     'Modernisations',
   ],
   about: {
     heading: 'About us',
     lead: 'A company with an established position in specialist insulation for retail and industry.',
     paragraphs: [
-      'GANC IZOLACJE Sp. z o.o. is a company with an established position in specialist insulation services for retail and industry. Our core offering is the construction of cold rooms and freezer rooms in retail and production buildings, in sandwich-panel and traditional systems. We also specialise in the supply and installation of doors for cold rooms and freezer rooms (internal and external). We carry out specialist flooring and tiling works in industrial buildings. We design and build warehouse and production halls.',
-      'The engineering staff and employees of GANC Izolacje Sp. z o.o. have many years of industry experience, which is why our work is characterised by the highest quality and precision. The company has delivered many complete cold and freezer chamber projects in retail and industrial buildings in Poland and Germany. We have also completed panel cladding of steel structures for warehouse and production halls.',
-      'Every investment is analysed in detail with the investor with a view to cost optimisation. As a rule we recommend proven materials whose quality guarantees durability and reliability. We are an authorised sales partner and distributor in Poland for doors from the German manufacturers COOLIT, EMS and PFEUFER, made from high-grade materials with low thermal transmittance.',
+      'The core service of GANC IZOLACJE Sp. z o.o. is the construction of cold rooms and freezer rooms in retail and production buildings. We specialise in the supply and installation of cold-store and freezer doors, internal and external. We carry out specialist flooring and tiling works in industrial buildings.',
+      'Our engineers and site staff have many years of industry experience, which is why the work is precise and of high quality. We deliver complete cold and freezer chambers in retail and industrial buildings.',
+      'Every investment is analysed in detail with the investor with a view to cost optimisation. As a rule we recommend proven materials whose quality guarantees durability and reliability. We are an authorised sales partner and distributor in Poland for doors from cool it, PFEUFFER and Celltherm.',
       'We always do our utmost so that every client is fully satisfied with the level of service we provide.',
     ],
     photoAlts: {
-      corridor: 'Process corridor with cold-room chamber doors',
-      panels: 'Ceiling and walls built from sandwich panels',
-      facade: 'Hall elevation with panel cladding',
-      steel: 'Steel structure of a warehouse hall under construction',
+      corridor: 'Corridor with a hygiene station',
+      doors: 'cool it freezer door in a chamber',
+      freezerDoor: 'cool it door with bollards',
+      steel: 'Fitting a cold-room door frame',
+    },
+    forbes: {
+      logoAlt: 'Forbes',
+      kicker: 'Forbes magazine Diamonds',
+      title: 'Ranking laureate, 2024 and 2026',
+      editions: [
+        {
+          year: '2024',
+          name: 'Robert Olesiński',
+          role: 'Regional Director for Corporate Clients, ING Bank Śląski',
+        },
+        {
+          year: '2026',
+          name: 'Marcin Hajduga',
+          role: 'Regional Director for Corporate Clients, ING Bank Śląski',
+        },
+      ],
+      partner: 'Strategic partner: ING',
     },
   },
   specialties: {
     eyebrow: 'Core products',
     titleBefore: 'Cold rooms and freezer rooms\u00A0— ',
     titleAccent: 'our speciality',
-    lead: 'We build chambers in sandwich-panel and traditional systems, including selection and installation of cold-store and freezer door sets.',
+    lead: 'We build chambers in sandwich-panel and modular systems, including selection and installation of cold-store and freezer door sets.',
     items: [
       {
         id: 'chlodnie',
@@ -123,27 +140,27 @@ export const en: Dictionary = {
         range: 'approx. 0 – +8 °C',
         tempLabel: '+2',
         summary:
-          'Cold chambers in retail and production buildings, built in sandwich-panel and traditional systems.',
+          'Cold chambers in retail and production buildings.',
         points: [
           'Thermal insulation of chambers, rooms and ceilings with sandwich panels',
           'Supply and installation of internal and external cold-store doors',
           'Complete chamber construction in retail and industrial buildings',
         ],
-        photo: '01-komora-chlodnicza',
+        photo: '18-wozki-chlodnicze',
       },
       {
         id: 'mroznie',
         name: 'Freezer rooms',
-        range: 'down to approx. −25 °C',
-        tempLabel: '−25',
+        range: 'down to −32 °C',
+        tempLabel: '−32',
         summary:
           'Freezer rooms for retail and the food industry — with freezer door sets that have low thermal transmittance.',
         points: [
-          'Freezer construction in sandwich-panel and traditional systems',
-          'Freezer doors from COOLIT, EMS and PFEUFER',
-          'Loading docks and automated industrial doors',
+          'Freezer construction in retail and production buildings',
+          'Freezer doors from cool it, PFEUFFER and Celltherm',
+          'Transfer docks and automated industrial doors',
         ],
-        photo: '02-drzwi-mroznicze-przesuwne',
+        photo: '22-odboje',
       },
     ],
   },
@@ -163,33 +180,27 @@ export const en: Dictionary = {
       },
       {
         icon: 'floor',
-        text: 'flooring and tiling specialised for food-industry sites (breweries, dairies, meat plants, ice-cream factories) and chemical-resistant specialist flooring',
+        text: 'flooring and tiling specialised for food-industry sites (breweries, dairies, meat plants, ice-cream factories, food processing, fish processing) and chemical-resistant specialist flooring',
       },
       { icon: 'blueprint', text: 'design of industrial buildings' },
       {
-        icon: 'stairs',
-        text: 'design and construction of auxiliary elements for industrial buildings (stairs, platforms, etc.)',
-      },
-      { icon: 'hall', text: 'design of production halls in the sandwich-panel system' },
-      {
         icon: 'factory',
-        text: 'construction of industrial buildings (processing plants, food factories, etc.)',
+        text: 'construction of industrial buildings (processing plants, food factories, restaurants, hotels)',
       },
-      { icon: 'refresh', text: 'modernisation of existing industrial buildings' },
+      { icon: 'refresh', text: 'modernisation of industrial buildings' },
       { icon: 'tools', text: 'repair works in the buildings listed above' },
-      { icon: 'move', text: 'dismantling and relocation of buildings' },
     ],
   },
   partners: {
     eyebrow: 'Authorised distributor',
     heading: 'Cold-store and freezer doors',
-    lead: 'We are an authorised sales partner and distributor in Poland for doors from the German manufacturers:',
+    lead: 'We are an authorised sales partner and distributor in Poland for doors from:',
     note: 'Doors made from high-grade materials, with low thermal transmittance.',
     role: 'Cold-store and freezer doors',
     photoAlts: {
-      stainless: 'Stainless-steel sliding doors in a freezer room',
-      sliding: 'Large sliding freezer doors in a process corridor',
-      docks: 'Loading docks with sectional doors',
+      stainless: 'cool it freezer door in a room with shelving',
+      sliding: 'Passage into a chamber with transport racks',
+      docks: 'Sectional door beside a panel chamber',
     },
   },
   process: {
@@ -205,7 +216,7 @@ export const en: Dictionary = {
       {
         step: '02',
         title: 'Design',
-        text: 'Design of industrial buildings and production halls in the sandwich-panel system.',
+        text: 'Design of industrial buildings.',
       },
       {
         step: '03',
@@ -220,16 +231,16 @@ export const en: Dictionary = {
       {
         step: '05',
         title: 'Finishes and handover',
-        text: 'Specialist flooring and tiling, auxiliary elements, and handover of the building.',
+        text: 'Specialist flooring and tiling, and handover of the building.',
       },
     ],
   },
   careers: {
     heading: 'Careers',
     headline: 'WE ARE HIRING',
-    lead: 'skilled and unskilled workers for the following positions:',
-    roles: ['insulation installer', 'construction worker'],
-    offerNote: 'We offer attractive pay after the probation period.',
+    lead: 'skilled workers for the following positions:',
+    roles: ['insulation fitter', 'door and joinery fitter'],
+    area: 'Work area: all of Poland',
     applyNote: 'Please send applications to:',
     disclaimer: 'We will contact selected candidates only.',
     applySubject: 'Application — job at GANC IZOLACJE',
@@ -237,7 +248,7 @@ export const en: Dictionary = {
   gallery: {
     eyebrow: 'Projects',
     title: 'Selected work',
-    lead: 'Cold and freezer chambers, panel hall cladding, door sets and docks — from projects delivered in Poland and Germany.',
+    lead: 'Cold and freezer chambers, door sets and finishes.',
     all: 'All',
     filterAria: 'Filter projects',
     closePreview: 'Close preview',
@@ -245,54 +256,119 @@ export const en: Dictionary = {
     nextPhoto: 'Next photo',
     items: [
       {
-        slug: '01-komora-chlodnicza',
-        title: 'Cold chamber with doors and a hygiene station',
+        slug: '17-agregat-podwojny',
+        title: 'Cold room with shelving and a cool it door',
         category: 'Cold rooms',
       },
       {
-        slug: '02-drzwi-mroznicze-przesuwne',
-        title: 'Sliding freezer doors in a production hall',
+        slug: '22-odboje',
+        title: 'cool it freezer door in a chamber',
         category: 'Doors',
       },
       {
-        slug: '03-korytarz-komor',
-        title: 'Process corridor with cold chambers',
+        slug: '18-wozki-chlodnicze',
+        title: 'Evaporator unit inside a cold room',
         category: 'Cold rooms',
       },
       {
-        slug: '04-hala-produkcyjna-wnetrze',
-        title: 'Production room with cold-store doors',
+        slug: '20-przejscie-wozkow',
+        title: 'Transport racks inside a cold room',
+        category: 'Cold rooms',
+      },
+      {
+        slug: '16-komora-regaly',
+        title: 'Corridor with a hygiene station',
+        category: 'Cold rooms',
+      },
+      {
+        slug: '34-komora-otwarta',
+        title: 'cool it door with bollards',
+        category: 'Doors',
+      },
+      {
+        slug: '35-parownik',
+        title: 'Passage through to shopping trolleys',
+        category: 'Doors',
+      },
+      {
+        slug: '36-drzwi-zamkniete',
+        title: 'Passage into a room with racks',
+        category: 'Doors',
+      },
+      {
+        slug: '19-drzwi-przesuwne',
+        title: 'Corner bumpers inside a chamber',
+        category: 'Cold rooms',
+      },
+      {
+        slug: '12-komora-posadzka',
+        title: 'Chamber with a non-slip floor',
+        category: 'Cold rooms',
+      },
+      {
+        slug: '21-okna-podawcze',
+        title: 'Interior of a cold chamber',
+        category: 'Cold rooms',
+      },
+      {
+        slug: '15-korytarz-higiena',
+        title: 'Chamber during finishing works',
+        category: 'Cold rooms',
+      },
+      {
+        slug: '11-komora-drzwi-swiatlo',
+        title: 'Chamber floor at the door opening',
+        category: 'Cold rooms',
+      },
+      {
+        slug: '27-ciag-komor',
+        title: 'A row of cold chambers',
+        category: 'Cold rooms',
+      },
+      {
+        slug: '23-komory-murowe',
+        title: 'Masonry chambers inside a hall',
+        category: 'Cold rooms',
+      },
+      {
+        slug: '26-brama-segmentowa',
+        title: 'Sectional door beside a chamber',
         category: 'Industrial buildings',
       },
       {
-        slug: '05-rampy-przeladunkowe',
-        title: 'Loading docks with industrial doors',
-        category: 'Docks and doors',
+        slug: '24-montaz-pianka',
+        title: 'Laying the chamber floor',
+        category: 'Installation',
       },
       {
-        slug: '06-konstrukcja-hali',
-        title: 'Steel structure of a warehouse hall',
-        category: 'Halls',
+        slug: '25-posadzka-montaz',
+        title: 'Sandwich-panel ceiling corner',
+        category: 'Sandwich panels',
       },
       {
-        slug: '07-drzwi-nierdzewne',
-        title: 'Stainless-steel sliding doors',
+        slug: '28-montaz-oscieznicy',
+        title: 'Installing a cold-room door',
         category: 'Doors',
       },
       {
-        slug: '08-hala-elewacja',
-        title: 'Panel cladding of a hall — elevation',
-        category: 'Halls',
+        slug: '31-skrzydlo-drzwi',
+        title: 'Cold-room door leaf',
+        category: 'Doors',
       },
       {
-        slug: '09-plyty-warstwowe-strop',
-        title: 'Ceiling and walls in sandwich panels',
-        category: 'Sandwich panels',
+        slug: '29-montaz-stropu',
+        title: 'Cold-room door inside a chamber',
+        category: 'Doors',
       },
       {
-        slug: '10-montaz-plyt',
-        title: 'Installation of sandwich panels',
-        category: 'Sandwich panels',
+        slug: '33-posadzka-otwor',
+        title: 'Cold-room door after the ceiling is closed',
+        category: 'Doors',
+      },
+      {
+        slug: '32-montaz-nad-drzwiami',
+        title: 'Chamber while panels are being fitted',
+        category: 'Installation',
       },
     ],
   },
@@ -329,7 +405,7 @@ export const en: Dictionary = {
   },
   footer: {
     blurb:
-      'Specialist insulation services for retail and industry — construction of cold rooms and freezer rooms in sandwich-panel and traditional systems.',
+      'Specialist insulation services for retail and industry — construction of cold rooms and freezer rooms.',
     copyrightNotice:
       'All graphics, photographs, programs, texts, the company mark and this website are legally protected under copyright law. Using them in any way without prior written permission from GANC IZOLACJE Sp. z o.o. is prohibited and may result in civil and criminal liability to the fullest extent permitted by law.',
   },
@@ -342,7 +418,7 @@ export const en: Dictionary = {
       {
         title: 'Data controller',
         paragraphs: [
-          'The controller of your personal data is GANC IZOLACJE Sp. z o.o., with its registered office in Sianów (the Controller) at ul. Dworcowa 16, 76-004 Sianów, phone 94 318 66 89, e-mail: sekretariat@ganc.com.pl',
+          'The controller of your personal data is GANC IZOLACJE Sp. z o.o., with its registered office in Sianów (the Controller) at ul. Dworcowa 16, 76-004 Sianów, phone 601 725 142, e-mail: sekretariat@ganc.com.pl',
         ],
       },
       {

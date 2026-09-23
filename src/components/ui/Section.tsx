@@ -12,8 +12,7 @@ type SectionProps = {
 export function Section({ id, children, className, decorated = false }: SectionProps) {
   return (
     <section
-      id={id}
-      className={`relative scroll-mt-24 py-20 sm:py-28 lg:py-36 ${className ?? ''}`}
+      className={`relative py-20 sm:py-28 lg:py-36 ${className ?? ''}`}
     >
       {decorated && (
         <>
@@ -24,7 +23,11 @@ export function Section({ id, children, className, decorated = false }: SectionP
           />
         </>
       )}
-      <div className="shell relative">{children}</div>
+      <div className="shell relative">
+        {/* Hash target after section padding so nav lands on the heading. */}
+        <div id={id} tabIndex={-1} />
+        {children}
+      </div>
     </section>
   )
 }
@@ -35,6 +38,7 @@ type HeadingProps = {
   lead?: ReactNode
   align?: 'left' | 'center'
   className?: string
+  eyebrowClassName?: string
 }
 
 export function SectionHeading({
@@ -43,6 +47,7 @@ export function SectionHeading({
   lead,
   align = 'left',
   className,
+  eyebrowClassName,
 }: HeadingProps) {
   const centered = align === 'center'
 
@@ -54,7 +59,7 @@ export function SectionHeading({
         <p
           className={`flex items-center gap-3 text-xs font-bold tracking-[0.28em] text-ice-400 uppercase ${
             centered ? 'justify-center' : ''
-          }`}
+          } ${eyebrowClassName ?? ''}`}
         >
           <span aria-hidden="true" className="h-px w-8 bg-gradient-to-r from-ember-500 to-ice-500" />
           {eyebrow}

@@ -60,7 +60,7 @@ export default defineConfig({
         name: 'GANC IZOLACJE Sp. z o.o. — chłodnie i mroźnie',
         short_name: 'GANC IZOLACJE',
         description:
-          'Budowa chłodni i mroźni, izolacje termiczne z płyt warstwowych, drzwi chłodnicze i mroźnicze, posadzki przemysłowe. Sianów, Polska i Niemcy.',
+          'Budowa chłodni i mroźni, izolacje termiczne z płyt warstwowych, drzwi chłodnicze i mroźnicze, posadzki przemysłowe. Sianów.',
         lang: 'pl',
         theme_color: '#00A0E3',
         background_color: '#05121f',

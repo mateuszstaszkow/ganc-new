@@ -53,8 +53,8 @@ export function Careers() {
               </ul>
 
               <p className="mt-7 flex items-center gap-2.5 font-semibold text-ice-200">
-                <Icon name="clock" className="size-5 shrink-0 text-ice-400" />
-                {careers.offerNote}
+                <Icon name="pin" className="size-5 shrink-0 text-ice-400" />
+                {careers.area}
               </p>
             </div>
 

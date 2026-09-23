@@ -98,5 +98,346 @@
       507
     ],
     "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAADQAwCdASoUAA0APu1iqU2ppaOiMAgBMB2JYwAAW/FdPHle3/PfQwAA/fkHPs1BH7Tw8k/f+93clkX2Lh4vJJZnj8AAAA=="
+  },
+  {
+    "slug": "11-komora-drzwi-swiatlo",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwBACdASoUABsAPtlgpE2oJiOiN/qoAQAbCWkAAEJgVlhAICj6GVb+G2AA/gciZEKZdm7ZnsB/hYXuAuoiXo7VjxJ/7Pv4mrJT4ryyJXYjrKWTRWoOAAAA"
+  },
+  {
+    "slug": "12-komora-posadzka",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAABQBACdASoUABsAPu1kqk6ppaOiKA1RMB2JaQDQGA2MCtJNXppbk7FaGnoAAPxOTYu3Bli1eFPBm9sm4tYiJjegeQcbq2GIX2Mnz/p+9Si8x/B2QUAAAA=="
+  },
+  {
+    "slug": "13-drzwi-coolit",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACQBACdASoUABsAPu1qq08ppiOiMBgIATAdiWcAABjJ621g1X11NEtsDN9fOAAA9xubwC62zzIO+pldYVjpRuYtIKpXR2uh7WTnJ6y2I6EAtJhlxBSskAAA"
+  },
+  {
+    "slug": "14-drzwi-coolit-front",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAACQBQCdASoUABsAPu1sq08ppiOiMBgIATAdiWcAwcwQ3JudpATa6q5f0hHfkaA7B0xft0znAAD+3qtZ+U8eZED56ocdvMgI9uzM2ZEL7tkzDG7emGMus8JNdsnSk2zI2y41DZsJMmAAAA=="
+  },
+  {
+    "slug": "15-korytarz-higiena",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACQBACdASoUABsAPt1WpU2opKOiN/qoARAbiWcAADU6DwUKxYwXhvapVHkC34AA/H5VYin2dcD8u2bI15sGTL26zwH8cRco4sXwcSrkoK/V45jx+1PmAAAA"
+  },
+  {
+    "slug": "16-komora-regaly",
+    "width": 1024,
+    "height": 768,
+    "widths": [
+      320,
+      512,
+      1024
+    ],
+    "lqip": "data:image/webp;base64,UklGRkoAAABXRUJQVlA4ID4AAABwAwCdASoUAA8APu1iqU2ppaQpMAgBMB2JZwC7ACF85Obb4AAA/d4hJRvRx9YK8cxgASo/HN7O5r5rU82gAA=="
+  },
+  {
+    "slug": "17-agregat-podwojny",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQBQCdASoUABsAPtlapE2oJSOiN/qoAQAbCWkAznQhydqvfVkyFFDdZOfSR65pMiwAAPxJ72p1ixs32/446BkETN9gLUacODZfi6fT+XXE7BeN4SBiZgbfArAAAA=="
+  },
+  {
+    "slug": "18-wozki-chlodnicze",
+    "width": 1024,
+    "height": 768,
+    "widths": [
+      320,
+      512,
+      1024
+    ],
+    "lqip": "data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAACQAwCdASoUAA8APu1kq04ppaQiMAgBMB2JZwCzgBgyl1RKdslgAPyB7S38iAaKbwuRJ+MueRbM4ZLsvXGGrlHVQsc8q4AA"
+  },
+  {
+    "slug": "19-drzwi-przesuwne",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADQBACdASoUABsAPtFWoU2oJKMiN+gBABoJZwDLpBeJzqGbn7aE5AA0TYT0B/iPQADhr+ZnC4XGoiDokVmeI60+Mfv2uKEsKPIM1cpacS0Nm/q52AAAAA=="
+  },
+  {
+    "slug": "20-przejscie-wozkow",
+    "width": 1024,
+    "height": 768,
+    "widths": [
+      320,
+      512,
+      1024
+    ],
+    "lqip": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAABwAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JZwDImCGv5mRNPgAA/LGui/Z7NcU4Y0y3b0mDmCll68SNtDK3O7akAAA="
+  },
+  {
+    "slug": "21-okna-podawcze",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRmIAAABXRUJQVlA4IFYAAADwBACdASoUABsAPu1cqE2ppKOiN/VYATAdiWcAyrR2hOg5h2x6xL96w0q4hQvjqIAA/e4ZdVKVnnaQImSaVZdxvLz4iH2NAe95Uz93Peas1TTAMFtsAA=="
+  },
+  {
+    "slug": "22-odboje",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAADQBACdASoUABsAPtlepU2oJaOiN/qoAQAbCWcAyrQgVyUF5Vbxz2aLkeIARYvRgADXLZHYoRHQ8EgpiWcg8j8W0J3XsKmteMkifLa9lR44/eV+MDIalYJzHBOSGxOv8q29xBQOAAA="
+  },
+  {
+    "slug": "23-komory-murowe",
+    "width": 1024,
+    "height": 768,
+    "widths": [
+      320,
+      512,
+      1024
+    ],
+    "lqip": "data:image/webp;base64,UklGRk4AAABXRUJQVlA4IEIAAACQAwCdASoUAA8APu1iqU2ppaOiMAgBMB2JZwC2yB9aYXf126G4AP5gIomcl2f7K4DHdi9exgonhALdOp2jNaOXIAA="
+  },
+  {
+    "slug": "24-montaz-pianka",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAADQBACdASoUABsAPu1krVAppSQisBgIATAdiWcAxkAQ5uoV7+qdbk4T8Y6Pw2TZAAD9yxM3sXGMAqY4AGkWcsGWfQvhWBipU9c75fb6vUp8Gqv+bvCAUmYYPGAAAA=="
+  },
+  {
+    "slug": "25-posadzka-montaz",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRlAAAABXRUJQVlA4IEQAAAAQBACdASoUABsAPu1qrlAppaQiqAqpMB2JaQDQGBbJXepuW0Mb3Tly4AD+6BzaH4M1rVKDCcpt3FoanOXwTSTRf1oAAA=="
+  },
+  {
+    "slug": "26-brama-segmentowa",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAACQBACdASoUABsAPulopU2pJqOiMAwBIB0JZQAAQaPqE9YNKjHg89d/hQ5uyUAA+Ak915NSr4Qkih3TDzHZUw7GblGkFhBKz7C17R1e0yIj50vb3oROOSAA"
+  },
+  {
+    "slug": "27-ciag-komor",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAACwBACdASoUABsAPtleo02oJaMiN/qoAQAbCWkAAEqGys6Ssbkh6NB6YcragPUAAPhdejh8kaAU8nCCuS1BCQSzVKf/NQmL+MTo/dXMkWJL50JfhsSPrz1AN0MCkE+0OAAAAA=="
+  },
+  {
+    "slug": "28-montaz-oscieznicy",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRoAAAABXRUJQVlA4IHQAAADQBACdASoUABsAPu1kq04ppaQiKA1RMB2JYwC7AAo/0ewAZy2ItQ59qeqX5Yy8AAD+FXl82wvqX0Yn/fym+dUbBV0u3zjeGB0c1thLbzvs52s9Rsb+TVd5ygiOTjdRpM8G1E0+wqm8L4wZQGJqMKNCmCAAAA=="
+  },
+  {
+    "slug": "29-montaz-stropu",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRmgAAABXRUJQVlA4IFwAAAAQBQCdASoUABsAPtFWo02oJKMiN+gBABoJaQDOdC1qQFGz159tlRF1m34OKH91rLAAAP5UZiKF8zXt36O052VuF+H1uhggYlm0BzWLMATX1dmyo5xw3LcqAAAAAA=="
+  },
+  {
+    "slug": "30-strop-komory",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAACwBACdASoUABsAPuVgpk2pJaOiMAwBIByJZwDM0AoByh0FPPBPzFv/CtmpypIAAO6AkCkLXrdK4Qsdn5iPsBzicZgMtQqFo1bNnXUC8Xsc6A2eGijEJHF6AAA="
+  },
+  {
+    "slug": "31-skrzydlo-drzwi",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwBACdASoUABsAPu1erU2ppKSiMBgMATAdiWcAxkAN0NLf+ixhaoIpcSV+rCXDB4AAzUL8b2c2lOKkY7LC5ROQpz71yXwnQDW15hCGTnei7UoOV0x+mP+8Hz/CryAA"
+  },
+  {
+    "slug": "32-montaz-nad-drzwiami",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRmQAAABXRUJQVlA4IFgAAAAwBACdASoUABsAPu1mq1AppSOisBgIATAdiWcAvkgQ0OOrWFFsJILYuAAA/rCeeYEXUt88+Nv6STP1J7MYbj2r9xl3fcKDf2u0qXF7nZGKJ7EqiAdwAAAA"
+  },
+  {
+    "slug": "33-posadzka-otwor",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAADQBACdASoUABsAPuViqE2pJaQiMAwBIByJaQDPoBNzMTwxGSVDhtxMq2tcNXbQAADG78Ee8wqVJ1ASk7A7hp44z1Ei1qtHiKt4dQjuTvbdMEIhInw15W5YAAA="
+  },
+  {
+    "slug": "34-komora-otwarta",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAACQBACdASoUABsAPu1mqk2ppaQiMAgBMB2JZwC9WB6VU73Bjyyp+5q1PIUzgQAA/HDlH7Jfpvmu3ejqUU1Cki2putVOG+1/ZzRsd8xbofb9dT6TbFPDfU+9+9Ce5RT6W+YBO33AAAA="
+  },
+  {
+    "slug": "35-parownik",
+    "width": 1024,
+    "height": 768,
+    "widths": [
+      320,
+      512,
+      1024
+    ],
+    "lqip": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADQAwCdASoUAA8APu1iqk2ppaQiMAgBMB2JZwDG9CHe3zFhaKmGIEAA/lF4bUQZUcf5qEAlOIdQ/K5lBrbmlOwjeZl2NwKJoAA="
+  },
+  {
+    "slug": "36-drzwi-zamkniete",
+    "width": 1024,
+    "height": 768,
+    "widths": [
+      320,
+      512,
+      1024
+    ],
+    "lqip": "data:image/webp;base64,UklGRlQAAABXRUJQVlA4IEgAAADwAwCdASoUAA8APu1kq04ppaQiMAgBMB2JZwC7AB3e6UbU6sNdbd20AP3SAKimxpfx1C23NmxYwdttOXsSI3sgCFREpGCkgAA="
+  },
+  {
+    "slug": "37-ekipa",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAAAwBQCdASoUABsAPu1kqU2ppaOiMAgBMB2JZwDM0B4JzsBF9nYRV8FlJNbfB1Yyk5vgAAD+zagO3FQ0/ErrFp3y/i8x7Tr2sLKhKTHniCVMCvAq2d4/Yf/NqDngXp+lI5C6QYysLTdeVrcgAAA="
+  },
+  {
+    "slug": "38-drzwi-w-montazu",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAACQBACdASoUABsAPulipE2pJaMiMAwBIB0JZwDJEAj4UxfF3vVl6t7U12Y6KwAAziMlwCLG/8EUMeVh0r400UtCL1apm8+zG5gmbvdCYUc009zpi9cyRQOyGk5RZy6BHZ6adAAA"
+  },
+  {
+    "slug": "39-strop-podpory",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAAAwBQCdASoUABsAPuFeqE2opSQiMAwBEBwJZwDMWB6MjQcG0TooBL3whxdzkFXyGlFhNADODWHXBl383zkRBqsLj/lmhUeGznQ+huSnnQ4ZKr18RGtPFAOyZAC7OXOP3pzH1BTxfrymhYAA"
+  },
+  {
+    "slug": "40-montaz-sciany",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADQBACdASoUABsAPuVgp02pJaOiMAwBIByJZwAAUo3jwDFlViLYn4dlkOOy5pwoQAD+2neQpbZ3VwjNWbBnDiOlANu2gcvghDvWFrL6enmCRHL09q0YdKnLsNgAr4P+gnbv3FU4fW7xTgAA"
+  },
+  {
+    "slug": "41-komora-drzwi-swiatlo",
+    "width": 768,
+    "height": 1024,
+    "widths": [
+      320,
+      512,
+      768
+    ],
+    "lqip": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAABwBACdASoUABsAPu1iqE2ppaOiMAgBMB2JZwDKtBI87X027aRVyB9KwRZCAADssCHW8x1+1gePqcUlkSSo8CytsWSUeu6YcCTvS5Gj0mSXQAAA"
   }
 ]
