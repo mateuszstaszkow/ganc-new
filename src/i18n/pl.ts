@@ -1,8 +1,8 @@
 export const pl = {
   meta: {
-    title: 'GANC IZOLACJE Sp. z o.o. — budowa chłodni i mroźni | Sianów',
+    title: 'GANC IZOLACJE — budowa chłodni i mroźni, drzwi chłodnicze | Sianów',
     description:
-      'GANC IZOLACJE Sp. z o.o. — budowa chłodni i mroźni w systemie płyt warstwowych i modułowym, drzwi chłodnicze i mroźnicze cool it, PFEUFFER i Celltherm, posadzki przemysłowe. Sianów.',
+      'GANC IZOLACJE Sp. z o.o. z Sianowa: budowa chłodni i mroźni, drzwi chłodnicze i mroźnicze, płyty warstwowe, system modułowy, posadzki przemysłowe, rampy przeładunkowe i obiekty przemysłowe. Autoryzowany partner cool it, PFEUFFER i Celltherm.',
   },
   ui: {
     skipToContent: 'Przejdź do treści',
@@ -27,12 +27,12 @@ export const pl = {
   },
   nav: [
     { id: 'proces', label: 'Jak pracujemy' },
+    { id: 'o-nas', label: 'O nas' },
     { id: 'specjalizacje', label: 'Chłodnie i mroźnie' },
     { id: 'oferta', label: 'Oferta' },
     { id: 'realizacje', label: 'Realizacje' },
     { id: 'kariera', label: 'Kariera' },
     { id: 'kontakt', label: 'Kontakt' },
-    { id: 'o-nas', label: 'O nas' },
   ],
   company: {
     region: 'woj. zachodniopomorskie',
@@ -40,7 +40,7 @@ export const pl = {
   },
   hero: {
     kicker: 'Specjalistyczne izolacje dla handlu i przemysłu',
-    titleLines: ['Budujemy', 'chłodnie i mroźnie'],
+    titleLines: ['Budujemy chłodnie i mroźnie'],
     titleAccent: '',
     lead:
       'Podstawową gałęzią naszych usług jest budowa chłodni i mroźni w obiektach handlowych i produkcyjnych.',
@@ -57,12 +57,6 @@ export const pl = {
     scrollAria: 'Przewiń do sekcji Jak pracujemy',
   },
   trustPoints: [
-    {
-      value: '2024 i 2026',
-      label: 'Diamenty Forbesa',
-      detail:
-        'GANC IZOLACJE Sp. z o.o. jest laureatem rankingu Diamenty Forbesa 2024 i Diamenty Forbesa 2026.',
-    },
     {
       value: 'Wieloletnie',
       label: 'Doświadczenie kadry',
@@ -93,7 +87,8 @@ export const pl = {
   ],
   about: {
     heading: 'O nas',
-    lead: 'Firma o ugruntowanej pozycji na rynku specjalistycznych usług izolacyjnych dla handlu i przemysłu.',
+    title: 'GANC IZOLACJE',
+    lead: 'firma o ugruntowanej pozycji na rynku specjalistycznych usług izolacyjnych dla handlu i przemysłu.',
     paragraphs: [
       'Podstawową gałęzią usług GANC IZOLACJE Sp. z o.o. jest budowa chłodni i mroźni w obiektach handlowych i produkcyjnych. Specjalizujemy się w dostawach i montażu drzwi chłodniczych i mroźniczych, wewnętrznych i zewnętrznych. Wykonujemy specjalistyczne roboty posadzkarskie i płytkarskie obiektów przemysłowych.',
       'Kadra inżynieryjna oraz pracownicy firmy posiadają wieloletnie doświadczenie w branży, dzięki czemu nasze wykonawstwo charakteryzuje się najwyższą jakością i precyzją. Realizujemy kompleksową budowę komór chłodniczych i mroźniczych w obiektach handlowych i przemysłowych.',
@@ -110,26 +105,15 @@ export const pl = {
       logoAlt: 'Forbes',
       kicker: 'Diamenty Miesięcznika Forbes',
       title: 'Laureat rankingu 2024 i 2026',
-      editions: [
-        {
-          year: '2024',
-          name: 'Robert Olesiński',
-          role: 'Dyrektor Regionalny ds. Korporacyjnych ING Bank Śląski',
-        },
-        {
-          year: '2026',
-          name: 'Marcin Hajduga',
-          role: 'Dyrektor Regionalny ds. Korporacyjnych ING Bank Śląski',
-        },
-      ],
+      editions: [] as { year: string; name: string; role: string }[],
       partner: 'Partner strategiczny: ING',
     },
   },
   specialties: {
     eyebrow: 'Główne produkty',
-    titleBefore: 'Chłodnie i mroźnie\u00A0— ',
+    titleBefore: 'Budowa chłodni i mroźni\u00A0— ',
     titleAccent: 'nasza specjalność',
-    lead: 'Budujemy komory w systemie płyt warstwowych i modułowym, wraz z doborem i montażem stolarki chłodniczej i mroźniczej.',
+    lead: 'Budujemy komory w systemie płyt warstwowych i modułowym, wraz z doborem i montażem drzwi chłodniczych i mroźniczych.',
     items: [
       {
         id: 'chlodnie',
@@ -163,7 +147,7 @@ export const pl = {
   },
   offer: {
     eyebrow: 'Oferta',
-    title: 'Profil działalności',
+    title: 'Chłodnie, mroźnie, płyty warstwowe i posadzki',
     lead: 'Pełny zakres prac, które wykonujemy dla inwestorów z branży handlowej i przemysłowej.',
     items: [
       { icon: 'snowflake', text: 'budowa chłodni i mroźni' },
@@ -190,10 +174,14 @@ export const pl = {
   },
   partners: {
     eyebrow: 'Autoryzowany dystrybutor',
-    heading: 'Drzwi chłodnicze i mroźnicze',
-    lead: 'Jesteśmy autoryzowanym partnerem handlowym i dystrybutorem na Polskę drzwi producentów:',
-    note: 'Drzwi wykonywane z wysokiej klasy materiałów, posiadające niskie współczynniki przenikalności cieplnej.',
-    role: 'Drzwi chłodnicze i mroźnicze',
+    heading: 'Drzwi chłodnicze i komory modułowe',
+    lead: 'Jesteśmy autoryzowanym partnerem handlowym i dystrybutorem na Polskę producentów:',
+    note: 'Drzwi i komory wykonywane z wysokiej klasy materiałów, posiadające niskie współczynniki przenikalności cieplnej.',
+    roles: {
+      coolIt: 'Drzwi chłodnicze i mroźnicze',
+      pfeuffer: 'Drzwi chłodnicze i mroźnicze oraz komory modułowe',
+      celltherm: 'Drzwi chłodnicze i mroźnicze oraz komory modułowe',
+    },
     photoAlts: {
       stainless: 'Drzwi mroźnicze cool it w komorze z regałami',
       sliding: 'Przejście do komory z wózkami transportowymi',
@@ -247,6 +235,7 @@ export const pl = {
     title: 'Wybrane prace',
     lead: 'Komory chłodnicze i mroźnicze, stolarka oraz wykończenie obiektów.',
     all: 'Wszystkie',
+    showMore: 'Pokaż więcej',
     filterAria: 'Filtruj realizacje',
     closePreview: 'Zamknij podgląd',
     prevPhoto: 'Poprzednie zdjęcie',

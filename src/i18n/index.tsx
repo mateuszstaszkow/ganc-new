@@ -42,6 +42,10 @@ export function I18nProvider({ children }: { children: ReactNode }) {
     document.title = t.meta.title
     const description = document.querySelector('meta[name="description"]')
     description?.setAttribute('content', t.meta.description)
+    document.querySelector('meta[property="og:title"]')?.setAttribute('content', t.meta.title)
+    document
+      .querySelector('meta[property="og:description"]')
+      ?.setAttribute('content', t.meta.description)
 
     const rest = stripLocale(pathname)
     document

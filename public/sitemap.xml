@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://mateuszstaszkow.github.io/ganc-new/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://mateuszstaszkow.github.io/ganc-new/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mateuszstaszkow.github.io/ganc-new/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://mateuszstaszkow.github.io/ganc-new/de/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://mateuszstaszkow.github.io/ganc-new/uk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mateuszstaszkow.github.io/ganc-new/" />
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://mateuszstaszkow.github.io/ganc-new/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://mateuszstaszkow.github.io/ganc-new/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mateuszstaszkow.github.io/ganc-new/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://mateuszstaszkow.github.io/ganc-new/de/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://mateuszstaszkow.github.io/ganc-new/uk/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mateuszstaszkow.github.io/ganc-new/de/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://mateuszstaszkow.github.io/ganc-new/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mateuszstaszkow.github.io/ganc-new/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://mateuszstaszkow.github.io/ganc-new/de/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://mateuszstaszkow.github.io/ganc-new/uk/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mateuszstaszkow.github.io/ganc-new/uk/</loc>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://mateuszstaszkow.github.io/ganc-new/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://mateuszstaszkow.github.io/ganc-new/en/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://mateuszstaszkow.github.io/ganc-new/de/" />
+    <xhtml:link rel="alternate" hreflang="uk" href="https://mateuszstaszkow.github.io/ganc-new/uk/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mateuszstaszkow.github.io/ganc-new/rodo</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

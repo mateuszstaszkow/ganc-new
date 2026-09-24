@@ -24,10 +24,10 @@ export const company = {
 
 export const SECTION_IDS = [
   'proces',
+  'o-nas',
   'specjalizacje',
   'oferta',
   'realizacje',
   'kariera',
   'kontakt',
-  'o-nas',
 ] as const

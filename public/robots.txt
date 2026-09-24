@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://mateuszstaszkow.github.io/ganc-new/sitemap.xml
+
+# Company and services overview for AI assistants
+# https://mateuszstaszkow.github.io/ganc-new/llms.txt

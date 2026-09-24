@@ -44,7 +44,7 @@ export function About() {
 
   return (
     <Section id="o-nas" decorated className="bg-steel-950">
-      <SectionHeading eyebrow={about.heading} title={about.lead} />
+      <SectionHeading eyebrow={about.heading} title={about.title} lead={about.lead} />
 
       <div ref={wrapRef} className="mt-14 grid gap-12 lg:mt-20 lg:grid-cols-[1fr_0.82fr] lg:gap-16">
         <div className="space-y-6">
@@ -78,15 +78,17 @@ export function About() {
                 {about.forbes.kicker}
               </p>
               <p className="mt-1 text-lg font-extrabold text-white">{about.forbes.title}</p>
-              <ul className="mt-4 space-y-3">
-                {about.forbes.editions.map((edition) => (
-                  <li key={edition.year}>
-                    <p className="font-extrabold text-white">{edition.year}</p>
-                    <p className="text-sm text-steel-100">{edition.name}</p>
-                    <p className="text-sm text-steel-400">{edition.role}</p>
-                  </li>
-                ))}
-              </ul>
+              {about.forbes.editions.length > 0 && (
+                <ul className="mt-4 space-y-3">
+                  {about.forbes.editions.map((edition) => (
+                    <li key={edition.year}>
+                      <p className="font-extrabold text-white">{edition.year}</p>
+                      <p className="text-sm text-steel-100">{edition.name}</p>
+                      <p className="text-sm text-steel-400">{edition.role}</p>
+                    </li>
+                  ))}
+                </ul>
+              )}
               <p className="mt-4 text-sm font-semibold text-steel-200">{about.forbes.partner}</p>
             </div>
           </Reveal>
@@ -125,7 +127,7 @@ export function About() {
         </div>
       </div>
 
-      <Stagger className="mt-16 grid gap-4 sm:grid-cols-2 lg:mt-24 lg:grid-cols-4">
+      <Stagger className="mt-16 grid gap-4 sm:grid-cols-2 lg:mt-24 lg:grid-cols-3">
         {trustPoints.map((point) => (
           <StaggerItem key={point.label}>
             <div className="glass group h-full rounded-2xl p-6 transition-colors duration-300 hover:border-ice-500/40">

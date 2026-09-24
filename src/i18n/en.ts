@@ -2,9 +2,9 @@ import type { Dictionary } from './pl'
 
 export const en: Dictionary = {
   meta: {
-    title: 'GANC IZOLACJE Sp. z o.o. — cold rooms and freezer rooms | Sianów',
+    title: 'GANC IZOLACJE — cold rooms, freezer rooms, cold-store doors | Sianów',
     description:
-      'GANC IZOLACJE Sp. z o.o. — construction of cold rooms and freezer rooms in sandwich-panel and modular systems, cool it, PFEUFFER and Celltherm doors, industrial flooring. Based in Sianów.',
+      'GANC IZOLACJE Sp. z o.o. in Sianów: construction of cold rooms and freezer rooms, cold-store and freezer doors, sandwich panels, modular systems, industrial flooring, loading docks and industrial buildings. Authorised partner for cool it, PFEUFFER and Celltherm.',
   },
   ui: {
     skipToContent: 'Skip to content',
@@ -30,12 +30,12 @@ export const en: Dictionary = {
   },
   nav: [
     { id: 'proces', label: 'How we work' },
+    { id: 'o-nas', label: 'About us' },
     { id: 'specjalizacje', label: 'Cold rooms' },
     { id: 'oferta', label: 'Offer' },
     { id: 'realizacje', label: 'Projects' },
     { id: 'kariera', label: 'Careers' },
     { id: 'kontakt', label: 'Contact' },
-    { id: 'o-nas', label: 'About us' },
   ],
   company: {
     region: 'West Pomeranian Voivodeship',
@@ -43,7 +43,7 @@ export const en: Dictionary = {
   },
   hero: {
     kicker: 'Specialist insulation for retail and industry',
-    titleLines: ['We build cold rooms', 'and freezer rooms'],
+    titleLines: ['We build cold rooms and freezer rooms'],
     titleAccent: '',
     lead:
       'Our core service is the construction of cold rooms and freezer rooms in retail and production buildings.',
@@ -60,12 +60,6 @@ export const en: Dictionary = {
     scrollAria: 'Scroll to How we work',
   },
   trustPoints: [
-    {
-      value: '2024 and 2026',
-      label: 'Forbes Diamonds',
-      detail:
-        'GANC IZOLACJE Sp. z o.o. is a laureate of the Forbes Diamonds 2024 and Forbes Diamonds 2026 rankings.',
-    },
     {
       value: 'Many years',
       label: 'Team experience',
@@ -96,7 +90,8 @@ export const en: Dictionary = {
   ],
   about: {
     heading: 'About us',
-    lead: 'A company with an established position in specialist insulation for retail and industry.',
+    title: 'GANC IZOLACJE',
+    lead: 'a company with an established position in specialist insulation for retail and industry.',
     paragraphs: [
       'The core service of GANC IZOLACJE Sp. z o.o. is the construction of cold rooms and freezer rooms in retail and production buildings. We specialise in the supply and installation of cold-store and freezer doors, internal and external. We carry out specialist flooring and tiling works in industrial buildings.',
       'Our engineers and site staff have many years of industry experience, which is why the work is precise and of high quality. We deliver complete cold and freezer chambers in retail and industrial buildings.',
@@ -113,26 +108,15 @@ export const en: Dictionary = {
       logoAlt: 'Forbes',
       kicker: 'Forbes magazine Diamonds',
       title: 'Ranking laureate, 2024 and 2026',
-      editions: [
-        {
-          year: '2024',
-          name: 'Robert Olesiński',
-          role: 'Regional Director for Corporate Clients, ING Bank Śląski',
-        },
-        {
-          year: '2026',
-          name: 'Marcin Hajduga',
-          role: 'Regional Director for Corporate Clients, ING Bank Śląski',
-        },
-      ],
+      editions: [],
       partner: 'Strategic partner: ING',
     },
   },
   specialties: {
     eyebrow: 'Core products',
-    titleBefore: 'Cold rooms and freezer rooms\u00A0— ',
+    titleBefore: 'Cold-room and freezer construction\u00A0— ',
     titleAccent: 'our speciality',
-    lead: 'We build chambers in sandwich-panel and modular systems, including selection and installation of cold-store and freezer door sets.',
+    lead: 'We build chambers in sandwich-panel and modular systems, including selection and installation of cold-store and freezer doors.',
     items: [
       {
         id: 'chlodnie',
@@ -166,7 +150,7 @@ export const en: Dictionary = {
   },
   offer: {
     eyebrow: 'Offer',
-    title: 'Scope of activity',
+    title: 'Cold rooms, freezer rooms, panels and flooring',
     lead: 'The full range of work we carry out for investors in retail and industry.',
     items: [
       { icon: 'snowflake', text: 'construction of cold rooms and freezer rooms' },
@@ -193,10 +177,14 @@ export const en: Dictionary = {
   },
   partners: {
     eyebrow: 'Authorised distributor',
-    heading: 'Cold-store and freezer doors',
-    lead: 'We are an authorised sales partner and distributor in Poland for doors from:',
-    note: 'Doors made from high-grade materials, with low thermal transmittance.',
-    role: 'Cold-store and freezer doors',
+    heading: 'Cold-store doors and modular cold rooms',
+    lead: 'We are an authorised sales partner and distributor in Poland for:',
+    note: 'Doors and chambers made from high-grade materials, with low thermal transmittance.',
+    roles: {
+      coolIt: 'Cold-store and freezer doors',
+      pfeuffer: 'Cold-store and freezer doors and modular cold rooms',
+      celltherm: 'Cold-store and freezer doors and modular cold rooms',
+    },
     photoAlts: {
       stainless: 'cool it freezer door in a room with shelving',
       sliding: 'Passage into a chamber with transport racks',
@@ -250,6 +238,7 @@ export const en: Dictionary = {
     title: 'Selected work',
     lead: 'Cold and freezer chambers, door sets and finishes.',
     all: 'All',
+    showMore: 'Show more',
     filterAria: 'Filter projects',
     closePreview: 'Close preview',
     prevPhoto: 'Previous photo',

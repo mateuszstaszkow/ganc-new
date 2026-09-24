@@ -27,13 +27,13 @@ export default function Home() {
         <Suspense fallback={<div className="min-h-[40vh] bg-steel-950" aria-hidden="true" />}>
           <Marquee items={t.marqueeItems} />
           <Process />
+          <About />
           <Specialties />
           <Offer />
           <Gallery />
           <Partners />
           <Careers />
           <Contact />
-          <About />
         </Suspense>
       </main>
       <Suspense fallback={null}>

@@ -44,7 +44,7 @@ function TemperatureReadout() {
 
   return (
     <div className="flex items-center gap-4">
-      <div className="relative h-14 w-2 overflow-hidden rounded-full bg-white/10 sm:h-24 sm:w-2.5">
+      <div className="relative h-24 w-2.5 overflow-hidden rounded-full bg-white/10">
         <motion.div
           style={{ height: fillHeight }}
           className="absolute bottom-0 w-full rounded-full bg-gradient-to-t from-ice-600 via-ice-400 to-ice-200"
@@ -52,8 +52,8 @@ function TemperatureReadout() {
       </div>
       <div>
         <p className="flex items-baseline gap-1 font-extrabold tabular-nums">
-          <span className="text-3xl text-white sm:text-5xl">{display}</span>
-          <span className="text-lg text-ice-400 sm:text-2xl">°C</span>
+          <span className="text-5xl text-white">{display}</span>
+          <span className="text-2xl text-ice-400">°C</span>
         </p>
         <p className="mt-1 text-xs font-semibold tracking-[0.18em] text-steel-400 uppercase">
           {t.hero.freezerRange}
@@ -81,7 +81,7 @@ export function Hero() {
     <section
       id="start"
       aria-label={hero.introAria}
-      className="relative flex h-[100svh] flex-col overflow-hidden pt-[4.75rem] pb-4 lg:justify-center lg:pt-28 lg:pb-10"
+      className="relative flex h-[100svh] flex-col overflow-hidden pt-[4.75rem] pb-3 lg:justify-center lg:pt-28 lg:pb-10"
     >
       {/* ---- background stack ---- */}
       <div aria-hidden="true" className="absolute inset-0 -z-10">
@@ -105,9 +105,9 @@ export function Hero() {
       </div>
 
       <motion.div style={{ y, opacity }} className="shell flex min-h-0 w-full flex-1 flex-col justify-center">
-        <div className="grid min-h-0 flex-1 grid-rows-[auto_minmax(0,1fr)] items-stretch gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:grid-rows-1 lg:gap-16">
+        <div className="grid min-h-0 flex-1 grid-rows-[auto_minmax(0,1fr)] items-stretch gap-4 sm:gap-6 lg:grid-cols-[1.15fr_0.85fr] lg:grid-rows-1 lg:gap-16">
           {/* ---- copy ---- */}
-          <div className="lg:flex lg:flex-col lg:justify-center">
+          <div className="min-w-0 shrink-0 lg:flex lg:flex-col lg:justify-center">
             <motion.p
               initial={enter ? { opacity: 0, y: 12 } : false}
               animate={enter ? { opacity: 1, y: 0 } : undefined}
@@ -130,7 +130,7 @@ export function Hero() {
               initial={enter ? { opacity: 0, y: 16 } : false}
               animate={enter ? { opacity: 1, y: 0 } : undefined}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="glass mt-5 inline-flex max-w-full items-center gap-2.5 rounded-full py-1.5 pr-3 pl-2 text-left text-xs leading-snug font-semibold text-ice-100 sm:mt-5 sm:py-2 sm:pr-4 sm:pl-2.5 sm:text-sm"
+              className="glass mt-6 inline-flex max-w-full items-center gap-2.5 rounded-full py-1.5 pr-3 pl-2 text-left text-xs leading-snug font-semibold text-ice-100 sm:mt-5 sm:py-2 sm:pr-4 sm:pl-2.5 sm:text-sm"
             >
               <span className="relative flex size-2">
                 <span className="absolute inset-0 animate-pulse-ring rounded-full bg-ice-400" />
@@ -139,7 +139,7 @@ export function Hero() {
               {hero.kicker}
             </motion.p>
 
-            <h1 className="headline-hero mt-5 text-[1.85rem] leading-[1.05] font-extrabold text-white sm:text-fluid-hero lg:mt-6">
+            <h1 className="headline-hero mt-6 text-[1.7rem] leading-[1.05] font-extrabold text-white sm:mt-5 sm:text-fluid-hero lg:mt-6">
               <span className="sr-only">{hero.titleLines.join(' ')}</span>
               <span aria-hidden="true" className="block">
                 {hero.titleLines.map((line, index) => (
@@ -164,7 +164,7 @@ export function Hero() {
               initial={enter ? { opacity: 0, y: 18 } : false}
               animate={enter ? { opacity: 1, y: 0 } : undefined}
               transition={{ delay: 0.45, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-5 line-clamp-3 max-w-xl text-sm text-steel-300 sm:text-base sm:line-clamp-none lg:mt-7 lg:text-fluid-lg"
+              className="mt-4 max-w-xl text-sm text-steel-300 lg:mt-7 lg:text-fluid-lg"
             >
               {hero.lead}
             </motion.p>
@@ -173,7 +173,7 @@ export function Hero() {
               initial={enter ? { opacity: 0, y: 18 } : false}
               animate={enter ? { opacity: 1, y: 0 } : undefined}
               transition={{ delay: 0.55, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="mt-5 flex flex-row items-center gap-2 sm:gap-3 lg:mt-9"
+              className="mt-6 mb-8 flex flex-row items-center gap-2 sm:mt-5 sm:gap-3 lg:mt-9 lg:mb-0"
             >
               <ButtonLink href="#kontakt" className="min-w-0 flex-1 sm:w-auto sm:flex-none">
                 {hero.primaryCta}
@@ -197,27 +197,27 @@ export function Hero() {
             initial={enter ? { opacity: 0, y: 28 } : false}
             animate={enter ? { opacity: 1, y: 0 } : undefined}
             transition={{ delay: 0.35, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="relative mx-auto flex h-full min-h-0 w-full max-w-md flex-col overflow-hidden lg:max-w-none"
+            className="relative flex min-h-0 w-full flex-col overflow-hidden lg:h-full"
           >
-            <div className="glass relative flex h-full min-h-0 flex-col overflow-hidden rounded-3xl p-3 sm:p-7">
+            <div className="glass relative flex h-full min-h-0 flex-col overflow-hidden rounded-3xl p-4 sm:p-7">
               <div
                 aria-hidden="true"
                 className="absolute -top-24 -right-16 size-52 rounded-full bg-ice-400/20 blur-3xl"
               />
 
-              <div className="relative flex shrink-0 items-start justify-between gap-4">
+              <div className="relative flex shrink-0 items-start justify-between gap-3 sm:gap-4">
                 <TemperatureReadout />
                 <span className="rounded-full bg-ember-500/15 px-3 py-1.5 text-[0.62rem] font-bold tracking-[0.16em] text-ember-400 uppercase ring-1 ring-ember-500/30">
                   {hero.freezerBadge}
                 </span>
               </div>
 
-              <div className="relative mt-4 min-h-0 flex-1 overflow-hidden rounded-2xl ring-1 ring-white/10 lg:mt-5">
+              <div className="relative mt-8 min-h-0 w-full flex-1 overflow-hidden rounded-2xl ring-1 ring-white/10 lg:mt-5">
                 <Photo
                   slug="41-komora-drzwi-swiatlo"
                   alt={hero.photoAlt}
-                  className="h-full min-h-0 w-full"
-                  imgClassName="object-[center_35%] lg:object-[center_42%]"
+                  className="h-full min-h-0 w-full lg:bg-steel-950/50"
+                  imgClassName="!object-cover !object-center lg:!object-[center_42%]"
                   sizes="(max-width: 1024px) 90vw, 34vw"
                   priority
                 />
@@ -225,7 +225,7 @@ export function Hero() {
                   aria-hidden="true"
                   className="pointer-events-none absolute inset-0 bg-gradient-to-t from-steel-950/70 via-transparent to-transparent"
                 />
-                <p className="absolute bottom-3 left-4 text-xs font-semibold text-white/90">
+                <p className="absolute bottom-2 left-3 text-[0.65rem] font-semibold text-white/90 sm:bottom-3 sm:left-4 sm:text-xs">
                   {hero.photoCaption}
                 </p>
               </div>

@@ -8,6 +8,16 @@ import { Reveal } from './ui/Reveal'
 import { Section, SectionHeading } from './ui/Section'
 
 const ALL = '__all__'
+const MOBILE_COUNT = 4
+const DESKTOP_COUNT = 6
+
+/** Diverse first look: chamber interior, door, industrial opening, installation/finish. */
+const FEATURED_SLUGS = [
+  '12-komora-posadzka',
+  '22-odboje',
+  '26-brama-segmentowa',
+  '25-posadzka-montaz',
+] as const
 
 export function Gallery() {
   const { t } = useI18n()
@@ -17,17 +27,36 @@ export function Gallery() {
     [gallery],
   )
   const [filter, setFilter] = useState<string>(ALL)
+  const [expanded, setExpanded] = useState(false)
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   useEffect(() => {
     setFilter(ALL)
+    setExpanded(false)
     setOpenIndex(null)
   }, [t.gallery.all])
 
-  const visible = useMemo(
-    () => (filter === ALL ? [...gallery] : gallery.filter((item) => item.category === filter)),
-    [filter, gallery],
-  )
+  const ordered = useMemo(() => {
+    if (filter !== ALL) {
+      return gallery.filter((item) => item.category === filter)
+    }
+    const featured = FEATURED_SLUGS.map((slug) => gallery.find((item) => item.slug === slug)).filter(
+      (item): item is (typeof gallery)[number] => Boolean(item),
+    )
+    const featuredSet = new Set(featured.map((item) => item.slug))
+    const rest = gallery.filter((item) => !featuredSet.has(item.slug))
+    return [...featured, ...rest]
+  }, [filter, gallery])
+
+  const visible = useMemo(() => {
+    if (filter !== ALL || expanded || ordered.length <= DESKTOP_COUNT) {
+      return ordered
+    }
+    return ordered.slice(0, DESKTOP_COUNT)
+  }, [expanded, filter, ordered])
+
+  const previewCollapsed = filter === ALL && !expanded
+  const canShowMore = previewCollapsed && ordered.length > MOBILE_COUNT
 
   useLockBodyScroll(openIndex !== null)
 
@@ -50,6 +79,11 @@ export function Gallery() {
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
   }, [openIndex, close, step])
+
+  useEffect(() => {
+    setOpenIndex(null)
+    if (filter !== ALL) setExpanded(false)
+  }, [filter])
 
   const current = openIndex === null ? null : visible[openIndex]
 
@@ -106,6 +140,7 @@ export function Gallery() {
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.94 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
+              className={previewCollapsed && index >= MOBILE_COUNT ? 'hidden lg:block' : undefined}
             >
               <button
                 type="button"
@@ -143,6 +178,21 @@ export function Gallery() {
           ))}
         </AnimatePresence>
       </motion.ul>
+
+      {canShowMore && (
+        <Reveal
+          direction="up"
+          className={`mt-8 flex justify-center ${ordered.length > DESKTOP_COUNT ? '' : 'lg:hidden'}`}
+        >
+          <button
+            type="button"
+            onClick={() => setExpanded(true)}
+            className="rounded-full bg-ice-500 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-ice-400"
+          >
+            {t.gallery.showMore}
+          </button>
+        </Reveal>
+      )}
 
       <AnimatePresence>
         {current && (

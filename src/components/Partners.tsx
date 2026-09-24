@@ -5,14 +5,15 @@ import { Photo } from './ui/Photo'
 import { Reveal, Stagger, StaggerItem } from './ui/Reveal'
 import { Section, SectionHeading } from './ui/Section'
 
+const BRANDS = [
+  { name: 'cool it', roleKey: 'coolIt' as const, logo: 'partner-cool-it.png' },
+  { name: 'PFEUFFER', roleKey: 'pfeuffer' as const, logo: 'partner-pfeuffer.png' },
+  { name: 'Celltherm', roleKey: 'celltherm' as const, logo: 'partner-celltherm.png' },
+]
+
 export function Partners() {
   const { t } = useI18n()
   const partners = t.partners
-  const brands = [
-    { name: 'cool it', role: partners.role },
-    { name: 'PFEUFFER', role: partners.role },
-    { name: 'Celltherm', role: partners.role },
-  ]
 
   return (
     <Section id="partnerzy" className="bg-steel-900">
@@ -25,17 +26,23 @@ export function Partners() {
           />
 
           <Stagger className="mt-10 space-y-3">
-            {brands.map((brand) => (
+            {BRANDS.map((brand) => (
               <StaggerItem key={brand.name}>
                 <div className="glass group flex items-center gap-4 rounded-2xl p-5 transition-colors duration-300 hover:border-ice-500/40">
-                  <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-ice-500/25 to-transparent text-ice-300 ring-1 ring-inset ring-white/10">
-                    <Icon name="door" className="size-6" />
+                  <span className="flex h-14 w-[7.5rem] shrink-0 items-center justify-center rounded-xl bg-white px-2.5 ring-1 ring-inset ring-black/5">
+                    <img
+                      src={`${import.meta.env.BASE_URL}${brand.logo}`}
+                      alt={brand.name}
+                      className="max-h-9 w-auto max-w-full object-contain"
+                    />
                   </span>
                   <span className="min-w-0">
                     <span className="block text-lg font-extrabold tracking-wide text-white">
                       {brand.name}
                     </span>
-                    <span className="block text-sm text-steel-400">{brand.role}</span>
+                    <span className="block text-sm text-steel-400">
+                      {partners.roles[brand.roleKey]}
+                    </span>
                   </span>
                   <motion.span
                     aria-hidden="true"

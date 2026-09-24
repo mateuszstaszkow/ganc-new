@@ -2,9 +2,9 @@ import type { Dictionary } from './pl'
 
 export const de: Dictionary = {
   meta: {
-    title: 'GANC IZOLACJE Sp. z o.o. — Kühl- und Tiefkühlräume | Sianów',
+    title: 'GANC IZOLACJE — Kühlräume, Tiefkühlräume, Kühltüren | Sianów',
     description:
-      'GANC IZOLACJE Sp. z o.o. — Bau von Kühl- und Tiefkühlräumen im Sandwichpaneel- und Modulsystem, Türen von cool it, PFEUFFER und Celltherm, Industrieböden. Sitz in Sianów.',
+      'GANC IZOLACJE Sp. z o.o. in Sianów: Bau von Kühl- und Tiefkühlräumen, Kühl- und Tiefkühltüren, Sandwichpaneele, Modulsystem, Industrieböden, Umschlagrampen und Industrieobjekte. Autorisierter Partner von cool it, PFEUFFER und Celltherm.',
   },
   ui: {
     skipToContent: 'Zum Inhalt springen',
@@ -30,12 +30,12 @@ export const de: Dictionary = {
   },
   nav: [
     { id: 'proces', label: 'Ablauf' },
+    { id: 'o-nas', label: 'Über uns' },
     { id: 'specjalizacje', label: 'Kühlräume' },
     { id: 'oferta', label: 'Angebot' },
     { id: 'realizacje', label: 'Referenzen' },
     { id: 'kariera', label: 'Karriere' },
     { id: 'kontakt', label: 'Kontakt' },
-    { id: 'o-nas', label: 'Über uns' },
   ],
   company: {
     region: 'Woiwodschaft Westpommern',
@@ -43,7 +43,7 @@ export const de: Dictionary = {
   },
   hero: {
     kicker: 'Dämmung für Handel und Industrie',
-    titleLines: ['Wir bauen Kühlräume', 'und Tiefkühlräume'],
+    titleLines: ['Wir bauen Kühl- und Tiefkühlräume'],
     titleAccent: '',
     lead:
       'Unser Kerngeschäft ist der Bau von Kühl- und Tiefkühlräumen in Handels- und Produktionsobjekten.',
@@ -60,12 +60,6 @@ export const de: Dictionary = {
     scrollAria: 'Zum Abschnitt Ablauf scrollen',
   },
   trustPoints: [
-    {
-      value: '2024 und 2026',
-      label: 'Forbes-Diamanten',
-      detail:
-        'GANC IZOLACJE Sp. z o.o. ist Preisträger der Rankings Forbes-Diamanten 2024 und Forbes-Diamanten 2026.',
-    },
     {
       value: 'Langjährig',
       label: 'Erfahrung des Teams',
@@ -96,7 +90,8 @@ export const de: Dictionary = {
   ],
   about: {
     heading: 'Über uns',
-    lead: 'Ein Unternehmen mit gefestigter Position bei Spezialdämmungen für Handel und Industrie.',
+    title: 'GANC IZOLACJE',
+    lead: 'ein Unternehmen mit gefestigter Position bei Spezialdämmungen für Handel und Industrie.',
     paragraphs: [
       'Das Kerngeschäft von GANC IZOLACJE Sp. z o.o. ist der Bau von Kühl- und Tiefkühlräumen in Handels- und Produktionsobjekten. Wir sind auf Lieferung und Montage von Kühl- und Tiefkühltüren spezialisiert, innen und außen. Wir führen Spezialarbeiten für Industrieböden und Fliesen in Industrieobjekten aus.',
       'Ingenieure und Mitarbeiter verfügen über langjährige Branchenerfahrung, daher zeichnet sich unsere Ausführung durch höchste Qualität und Präzision aus. Wir realisieren den kompletten Bau von Kühl- und Tiefkühlkammern in Handels- und Industrieobjekten.',
@@ -113,26 +108,15 @@ export const de: Dictionary = {
       logoAlt: 'Forbes',
       kicker: 'Diamanten des Magazins Forbes',
       title: 'Preisträger des Rankings 2024 und 2026',
-      editions: [
-        {
-          year: '2024',
-          name: 'Robert Olesiński',
-          role: 'Regionaldirektor für Firmenkunden, ING Bank Śląski',
-        },
-        {
-          year: '2026',
-          name: 'Marcin Hajduga',
-          role: 'Regionaldirektor für Firmenkunden, ING Bank Śląski',
-        },
-      ],
+      editions: [],
       partner: 'Strategischer Partner: ING',
     },
   },
   specialties: {
     eyebrow: 'Hauptprodukte',
-    titleBefore: 'Kühl-\u00A0und Tiefkühlräume\u00A0— ',
+    titleBefore: 'Bau von Kühl- und Tiefkühlräumen\u00A0— ',
     titleAccent: 'unsere Spezialität',
-    lead: 'Wir bauen Kammern im Sandwichpaneel- und Modulsystem, einschließlich Auswahl und Montage der Kühl- und Tiefkühlzargen.',
+    lead: 'Wir bauen Kammern im Sandwichpaneel- und Modulsystem, einschließlich Auswahl und Montage von Kühl- und Tiefkühltüren.',
     items: [
       {
         id: 'chlodnie',
@@ -166,7 +150,7 @@ export const de: Dictionary = {
   },
   offer: {
     eyebrow: 'Angebot',
-    title: 'Leistungsspektrum',
+    title: 'Kühlräume, Tiefkühlräume, Paneele und Böden',
     lead: 'Der volle Umfang der Arbeiten, die wir für Investoren aus Handel und Industrie ausführen.',
     items: [
       { icon: 'snowflake', text: 'Bau von Kühl- und Tiefkühlräumen' },
@@ -193,10 +177,14 @@ export const de: Dictionary = {
   },
   partners: {
     eyebrow: 'Autorisierter Vertrieb',
-    heading: 'Kühl- und Tiefkühltüren',
-    lead: 'Wir sind autorisierter Handelspartner und Vertrieb in Polen für Türen der Hersteller:',
-    note: 'Türen aus hochwertigen Materialien mit geringen Wärmedurchgangskoeffizienten.',
-    role: 'Kühl- und Tiefkühltüren',
+    heading: 'Kühltüren und modulare Kühlzellen',
+    lead: 'Wir sind autorisierter Handelspartner und Vertrieb in Polen für:',
+    note: 'Türen und Kammern aus hochwertigen Materialien mit geringen Wärmedurchgangskoeffizienten.',
+    roles: {
+      coolIt: 'Kühl- und Tiefkühltüren',
+      pfeuffer: 'Kühl- und Tiefkühltüren sowie modulare Kühlzellen',
+      celltherm: 'Kühl- und Tiefkühltüren sowie modulare Kühlzellen',
+    },
     photoAlts: {
       stainless: 'cool it-Tiefkühltür in einem Raum mit Regalen',
       sliding: 'Durchgang in eine Kammer mit Transportwagen',
@@ -250,6 +238,7 @@ export const de: Dictionary = {
     title: 'Ausgewählte Arbeiten',
     lead: 'Kühl- und Tiefkühlkammern, Türen und Ausbau.',
     all: 'Alle',
+    showMore: 'Mehr anzeigen',
     filterAria: 'Referenzen filtern',
     closePreview: 'Vorschau schließen',
     prevPhoto: 'Vorheriges Foto',

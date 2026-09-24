@@ -7,7 +7,15 @@ import { useLockBodyScroll } from '../hooks/useLockBodyScroll'
 import { useScrollSpy } from '../hooks/useScrollSpy'
 import { LanguageSwitcher } from './LanguageSwitcher'
 import { Icon } from './ui/Icon'
-const SECTION_IDS = ['proces', 'specjalizacje', 'oferta', 'realizacje', 'kariera', 'kontakt', 'o-nas']
+const SECTION_IDS = [
+  'proces',
+  'o-nas',
+  'specjalizacje',
+  'oferta',
+  'realizacje',
+  'kariera',
+  'kontakt',
+]
 
 export function Header({ onHome = true }: { onHome?: boolean }) {
   const { t, homePath, sectionHref } = useI18n()
@@ -41,7 +49,7 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
           <Link
             to={homePath}
             aria-label={`${company.legalName} — ${t.ui.homeAria}`}
-            className="inline-flex shrink-0"
+            className="inline-flex shrink-0 items-center gap-2.5"
           >
             <img
               src={`${import.meta.env.BASE_URL}logo-lockup-light.png`}
@@ -50,6 +58,9 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
               height={269}
               className="h-7 w-auto sm:h-8"
             />
+            <span className="text-sm font-extrabold tracking-normal text-white sm:text-[0.9375rem]">
+              GANC
+            </span>
           </Link>
 
           <nav aria-label={t.ui.mainMenu} className="hidden min-w-0 xl:block">
@@ -140,7 +151,7 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
                   to={homePath}
                   onClick={() => setOpen(false)}
                   aria-label={`${company.legalName} — ${t.ui.homeAria}`}
-                  className="inline-flex"
+                  className="inline-flex items-center gap-2.5"
                 >
                   <img
                     src={`${import.meta.env.BASE_URL}logo-lockup-light.png`}
@@ -149,6 +160,7 @@ export function Header({ onHome = true }: { onHome?: boolean }) {
                     height={269}
                     className="h-7 w-auto"
                   />
+                  <span className="text-sm font-extrabold tracking-normal text-white">GANC</span>
                 </Link>
                 <button
                   type="button"

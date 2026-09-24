@@ -222,7 +222,7 @@ export function Contact() {
       label: c.email,
       value: company.email,
       href: `mailto:${company.email}`,
-      note: `${c.hr}: ${company.emailHr}`,
+      note: company.emailHr,
     },
   ]
 
