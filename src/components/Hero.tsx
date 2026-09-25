@@ -6,8 +6,9 @@ import {
   useScroll,
   useTransform,
 } from 'framer-motion'
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { company } from '../data/content'
+import { orderGallery } from '../data/gallery-order'
 import { useI18n } from '../i18n'
 import { useLiteMotion } from '../hooks/useLiteMotion'
 import { ButtonLink } from './ui/Button'
@@ -76,6 +77,21 @@ export function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.13], [1, lite ? 1 : 0.1])
 
   const enter = !lite && !reduce
+  const slides = useMemo(() => orderGallery(t.gallery.items), [t.gallery.items])
+  const [slideIndex, setSlideIndex] = useState(0)
+  const slide = slides[slideIndex] ?? slides[0]
+
+  useEffect(() => {
+    setSlideIndex(0)
+  }, [slides])
+
+  useEffect(() => {
+    if (reduce || slides.length < 2) return
+    const timer = window.setInterval(() => {
+      setSlideIndex((current) => (current + 1) % slides.length)
+    }, 5000)
+    return () => window.clearInterval(timer)
+  }, [reduce, slides.length])
 
   return (
     <section
@@ -213,20 +229,23 @@ export function Hero() {
               </div>
 
               <div className="relative mt-8 min-h-0 w-full flex-1 overflow-hidden rounded-2xl ring-1 ring-white/10 lg:mt-5">
-                <Photo
-                  slug="41-komora-drzwi-swiatlo"
-                  alt={hero.photoAlt}
-                  className="h-full min-h-0 w-full lg:bg-steel-950/50"
-                  imgClassName="!object-cover !object-center lg:!object-[center_42%]"
-                  sizes="(max-width: 1024px) 90vw, 34vw"
-                  priority
-                />
+                {slide && (
+                  <Photo
+                    key={slide.slug}
+                    slug={slide.slug}
+                    alt={slide.title}
+                    className="absolute inset-0 h-full min-h-0 w-full lg:bg-steel-950/50"
+                    imgClassName="!object-cover !object-center"
+                    sizes="(max-width: 1024px) 90vw, 34vw"
+                    priority={slideIndex === 0}
+                  />
+                )}
                 <div
                   aria-hidden="true"
                   className="pointer-events-none absolute inset-0 bg-gradient-to-t from-steel-950/70 via-transparent to-transparent"
                 />
                 <p className="absolute bottom-2 left-3 text-[0.65rem] font-semibold text-white/90 sm:bottom-3 sm:left-4 sm:text-xs">
-                  {hero.photoCaption}
+                  {slide?.title}
                 </p>
               </div>
             </div>

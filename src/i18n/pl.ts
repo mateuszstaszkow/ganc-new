@@ -356,6 +356,61 @@ export const pl = {
         title: 'Komora w trakcie montażu płyt',
         category: 'Montaż',
       },
+      {
+        slug: '01-komora-chlodnicza',
+        title: 'Komora chłodnicza z drzwiami',
+        category: 'Chłodnie',
+      },
+      {
+        slug: '02-drzwi-mroznicze-przesuwne',
+        title: 'Drzwi mroźnicze przesuwne',
+        category: 'Drzwi',
+      },
+      {
+        slug: '03-korytarz-komor',
+        title: 'Korytarz komór chłodniczych',
+        category: 'Chłodnie',
+      },
+      {
+        slug: '04-hala-produkcyjna-wnetrze',
+        title: 'Drzwi chłodnicze w hali produkcyjnej',
+        category: 'Obiekty przemysłowe',
+      },
+      {
+        slug: '05-rampy-przeladunkowe',
+        title: 'Rampy przeładunkowe',
+        category: 'Obiekty przemysłowe',
+      },
+      {
+        slug: '06-konstrukcja-hali',
+        title: 'Konstrukcja hali przemysłowej',
+        category: 'Obiekty przemysłowe',
+      },
+      {
+        slug: '07-drzwi-nierdzewne',
+        title: 'Drzwi nierdzewne przesuwne',
+        category: 'Drzwi',
+      },
+      {
+        slug: '08-hala-elewacja',
+        title: 'Elewacja hali z płyt warstwowych',
+        category: 'Obiekty przemysłowe',
+      },
+      {
+        slug: '09-plyty-warstwowe-strop',
+        title: 'Strop z płyt warstwowych',
+        category: 'Płyty warstwowe',
+      },
+      {
+        slug: '10-montaz-plyt',
+        title: 'Montaż płyt warstwowych',
+        category: 'Montaż',
+      },
+      {
+        slug: '41-komora-drzwi-swiatlo',
+        title: 'Komora chłodnicza — realizacja GANC',
+        category: 'Chłodnie',
+      },
     ],
   },
   contact: {

@@ -359,6 +359,61 @@ export const de: Dictionary = {
         title: 'Kammer während der Paneelmontage',
         category: 'Montage',
       },
+      {
+        slug: '01-komora-chlodnicza',
+        title: 'Kühlraum mit Türen',
+        category: 'Kühlräume',
+      },
+      {
+        slug: '02-drzwi-mroznicze-przesuwne',
+        title: 'Schiebetür für Tiefkühlräume',
+        category: 'Türen',
+      },
+      {
+        slug: '03-korytarz-komor',
+        title: 'Flur mit Kühlräumen',
+        category: 'Kühlräume',
+      },
+      {
+        slug: '04-hala-produkcyjna-wnetrze',
+        title: 'Kühltür in einer Produktionshalle',
+        category: 'Industrieobjekte',
+      },
+      {
+        slug: '05-rampy-przeladunkowe',
+        title: 'Laderampen',
+        category: 'Industrieobjekte',
+      },
+      {
+        slug: '06-konstrukcja-hali',
+        title: 'Stahlkonstruktion einer Industriehalle',
+        category: 'Industrieobjekte',
+      },
+      {
+        slug: '07-drzwi-nierdzewne',
+        title: 'Edelstahl-Schiebetür',
+        category: 'Türen',
+      },
+      {
+        slug: '08-hala-elewacja',
+        title: 'Hallenfassade aus Sandwichpaneelen',
+        category: 'Industrieobjekte',
+      },
+      {
+        slug: '09-plyty-warstwowe-strop',
+        title: 'Decke aus Sandwichpaneelen',
+        category: 'Sandwichpaneele',
+      },
+      {
+        slug: '10-montaz-plyt',
+        title: 'Montage von Sandwichpaneelen',
+        category: 'Montage',
+      },
+      {
+        slug: '41-komora-drzwi-swiatlo',
+        title: 'Kühlkammer — Ausführung GANC',
+        category: 'Kühlräume',
+      },
     ],
   },
   contact: {

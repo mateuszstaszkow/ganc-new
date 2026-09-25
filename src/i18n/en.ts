@@ -359,6 +359,61 @@ export const en: Dictionary = {
         title: 'Chamber while panels are being fitted',
         category: 'Installation',
       },
+      {
+        slug: '01-komora-chlodnicza',
+        title: 'Cold room with doors',
+        category: 'Cold rooms',
+      },
+      {
+        slug: '02-drzwi-mroznicze-przesuwne',
+        title: 'Sliding freezer door',
+        category: 'Doors',
+      },
+      {
+        slug: '03-korytarz-komor',
+        title: 'Corridor of cold rooms',
+        category: 'Cold rooms',
+      },
+      {
+        slug: '04-hala-produkcyjna-wnetrze',
+        title: 'Cold-room door in a production hall',
+        category: 'Industrial buildings',
+      },
+      {
+        slug: '05-rampy-przeladunkowe',
+        title: 'Loading docks',
+        category: 'Industrial buildings',
+      },
+      {
+        slug: '06-konstrukcja-hali',
+        title: 'Industrial hall structure',
+        category: 'Industrial buildings',
+      },
+      {
+        slug: '07-drzwi-nierdzewne',
+        title: 'Stainless sliding door',
+        category: 'Doors',
+      },
+      {
+        slug: '08-hala-elewacja',
+        title: 'Sandwich-panel hall facade',
+        category: 'Industrial buildings',
+      },
+      {
+        slug: '09-plyty-warstwowe-strop',
+        title: 'Sandwich-panel ceiling',
+        category: 'Sandwich panels',
+      },
+      {
+        slug: '10-montaz-plyt',
+        title: 'Fitting sandwich panels',
+        category: 'Installation',
+      },
+      {
+        slug: '41-komora-drzwi-swiatlo',
+        title: 'Cold room — a GANC project',
+        category: 'Cold rooms',
+      },
     ],
   },
   contact: {

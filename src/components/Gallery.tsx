@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useCallback, useEffect, useMemo, useState } from 'react'
+import { orderGallery } from '../data/gallery-order'
 import { useI18n } from '../i18n'
 import { useLockBodyScroll } from '../hooks/useLockBodyScroll'
 import { Icon } from './ui/Icon'
@@ -10,14 +11,6 @@ import { Section, SectionHeading } from './ui/Section'
 const ALL = '__all__'
 const MOBILE_COUNT = 4
 const DESKTOP_COUNT = 6
-
-/** Diverse first look: chamber interior, door, industrial opening, installation/finish. */
-const FEATURED_SLUGS = [
-  '12-komora-posadzka',
-  '22-odboje',
-  '26-brama-segmentowa',
-  '25-posadzka-montaz',
-] as const
 
 export function Gallery() {
   const { t } = useI18n()
@@ -37,15 +30,9 @@ export function Gallery() {
   }, [t.gallery.all])
 
   const ordered = useMemo(() => {
-    if (filter !== ALL) {
-      return gallery.filter((item) => item.category === filter)
-    }
-    const featured = FEATURED_SLUGS.map((slug) => gallery.find((item) => item.slug === slug)).filter(
-      (item): item is (typeof gallery)[number] => Boolean(item),
-    )
-    const featuredSet = new Set(featured.map((item) => item.slug))
-    const rest = gallery.filter((item) => !featuredSet.has(item.slug))
-    return [...featured, ...rest]
+    const sequence = orderGallery(gallery)
+    if (filter === ALL) return sequence
+    return sequence.filter((item) => item.category === filter)
   }, [filter, gallery])
 
   const visible = useMemo(() => {

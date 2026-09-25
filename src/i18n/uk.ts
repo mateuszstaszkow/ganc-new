@@ -359,6 +359,61 @@ export const uk: Dictionary = {
         title: 'Камера під час монтажу панелей',
         category: 'Монтаж',
       },
+      {
+        slug: '01-komora-chlodnicza',
+        title: 'Холодильна камера з дверима',
+        category: 'Холодильні камери',
+      },
+      {
+        slug: '02-drzwi-mroznicze-przesuwne',
+        title: 'Розсувні морозильні двері',
+        category: 'Двері',
+      },
+      {
+        slug: '03-korytarz-komor',
+        title: 'Коридор холодильних камер',
+        category: 'Холодильні камери',
+      },
+      {
+        slug: '04-hala-produkcyjna-wnetrze',
+        title: 'Холодильні двері у виробничому цеху',
+        category: 'Промислові об’єкти',
+      },
+      {
+        slug: '05-rampy-przeladunkowe',
+        title: 'Перевантажувальні рампи',
+        category: 'Промислові об’єкти',
+      },
+      {
+        slug: '06-konstrukcja-hali',
+        title: 'Конструкція промислової будівлі',
+        category: 'Промислові об’єкти',
+      },
+      {
+        slug: '07-drzwi-nierdzewne',
+        title: 'Розсувні двері з нержавіючої сталі',
+        category: 'Двері',
+      },
+      {
+        slug: '08-hala-elewacja',
+        title: 'Фасад будівлі із сендвіч-панелей',
+        category: 'Промислові об’єкти',
+      },
+      {
+        slug: '09-plyty-warstwowe-strop',
+        title: 'Стеля із сендвіч-панелей',
+        category: 'Сендвіч-панелі',
+      },
+      {
+        slug: '10-montaz-plyt',
+        title: 'Монтаж сендвіч-панелей',
+        category: 'Монтаж',
+      },
+      {
+        slug: '41-komora-drzwi-swiatlo',
+        title: 'Холодильна камера — реалізація GANC',
+        category: 'Холодильні камери',
+      },
     ],
   },
   contact: {
