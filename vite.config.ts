@@ -5,9 +5,10 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
-// Served from https://mateuszstaszkow.github.io/ganc-new/
-const base = process.env.VITE_BASE ?? '/ganc-new/'
-const siteUrl = process.env.VITE_SITE_URL ?? 'https://mateuszstaszkow.github.io/ganc-new/'
+// Custom domain serves the site from the root. github.io/ganc-new/ stays available
+// only if a build sets VITE_BASE=/ganc-new/.
+const base = process.env.VITE_BASE ?? '/'
+const siteUrl = process.env.VITE_SITE_URL ?? 'https://www.ganc.com.pl/'
 
 /**
  * GitHub Pages has no server-side rewrite, so a reload on /rodo would 404.

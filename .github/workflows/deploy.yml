@@ -32,6 +32,9 @@ jobs:
         run: npm run lint
 
       - name: Build
+        env:
+          VITE_BASE: /
+          VITE_SITE_URL: https://www.ganc.com.pl/
         run: npm run build
 
       - uses: actions/configure-pages@v5

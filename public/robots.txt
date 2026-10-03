@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mateuszstaszkow.github.io/ganc-new/sitemap.xml
+Sitemap: https://www.ganc.com.pl/sitemap.xml
 
 # Company and services overview for AI assistants
-# https://mateuszstaszkow.github.io/ganc-new/llms.txt
+# https://www.ganc.com.pl/llms.txt
