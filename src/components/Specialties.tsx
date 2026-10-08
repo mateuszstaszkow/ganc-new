@@ -12,11 +12,6 @@ export function Specialties() {
 
   return (
     <Section id="specjalizacje" className="bg-steel-900">
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(70%_55%_at_50%_0%,rgba(0,160,227,0.16),transparent)]"
-      />
-
       <SectionHeading
         eyebrow={specialties.eyebrow}
         eyebrowClassName="pt-4"

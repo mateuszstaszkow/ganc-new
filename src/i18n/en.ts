@@ -95,7 +95,7 @@ export const en: Dictionary = {
     paragraphs: [
       'The core service of GANC IZOLACJE Sp. z o.o. is the construction of cold rooms and freezer rooms in retail and production buildings. We specialise in the supply and installation of cold-store and freezer doors, internal and external. We carry out specialist flooring and tiling works in industrial buildings.',
       'Our engineers and site staff have many years of industry experience, which is why the work is precise and of high quality. We deliver complete cold and freezer chambers in retail and industrial buildings.',
-      'Every investment is analysed in detail with the investor with a view to cost optimisation. As a rule we recommend proven materials whose quality guarantees durability and reliability. We are an authorised sales partner and distributor in Poland for doors from cool it, PFEUFFER and Celltherm.',
+      'Every investment is analysed in detail with the investor with a view to cost optimisation. As a rule we recommend proven materials whose quality guarantees durability and reliability. We are an authorised sales partner and distributor in Poland for doors from {coolIt}, {pfeuffer} and {celltherm}.',
       'We always do our utmost so that every client is fully satisfied with the level of service we provide.',
     ],
     photoAlts: {

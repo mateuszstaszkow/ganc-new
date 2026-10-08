@@ -92,7 +92,7 @@ export const pl = {
     paragraphs: [
       'Podstawową gałęzią usług GANC IZOLACJE Sp. z o.o. jest budowa chłodni i mroźni w obiektach handlowych i produkcyjnych. Specjalizujemy się w dostawach i montażu drzwi chłodniczych i mroźniczych, wewnętrznych i zewnętrznych. Wykonujemy specjalistyczne roboty posadzkarskie i płytkarskie obiektów przemysłowych.',
       'Kadra inżynieryjna oraz pracownicy firmy posiadają wieloletnie doświadczenie w branży, dzięki czemu nasze wykonawstwo charakteryzuje się najwyższą jakością i precyzją. Realizujemy kompleksową budowę komór chłodniczych i mroźniczych w obiektach handlowych i przemysłowych.',
-      'Każda inwestycja jest dokładnie analizowana z inwestorem pod kątem optymalizacji kosztowej. Z zasady zalecamy naszym klientom sprawdzone materiały o jakości gwarantującej trwałość i niezawodność. Nasza firma jest autoryzowanym partnerem handlowym i dystrybutorem na Polskę drzwi producentów cool it, PFEUFFER oraz Celltherm.',
+      'Każda inwestycja jest dokładnie analizowana z inwestorem pod kątem optymalizacji kosztowej. Z zasady zalecamy naszym klientom sprawdzone materiały o jakości gwarantującej trwałość i niezawodność. Nasza firma jest autoryzowanym partnerem handlowym i dystrybutorem na Polskę drzwi producentów {coolIt}, {pfeuffer} oraz {celltherm}.',
       'Każdorazowo dokładamy wszelkich starań, aby każdy klient był maksymalnie zadowolony z poziomu świadczonych przez nas usług.',
     ],
     photoAlts: {

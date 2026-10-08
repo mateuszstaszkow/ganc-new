@@ -95,7 +95,7 @@ export const de: Dictionary = {
     paragraphs: [
       'Das Kerngeschäft von GANC IZOLACJE Sp. z o.o. ist der Bau von Kühl- und Tiefkühlräumen in Handels- und Produktionsobjekten. Wir sind auf Lieferung und Montage von Kühl- und Tiefkühltüren spezialisiert, innen und außen. Wir führen Spezialarbeiten für Industrieböden und Fliesen in Industrieobjekten aus.',
       'Ingenieure und Mitarbeiter verfügen über langjährige Branchenerfahrung, daher zeichnet sich unsere Ausführung durch höchste Qualität und Präzision aus. Wir realisieren den kompletten Bau von Kühl- und Tiefkühlkammern in Handels- und Industrieobjekten.',
-      'Jede Investition wird gemeinsam mit dem Investor genau auf Kostenoptimierung geprüft. Grundsätzlich empfehlen wir bewährte Materialien, deren Qualität Dauerhaftigkeit und Zuverlässigkeit garantiert. Wir sind autorisierter Handelspartner und Vertrieb in Polen für Türen der Hersteller cool it, PFEUFFER und Celltherm.',
+      'Jede Investition wird gemeinsam mit dem Investor genau auf Kostenoptimierung geprüft. Grundsätzlich empfehlen wir bewährte Materialien, deren Qualität Dauerhaftigkeit und Zuverlässigkeit garantiert. Wir sind autorisierter Handelspartner und Vertrieb in Polen für Türen der Hersteller {coolIt}, {pfeuffer} und {celltherm}.',
       'Wir setzen uns jedes Mal dafür ein, dass jeder Kunde mit dem Niveau unserer Leistungen höchstzufrieden ist.',
     ],
     photoAlts: {

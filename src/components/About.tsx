@@ -5,6 +5,32 @@ import { Reveal, Stagger, StaggerItem } from './ui/Reveal'
 import { Photo } from './ui/Photo'
 import { Section, SectionHeading } from './ui/Section'
 
+const BRAND_LOGOS: Record<string, { file: string; name: string }> = {
+  '{coolIt}': { file: 'partner-cool-it.png', name: 'cool it' },
+  '{pfeuffer}': { file: 'partner-pfeuffer.png', name: 'Pfeuffer' },
+  '{celltherm}': { file: 'partner-celltherm.png', name: 'Celltherm' },
+}
+
+function Paragraph({ text, prominent }: { text: string; prominent: boolean }) {
+  const parts = text.split(/(\{coolIt\}|\{pfeuffer\}|\{celltherm\})/g)
+  return (
+    <p className={prominent ? 'text-fluid-lg leading-relaxed text-steel-100' : 'leading-relaxed text-steel-300'}>
+      {parts.map((part, index) => {
+        const brand = BRAND_LOGOS[part]
+        if (!brand) return part
+        return (
+          <img
+            key={index}
+            src={`${import.meta.env.BASE_URL}${brand.file}`}
+            alt={brand.name}
+            className="mx-1 inline-block h-[1.35em] w-auto align-middle rounded-sm bg-white px-1 py-px"
+          />
+        )
+      })}
+    </p>
+  )
+}
+
 function DiamondMark() {
   return (
     <svg viewBox="0 0 64 72" className="h-16 w-14 shrink-0" aria-hidden="true">
@@ -44,21 +70,27 @@ export function About() {
 
   return (
     <Section id="o-nas" decorated className="bg-steel-950">
-      <SectionHeading eyebrow={about.heading} title={about.title} lead={about.lead} />
+      <SectionHeading
+        eyebrow={about.heading}
+        title={
+          <>
+            <span className="sr-only">{about.title}</span>
+            <img
+              src={`${import.meta.env.BASE_URL}logo-lockup-light.png`}
+              alt=""
+              className="h-14 w-auto sm:h-16"
+            />
+          </>
+        }
+        lead={about.lead}
+        className="[&_h2]:leading-none"
+      />
 
       <div ref={wrapRef} className="mt-14 grid gap-12 lg:mt-20 lg:grid-cols-[1fr_0.82fr] lg:gap-16">
         <div className="space-y-6">
           {about.paragraphs.map((paragraph, index) => (
             <Reveal key={index} direction="up" delay={index * 0.06}>
-              <p
-                className={
-                  index === 0
-                    ? 'text-fluid-lg leading-relaxed text-steel-100'
-                    : 'leading-relaxed text-steel-300'
-                }
-              >
-                {paragraph}
-              </p>
+              <Paragraph text={paragraph} prominent={index === 0} />
             </Reveal>
           ))}
 
