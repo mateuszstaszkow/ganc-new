@@ -22,7 +22,17 @@ if (import.meta.env.PROD) {
         : (cb: () => void) => window.setTimeout(cb, 1200)
     later(() => {
       void import('virtual:pwa-register').then(({ registerSW }) => {
-        registerSW({ immediate: true })
+        registerSW({
+          immediate: true,
+          onRegisteredSW(_url, registration) {
+            if (!registration) return
+            const check = () => {
+              if (document.visibilityState === 'visible') void registration.update()
+            }
+            document.addEventListener('visibilitychange', check)
+            window.setInterval(check, 30 * 60 * 1000)
+          },
+        })
       })
     })
   })
