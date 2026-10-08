@@ -213,9 +213,10 @@ export function Hero() {
             initial={enter ? { opacity: 0, y: 28 } : false}
             animate={enter ? { opacity: 1, y: 0 } : undefined}
             transition={{ delay: 0.35, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="relative flex min-h-0 w-full flex-col overflow-hidden lg:h-full"
+            className="relative flex min-h-0 w-full flex-col overflow-hidden rounded-3xl lg:h-full"
           >
-            <div className="glass relative flex h-full min-h-0 flex-col overflow-hidden rounded-3xl p-4 sm:p-7">
+            {/* iOS WebKit ignores border-radius clipping for blurred children without a mask. */}
+            <div className="glass relative isolate flex h-full min-h-0 flex-col overflow-hidden rounded-3xl p-4 [-webkit-mask-image:-webkit-radial-gradient(white,black)] [mask-image:radial-gradient(white,black)] sm:p-7">
               <div
                 aria-hidden="true"
                 className="absolute -top-24 -right-16 size-52 rounded-full bg-ice-400/20 blur-3xl"

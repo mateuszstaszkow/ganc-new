@@ -18,12 +18,15 @@ function Paragraph({ text, prominent }: { text: string; prominent: boolean }) {
       {parts.map((part, index) => {
         const brand = BRAND_LOGOS[part]
         if (!brand) return part
+        const pfeuffer = part === '{pfeuffer}'
         return (
           <img
             key={index}
             src={`${import.meta.env.BASE_URL}${brand.file}`}
             alt={brand.name}
-            className="mx-1 inline-block h-[1.35em] w-auto align-middle rounded-sm bg-white px-1 py-px"
+            className={`mx-1 inline-block w-auto align-middle rounded-sm bg-white ${
+              pfeuffer ? 'box-border h-[1.35em] p-[2px]' : 'h-[1.35em] px-1 py-px'
+            }`}
           />
         )
       })}
@@ -70,21 +73,7 @@ export function About() {
 
   return (
     <Section id="o-nas" decorated className="bg-steel-950">
-      <SectionHeading
-        eyebrow={about.heading}
-        title={
-          <>
-            <span className="sr-only">{about.title}</span>
-            <img
-              src={`${import.meta.env.BASE_URL}logo-lockup-light.png`}
-              alt=""
-              className="h-14 w-auto sm:h-16"
-            />
-          </>
-        }
-        lead={about.lead}
-        className="[&_h2]:leading-none"
-      />
+      <SectionHeading eyebrow={about.heading} title={about.title} lead={about.lead} />
 
       <div ref={wrapRef} className="mt-14 grid gap-12 lg:mt-20 lg:grid-cols-[1fr_0.82fr] lg:gap-16">
         <div className="space-y-6">
